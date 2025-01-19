@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=north,half=lower": {
+      "model": "better_on_bedrock:block/waystone_down"
+    },
+    "facing=south,half=lower": {
+      "model": "better_on_bedrock:block/waystone_down",
+      "y": 180
+    },
+    "facing=east,half=lower": {
+      "model": "better_on_bedrock:block/waystone_down",
+      "y": 90
+    },
+    "facing=west,half=lower": {
+      "model": "better_on_bedrock:block/waystone_down",
+      "y": 270
+    },
+
+    "facing=north,half=upper": {
+      "model": "better_on_bedrock:block/waystone_up"
+    },
+    "facing=south,half=upper": {
+      "model": "better_on_bedrock:block/waystone_up",
+      "y": 180
+    },
+    "facing=east,half=upper": {
+      "model": "better_on_bedrock:block/waystone_up",
+      "y": 90
+    },
+    "facing=west,half=upper": {
+      "model": "better_on_bedrock:block/waystone_up",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": "better_on_bedrock:mutton_chops_raw",
+  "result": {
+    "id": "better_on_bedrock:mutton_chops_cooked"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "itemGroup.betterOnBedrock.tools": "Better on Bedrock — Tools",
+  "itemGroup.betterOnBedrock.food": "Better on Bedrock — Food",
+  "itemGroup.betterOnBedrock.combat": "Better on Bedrock — Combat",
+
+  "category.better_on_bedrock.keybinds": "Better on Bedrock",
+  "key.better_on_bedrock.test": "Test",
+
+
+  "block.better_on_bedrock.waystone": "Waystone",
+
+
+  "item.better_on_bedrock.corstinite_helmet": "Corstinite Helmet",
+  "item.better_on_bedrock.corstinite_chestplate": "Corstinite Chestplate",
+  "item.better_on_bedrock.corstinite_leggings": "Corstinite Leggings",
+  "item.better_on_bedrock.corstinite_boots": "Corstinite Boots",
+
+  "item.better_on_bedrock.mutton_chops_raw": "Raw Mutton Chops",
+  "item.better_on_bedrock.mutton_chops_cooked": "Cooked Mutton Chops",
+
+
+  "enchantment.better_on_bedrock.vein_miner": "Vein Miner"
+}

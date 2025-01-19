@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "better-on-bedrock",
+  "name": "Better on Bedrock",
+  "description": "",
+  "version": "${version}",
+  "authors": [
+    "xKingDark",
+    "XxPoggyisLitxX"
+  ],
+  "license": "MIT",
+  "icon": "assets/better_on_bedrock/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [ "com.xkingdark.bob.client.Client" ],
+    "main": [ "com.xkingdark.bob.Main" ]
+  },
+  "mixins": [ "bob.mixins.json" ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
