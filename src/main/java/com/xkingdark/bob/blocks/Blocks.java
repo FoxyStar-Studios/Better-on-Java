@@ -12,9 +12,12 @@ import java.util.function.Function;
 
 public final class Blocks {
     public static final Block WAYSTONE;
-    
+    public static final Block STARDUST_ORE;
+
     static {
         WAYSTONE = Blocks.register("waystone", WaystoneBlock::new,
+                AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
+        STARDUST_ORE = Blocks.register("stardust_ore",
                 AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
     }
 

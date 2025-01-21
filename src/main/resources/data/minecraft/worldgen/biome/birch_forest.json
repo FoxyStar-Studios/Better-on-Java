@@ -56,6 +56,8 @@
       "minecraft:ore_tuff",
       "minecraft:ore_coal_upper",
       "minecraft:ore_coal_lower",
+      "better_on_bedrock:ore_stardust_exposed",
+      "better_on_bedrock:ore_stardust",
       "minecraft:ore_iron_upper",
       "minecraft:ore_iron_middle",
       "minecraft:ore_iron_small",

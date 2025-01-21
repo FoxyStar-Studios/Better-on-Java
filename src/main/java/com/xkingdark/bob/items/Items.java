@@ -36,6 +36,7 @@ public class Items {
     public static final Item STARDUST_PICKAXE;
     public static final Item STARDUST_SHOVEL;
     public static final Item STARDUST_HOE;
+    public static final Item STARDUST_ORE;
 
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
@@ -45,6 +46,7 @@ public class Items {
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
+        STARDUST_ORE = register(Blocks.STARDUST_ORE);
 
         CORSTINITE_HELMET = register("corstinite_helmet", (settings) ->
                 new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));

@@ -28,6 +28,7 @@ public class ItemGroups {
                 .icon(() -> new ItemStack(Items.WAYSTONE))
                 .entries((displayContext, entries) -> {
                     entries.add(Items.WAYSTONE);
+                    entries.add(Items.STARDUST_ORE);
                 }).build()
         );
 

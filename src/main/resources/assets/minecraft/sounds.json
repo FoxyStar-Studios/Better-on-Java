@@ -47,5 +47,438 @@
         "stream": true
       }
     ]
+  },
+  
+  "music.overworld.bamboo_jungle": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.cherry_grove": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.desert": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.dripstone_caves": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.flower_forest": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.forest": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.jungle": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.old_growth_taiga": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.swamp": {
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
   }
-  }
+}
