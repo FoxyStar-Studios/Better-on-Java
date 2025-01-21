@@ -14,7 +14,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        "better_on_bedrock" {
+        "better-on-java" {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }
