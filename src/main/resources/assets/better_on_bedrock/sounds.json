@@ -1,5 +1,5 @@
 {
-    "bob.music": {
+  "bob.music": {
     "replace": true,
     "sounds": [
       {
@@ -105,4 +105,4 @@
       }
     ]
   }
-  }
+}
