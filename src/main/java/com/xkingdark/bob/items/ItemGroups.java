@@ -42,16 +42,16 @@ public class ItemGroups {
                 }).build()
         );
 
-        Registry.register(Registries.ITEM_GROUP, UPGRADES, ItemGroup.create(ItemGroup.Row.BOTTOM, 0)
+        Registry.register(Registries.ITEM_GROUP, UPGRADES, ItemGroup.create(ItemGroup.Row.BOTTOM, 1)
                 .displayName(Text.translatable("itemGroup.betterOnBedrock.upgrades"))
-                .icon(() -> new ItemStack(Items.STARDUST_SMITHING_TEMPLATE))
+                .icon(() -> new ItemStack(Items.STARDUST_UPGRADE))
                 .entries((displayContext, entries) -> {
-                    entries.add(Items.STARDUST_SMITHING_TEMPLATE);
+                    entries.add(Items.STARDUST_UPGRADE);
                     entries.add(Items.STARDUST_INGOT);
                 }).build()
         );
 
-        Registry.register(Registries.ITEM_GROUP, COMBAT, ItemGroup.create(ItemGroup.Row.BOTTOM, 1)
+        Registry.register(Registries.ITEM_GROUP, COMBAT, ItemGroup.create(ItemGroup.Row.BOTTOM, 2)
                 .displayName(Text.translatable("itemGroup.betterOnBedrock.combat"))
                 .icon(() -> new ItemStack(Items.CORSTINITE_HELMET))
                 .entries((displayContext, entries) -> {

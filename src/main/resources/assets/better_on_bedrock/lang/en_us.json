@@ -30,11 +30,16 @@
   "item.better_on_bedrock.mutton_chops_cooked": "Cooked Mutton Chops",
   "item.better_on_bedrock.baguette": "Baguette",
 
-  "item.better_on_bedrock.stardust_smithing_template": "Stardust Smithing Template",
+  "item.better_on_bedrock.smithing_template.stardust_upgrade.applies_to": "Netherite Equipment",
+  "item.better_on_bedrock.smithing_template.stardust_upgrade.ingredients": "Stardust Ingot",
+  "item.better_on_bedrock.smithing_template.stardust_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.better_on_bedrock.smithing_template.stardust_upgrade.additions_slot_description": "Add Stardust Ingot",
+
+  "item.better_on_bedrock.stardust_upgrade_smithing_template": "Stardust Upgrade",
   "item.better_on_bedrock.stardust_ingot": "Stardust Ingot",
 
-  "advancements.obtain_stardust.description": "Obtain a full set of Stardust Armor",
   "advancements.obtain_stardust.title": "Stardust!",
+  "advancements.obtain_stardust.description": "Obtain a full set of Stardust Armor",
   
   "enchantment.better_on_bedrock.vein_miner": "Vein Miner"
 }

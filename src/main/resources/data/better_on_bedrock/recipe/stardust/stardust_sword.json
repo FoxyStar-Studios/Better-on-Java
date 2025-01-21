@@ -2,7 +2,7 @@
   "type": "minecraft:smithing_transform",
   "base": "minecraft:netherite_sword",
   "addition": "better_on_bedrock:stardust_ingot",
-  "template": "better_on_bedrock:stardust_smithing_template",
+  "template": "better_on_bedrock:stardust_upgrade_smithing_template",
   "result": {
     "id": "better_on_bedrock:stardust_sword",
     "count": 1

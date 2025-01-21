@@ -13,6 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -26,6 +27,10 @@ public class Items {
     public static final Item CORSTINITE_LEGGINGS;
     public static final Item CORSTINITE_BOOTS;
 
+    public static final Item STARDUST_HELMET;
+    public static final Item STARDUST_CHESTPLATE;
+    public static final Item STARDUST_LEGGINGS;
+    public static final Item STARDUST_BOOTS;
     public static final Item STARDUST_SWORD;
     public static final Item STARDUST_AXE;
     public static final Item STARDUST_PICKAXE;
@@ -35,12 +40,8 @@ public class Items {
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
     public static final Item BAGUETTE;
-    public static final Item STARDUST_SMITHING_TEMPLATE;
+    public static final Item STARDUST_UPGRADE;
     public static final Item STARDUST_INGOT;
-    public static final Item STARDUST_HELMET;
-    public static final Item STARDUST_CHESTPLATE;
-    public static final Item STARDUST_LEGGINGS;
-    public static final Item STARDUST_BOOTS;
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
@@ -83,9 +84,9 @@ public class Items {
 
         BAGUETTE = register("baguette", new Item.Settings().food(FoodComponents.BAGUETTE));
 
-        STARDUST_SMITHING_TEMPLATE = register("stardust_smithing_template");
+        STARDUST_UPGRADE = register("stardust_upgrade_smithing_template", (settings) ->
+                SmithingTemplates.createUpgrade("stardust", settings), new Item.Settings().rarity(Rarity.RARE));
         STARDUST_INGOT = register("stardust_ingot");
-
     }
 
 
