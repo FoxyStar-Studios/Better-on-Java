@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 100,
+    "experience": 0.7,
+    "group": "iron_ingot",
+    "ingredient": "better_on_bedrock:stardust",
+    "result": {
+      "id": "better_on_bedrock:stardust_nugget"
+    }
+  }

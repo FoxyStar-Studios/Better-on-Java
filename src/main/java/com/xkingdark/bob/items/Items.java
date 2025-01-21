@@ -39,6 +39,8 @@ public class Items {
 
     public static final Item STARDUST_UPGRADE;
     public static final Item STARDUST_INGOT;
+    public static final Item STARDUST;
+    public static final Item STARDUST_NUGGET;
 
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
@@ -88,6 +90,8 @@ public class Items {
         STARDUST_UPGRADE = register("stardust_upgrade_smithing_template", (settings) ->
             SmithingTemplates.createUpgrade("stardust", settings), new Item.Settings().rarity(Rarity.RARE));
         STARDUST_INGOT = register("stardust_ingot");
+        STARDUST = register("stardust");
+        STARDUST_NUGGET = register("stardust_nugget");
 
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "better_on_bedrock:blocks/stardust_ore",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "better_on_bedrock:stardust",
+          "conditions": [
+            {
+              "block": "better_on_bedrock:stardust_ore",
+              "condition": "minecraft:block_state_property"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        { "condition": "minecraft:survives_explosion" }
+      ]
+    }
+  ]
+}

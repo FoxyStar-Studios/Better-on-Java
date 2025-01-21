@@ -90,6 +90,8 @@ public class ItemGroups {
             .entries((displayContext, entries) -> {
                 entries.add(Items.STARDUST_UPGRADE);
                 entries.add(Items.STARDUST_INGOT);
+                entries.add(Items.STARDUST);
+                entries.add(Items.STARDUST_NUGGET);
             }).special().build()
         );
     }

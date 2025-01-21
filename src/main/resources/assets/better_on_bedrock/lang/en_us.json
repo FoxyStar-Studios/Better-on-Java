@@ -42,6 +42,8 @@
 
   "item.better_on_bedrock.stardust_upgrade_smithing_template": "Stardust Upgrade",
   "item.better_on_bedrock.stardust_ingot": "Stardust Ingot",
+  "item.better_on_bedrock.stardust": "Stardust",
+  "item.better_on_bedrock.stardust_nugget": "Stardust Nugget",
 
   "advancements.obtain_stardust.title": "Stardust!",
   "advancements.obtain_stardust.description": "Obtain a full set of Stardust Armor",

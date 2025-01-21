@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "DMD",
+        "nMn",
+        "nnn"
+    ],
+    "key": {
+        "n": "better_on_bedrock:stardust_nugget",
+        "M": "minecraft:gold_ingot",
+        "D": "minecraft:diamond"
+    },
+    "result": {
+        "id": "better_on_bedrock:stardust_ingot",
+        "count": 4
+    }
+}
