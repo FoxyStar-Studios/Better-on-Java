@@ -36,59 +36,67 @@ public class Items {
     public static final Item STARDUST_PICKAXE;
     public static final Item STARDUST_SHOVEL;
     public static final Item STARDUST_HOE;
-    public static final Item STARDUST_ORE;
+
+    public static final Item STARDUST_UPGRADE;
+    public static final Item STARDUST_INGOT;
 
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
     public static final Item BAGUETTE;
-    public static final Item STARDUST_UPGRADE;
-    public static final Item STARDUST_INGOT;
+
+    public static final Item STARDUST_ORE;
+
+    public static final Item PINK_LAVENDER;
+    public static final Item TALL_LAVENDER;
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
-        STARDUST_ORE = register(Blocks.STARDUST_ORE);
 
         CORSTINITE_HELMET = register("corstinite_helmet", (settings) ->
-                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));
+            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));
         CORSTINITE_CHESTPLATE = register("corstinite_chestplate", (settings) ->
-                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.CHESTPLATE, settings));
+            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.CHESTPLATE, settings));
         CORSTINITE_LEGGINGS = register("corstinite_leggings", (settings) ->
-                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.LEGGINGS, settings));
+            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.LEGGINGS, settings));
         CORSTINITE_BOOTS = register("corstinite_boots", (settings) ->
-                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS, settings));
+            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS, settings));
 
         STARDUST_HELMET = register("stardust_helmet", (settings) ->
-                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.HELMET, settings));
+            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.HELMET, settings));
         STARDUST_CHESTPLATE = register("stardust_chestplate", (settings) ->
-                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.CHESTPLATE, settings));
+            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.CHESTPLATE, settings));
         STARDUST_LEGGINGS = register("stardust_leggings", (settings) ->
-                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.LEGGINGS, settings));
+            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.LEGGINGS, settings));
         STARDUST_BOOTS = register("stardust_boots", (settings) ->
-                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.BOOTS, settings));
+            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.BOOTS, settings));
         STARDUST_SWORD = register("stardust_sword", (settings) ->
-                        new SwordItem(ToolMaterials.STARDUST, 3.0F, -2.4F, settings),
-                (new Item.Settings()).fireproof());
+                new SwordItem(ToolMaterials.STARDUST, 3.0F, -2.4F, settings),
+            (new Item.Settings()).fireproof());
         STARDUST_AXE = register("stardust_axe", (settings) ->
-                        new AxeItem(ToolMaterials.STARDUST, 5.0F, -3.0F, settings),
-                (new Item.Settings()).fireproof());
+                new AxeItem(ToolMaterials.STARDUST, 5.0F, -3.0F, settings),
+            (new Item.Settings()).fireproof());
         STARDUST_PICKAXE = register("stardust_pickaxe", (settings) ->
-                        new PickaxeItem(ToolMaterials.STARDUST, 1.0F, -2.8F, settings),
-                (new Item.Settings()).fireproof());
+                new PickaxeItem(ToolMaterials.STARDUST, 1.0F, -2.8F, settings),
+            (new Item.Settings()).fireproof());
         STARDUST_SHOVEL = register("stardust_shovel", (settings) ->
-                        new ShovelItem(ToolMaterials.STARDUST, 1.5F, -3.0F, settings),
-                (new Item.Settings()).fireproof());
+                new ShovelItem(ToolMaterials.STARDUST, 1.5F, -3.0F, settings),
+            (new Item.Settings()).fireproof());
         STARDUST_HOE = register("stardust_hoe", (settings) ->
-                        new HoeItem(ToolMaterials.STARDUST, -4.0F, 0.0F, settings),
-                (new Item.Settings()).fireproof());
+                new HoeItem(ToolMaterials.STARDUST, -4.0F, 0.0F, settings),
+            (new Item.Settings()).fireproof());
+
+        STARDUST_UPGRADE = register("stardust_upgrade_smithing_template", (settings) ->
+            SmithingTemplates.createUpgrade("stardust", settings), new Item.Settings().rarity(Rarity.RARE));
+        STARDUST_INGOT = register("stardust_ingot");
 
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
-
         BAGUETTE = register("baguette", new Item.Settings().food(FoodComponents.BAGUETTE));
 
-        STARDUST_UPGRADE = register("stardust_upgrade_smithing_template", (settings) ->
-                SmithingTemplates.createUpgrade("stardust", settings), new Item.Settings().rarity(Rarity.RARE));
-        STARDUST_INGOT = register("stardust_ingot");
+        STARDUST_ORE = register(Blocks.STARDUST_ORE);
+
+        PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
+        TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
     }
 
 
@@ -123,7 +131,7 @@ public class Items {
 
     public static Item register(Block block, BiFunction<Block, Item.Settings, Item> factory, Item.Settings settings) {
         return register(keyOf(block.getRegistryEntry().registryKey()), (itemSettings) ->
-                (Item)factory.apply(block, itemSettings), settings.useBlockPrefixedTranslationKey());
+            factory.apply(block, itemSettings), settings.useBlockPrefixedTranslationKey());
     }
 
     public static Item register(String id, Function<Item.Settings, Item> factory) {
@@ -147,11 +155,10 @@ public class Items {
     }
 
     public static Item register(RegistryKey<Item> key, Function<Item.Settings, Item> factory, Item.Settings settings) {
-        Item item = (Item)factory.apply(settings.registryKey(key));
-        if (item instanceof BlockItem blockItem) {
+        Item item = factory.apply(settings.registryKey(key));
+        if (item instanceof BlockItem blockItem)
             blockItem.appendBlocks(Item.BLOCK_ITEMS, item);
-        }
 
-        return (Item) Registry.register(Registries.ITEM, key, item);
+        return Registry.register(Registries.ITEM, key, item);
     }
 }

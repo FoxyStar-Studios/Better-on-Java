@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "better_on_bedrock:item/stardust_leggings"
+    "model": "better_on_bedrock:item/armor/stardust/stardust_leggings"
   }
 }

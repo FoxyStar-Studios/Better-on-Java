@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "better_on_bedrock:item/stardust_upgrade_smithing_template"
+    "model": "better_on_bedrock:item/tools/stardust_upgrade_smithing_template"
   }
 }

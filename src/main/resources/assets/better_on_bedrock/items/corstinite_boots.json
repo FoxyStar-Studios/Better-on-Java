@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "better_on_bedrock:item/corstinite_boots"
+    "model": "better_on_bedrock:item/armor/corstinite/corstinite_boots"
   }
 }
