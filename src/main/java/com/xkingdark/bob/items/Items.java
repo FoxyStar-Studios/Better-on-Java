@@ -27,6 +27,13 @@ public class Items {
     public static final Item CORSTINITE_BOOTS;
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
+    public static final Item BAGUETTE;
+    public static final Item STARDUST_SMITHING_TEMPLATE;
+    public static final Item STARDUST_INGOT;
+    public static final Item STARDUST_HELMET;
+    public static final Item STARDUST_CHESTPLATE;
+    public static final Item STARDUST_LEGGINGS;
+    public static final Item STARDUST_BOOTS;
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
@@ -40,8 +47,22 @@ public class Items {
         CORSTINITE_BOOTS = register("corstinite_boots", (settings) ->
                 new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS, settings));
 
+        STARDUST_HELMET = register("stardust_helmet", (settings) ->
+                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.HELMET, settings));
+        STARDUST_CHESTPLATE = register("stardust_chestplate", (settings) ->
+                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.CHESTPLATE, settings));
+        STARDUST_LEGGINGS = register("stardust_leggings", (settings) ->
+                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.LEGGINGS, settings));
+        STARDUST_BOOTS = register("stardust_boots", (settings) ->
+                new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.BOOTS, settings));
+
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
+
+        BAGUETTE = register("baguette", new Item.Settings().food(FoodComponents.BAGUETTE));
+
+        STARDUST_SMITHING_TEMPLATE = register("stardust_smithing_template");
+        STARDUST_INGOT = register("stardust_ingot");
 
     }
 

@@ -1,6 +1,7 @@
 {
   "itemGroup.betterOnBedrock.tools": "Better on Bedrock — Tools",
   "itemGroup.betterOnBedrock.food": "Better on Bedrock — Food",
+  "itemGroup.betterOnBedrock.upgrades": "Better on Bedrock — Upgrades",
   "itemGroup.betterOnBedrock.combat": "Better on Bedrock — Combat",
 
   "category.better_on_bedrock.keybinds": "Better on Bedrock",
@@ -14,10 +15,20 @@
   "item.better_on_bedrock.corstinite_chestplate": "Corstinite Chestplate",
   "item.better_on_bedrock.corstinite_leggings": "Corstinite Leggings",
   "item.better_on_bedrock.corstinite_boots": "Corstinite Boots",
+  "item.better_on_bedrock.stardust_helmet": "Stardust Helmet",
+  "item.better_on_bedrock.stardust_chestplate": "Stardust Chestplate",
+  "item.better_on_bedrock.stardust_leggings": "Stardust Leggings",
+  "item.better_on_bedrock.stardust_boots": "Stardust Boots",
 
   "item.better_on_bedrock.mutton_chops_raw": "Raw Mutton Chops",
   "item.better_on_bedrock.mutton_chops_cooked": "Cooked Mutton Chops",
+  "item.better_on_bedrock.baguette": "Baguette",
 
+  "item.better_on_bedrock.stardust_smithing_template": "Stardust Smithing Template",
+  "item.better_on_bedrock.stardust_ingot": "Stardust Ingot",
 
+  "advancements.obtain_stardust.description": "Obtain a full set of Stardust Armor",
+  "advancements.obtain_stardust.title": "Stardust!",
+  
   "enchantment.better_on_bedrock.vein_miner": "Vein Miner"
 }

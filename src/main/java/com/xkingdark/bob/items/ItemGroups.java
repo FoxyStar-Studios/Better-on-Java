@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 public class ItemGroups {
     public static final RegistryKey<ItemGroup> TOOLS = keyOf("tools");
     public static final RegistryKey<ItemGroup> FOOD = keyOf("food");
+    public static final RegistryKey<ItemGroup> UPGRADES = keyOf("upgrades");
     public static final RegistryKey<ItemGroup> COMBAT = keyOf("combat");
 
     private static RegistryKey<ItemGroup> keyOf(String id) {
@@ -37,8 +38,19 @@ public class ItemGroups {
                 .entries((displayContext, entries) -> {
                     entries.add(Items.MUTTON_CHOPS_RAW);
                     entries.add(Items.MUTTON_CHOPS_COOKED);
+                    entries.add(Items.BAGUETTE);
                 }).build()
         );
+
+        Registry.register(Registries.ITEM_GROUP, UPGRADES, ItemGroup.create(ItemGroup.Row.BOTTOM, 0)
+                .displayName(Text.translatable("itemGroup.betterOnBedrock.upgrades"))
+                .icon(() -> new ItemStack(Items.STARDUST_SMITHING_TEMPLATE))
+                .entries((displayContext, entries) -> {
+                    entries.add(Items.STARDUST_SMITHING_TEMPLATE);
+                    entries.add(Items.STARDUST_INGOT);
+                }).build()
+        );
+
         Registry.register(Registries.ITEM_GROUP, COMBAT, ItemGroup.create(ItemGroup.Row.BOTTOM, 1)
                 .displayName(Text.translatable("itemGroup.betterOnBedrock.combat"))
                 .icon(() -> new ItemStack(Items.CORSTINITE_HELMET))
@@ -47,6 +59,11 @@ public class ItemGroups {
                     entries.add(Items.CORSTINITE_CHESTPLATE);
                     entries.add(Items.CORSTINITE_LEGGINGS);
                     entries.add(Items.CORSTINITE_BOOTS);
+
+                    entries.add(Items.STARDUST_HELMET);
+                    entries.add(Items.STARDUST_CHESTPLATE);
+                    entries.add(Items.STARDUST_LEGGINGS);
+                    entries.add(Items.STARDUST_BOOTS);
                 }).build()
         );
     }

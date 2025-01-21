@@ -9,6 +9,7 @@ import static net.minecraft.item.equipment.EquipmentAssetKeys.REGISTRY_KEY;
 
 public interface EquipmentAssetKeys {
     RegistryKey<EquipmentAsset> CORSTINITE = register("corstinite");
+    RegistryKey<EquipmentAsset> STARDUST = register("stardust");
 
     static RegistryKey<EquipmentAsset> register(String name) {
         return RegistryKey.of(REGISTRY_KEY, Identifier.of(Main.MOD_ID, name));

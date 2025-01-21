@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 
 public class ItemTags {
     public static final TagKey<Item> CORSTINITE = of("corstinite");
+    public static final TagKey<Item> STARDUST = of("stardust");
 
     private ItemTags() {}
     private static TagKey<Item> of(String identifier) {
