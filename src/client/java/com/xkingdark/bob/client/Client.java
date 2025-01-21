@@ -2,6 +2,7 @@ package com.xkingdark.bob.client;
 
 import com.xkingdark.bob.blocks.Blocks;
 import com.xkingdark.bob.client.helpers.Registry;
+import com.xkingdark.bob.client.network.NetworkHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
@@ -15,10 +16,10 @@ public class Client implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         LOGGER.info("Initializing client.");
-
-        Registry.initialize();
-
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PINK_LAVENDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TALL_LAVENDER, RenderLayer.getCutout());
     };
+
+    static {
+        Registry.initialize();
+        new NetworkHandler();
+    }
 };

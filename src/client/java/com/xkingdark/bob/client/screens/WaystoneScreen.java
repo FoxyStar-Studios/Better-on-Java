@@ -1,7 +1,9 @@
 package com.xkingdark.bob.client.screens;
 
+import com.xkingdark.bob.network.packets.WaystoneHandlePacket;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.ElementListWidget;
@@ -22,6 +24,7 @@ public class WaystoneScreen extends Screen {
 
 
                     client.setScreen(null);
+                    ClientPlayNetworking.send(new WaystoneHandlePacket(0));
                 }).build()
         );
     }

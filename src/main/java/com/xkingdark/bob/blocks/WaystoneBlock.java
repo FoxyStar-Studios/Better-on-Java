@@ -1,6 +1,6 @@
 package com.xkingdark.bob.blocks;
 
-import com.xkingdark.bob.network.packets.WaystonePacket;
+import com.xkingdark.bob.network.packets.WaystoneOpenPacket;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.player.PlayerEntity;
@@ -77,7 +77,7 @@ public class WaystoneBlock extends Block implements Waterloggable {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient()) {
-            ServerPlayNetworking.send((ServerPlayerEntity) player, new WaystonePacket(true, pos));
+            ServerPlayNetworking.send((ServerPlayerEntity) player, new WaystoneOpenPacket(true, pos));
         }
 
         return ActionResult.SUCCESS;

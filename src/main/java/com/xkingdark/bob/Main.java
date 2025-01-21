@@ -1,6 +1,10 @@
 package com.xkingdark.bob;
 
+import com.xkingdark.bob.network.NetworkHandler;
+import com.xkingdark.bob.network.Packets;
+import com.xkingdark.bob.network.packets.WaystoneHandlePacket;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +25,8 @@ public class Main implements ModInitializer {
         new Blocks();
         new Items();
         new ItemGroups();
+
+        PayloadTypeRegistry.playC2S().register(Packets.WAYSTONE_HANDLE_PACKET, WaystoneHandlePacket.CODEC);
+        new NetworkHandler();
     }
 }
