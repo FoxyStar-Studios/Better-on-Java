@@ -1,0 +1,51 @@
+{
+  "music.game": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "music/game/garden",
+        "stream": true
+      },
+      {
+        "name": "music/game/travels",
+        "stream": true
+      },
+      {
+        "name": "music/game/confused",
+        "stream": true
+      },
+      {
+        "name": "music/game/fox_fur",
+        "stream": true
+      },
+      {
+        "name": "music/game/reverie",
+        "stream": true
+      },
+      {
+        "name": "music/game/shelby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wandering_souls",
+        "stream": true
+      },
+      {
+        "name": "music/game/prelude",
+        "stream": true
+      },
+      {
+        "name": "music/game/deeds",
+        "stream": true
+      },
+      {
+        "name": "music/game/cozy_palms",
+        "stream": true
+      },
+      {
+        "name": "music/game/acceptance",
+        "stream": true
+      }
+    ]
+  }
+  }
