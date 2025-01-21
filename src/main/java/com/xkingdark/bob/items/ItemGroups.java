@@ -64,6 +64,11 @@ public class ItemGroups {
                     entries.add(Items.STARDUST_CHESTPLATE);
                     entries.add(Items.STARDUST_LEGGINGS);
                     entries.add(Items.STARDUST_BOOTS);
+                    entries.add(Items.STARDUST_SWORD);
+                    entries.add(Items.STARDUST_AXE);
+                    entries.add(Items.STARDUST_PICKAXE);
+                    entries.add(Items.STARDUST_SHOVEL);
+                    entries.add(Items.STARDUST_HOE);
                 }).build()
         );
     }

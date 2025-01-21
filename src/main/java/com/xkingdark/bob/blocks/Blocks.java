@@ -18,10 +18,10 @@ public final class Blocks {
                 AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
     }
 
-    
+
     public static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        Block block = (Block)factory.apply(settings.registryKey(key));
-        return (Block) net.minecraft.registry.Registry.register(Registries.BLOCK, key, block);
+        Block block = factory.apply(settings.registryKey(key));
+        return net.minecraft.registry.Registry.register(Registries.BLOCK, key, block);
     }
 
     public static Block register(RegistryKey<Block> key, AbstractBlock.Settings settings) {

@@ -9,8 +9,8 @@ import net.minecraft.util.Identifier;
 public class ItemTags {
     public static final TagKey<Item> CORSTINITE = of("corstinite");
     public static final TagKey<Item> STARDUST = of("stardust");
+    public static final TagKey<Item> STARDUST_TOOL_MATERIALS = of("stardust_tool_materials");
 
-    private ItemTags() {}
     private static TagKey<Item> of(String identifier) {
         return TagKey.of(RegistryKeys.ITEM, Identifier.of(Main.MOD_ID, identifier));
     }
