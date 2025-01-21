@@ -15,7 +15,9 @@ public class Main implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Hello, world!");
+    }
 
+    static {
         new Blocks();
         new Items();
         new ItemGroups();

@@ -16,8 +16,6 @@ public class ItemGroups {
     public static final RegistryKey<ItemGroup> FOOD = keyOf("food");
     public static final RegistryKey<ItemGroup> COMBAT = keyOf("combat");
 
-    public ItemGroups() {}
-
     private static RegistryKey<ItemGroup> keyOf(String id) {
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(Main.MOD_ID, id));
     }

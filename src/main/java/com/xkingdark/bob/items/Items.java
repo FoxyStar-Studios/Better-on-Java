@@ -20,20 +20,32 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class Items {
-    public static final Item WAYSTONE = register(Blocks.WAYSTONE);
-    public static final Item CORSTINITE_HELMET = register("corstinite_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));
-    public static final Item CORSTINITE_CHESTPLATE = register("corstinite_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.CHESTPLATE, settings));
-    public static final Item CORSTINITE_LEGGINGS = register("corstinite_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.LEGGINGS, settings));
-    public static final Item CORSTINITE_BOOTS = register("corstinite_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS, settings));
-    public static final Item MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
-    public static final Item MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
+    public static final Item WAYSTONE;
+    public static final Item CORSTINITE_HELMET;
+    public static final Item CORSTINITE_CHESTPLATE;
+    public static final Item CORSTINITE_LEGGINGS;
+    public static final Item CORSTINITE_BOOTS;
+    public static final Item MUTTON_CHOPS_RAW;
+    public static final Item MUTTON_CHOPS_COOKED;
 
-    public Items() {}
+    static {
+        WAYSTONE = register(Blocks.WAYSTONE);
 
+        CORSTINITE_HELMET = register("corstinite_helmet", (settings) ->
+                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));
+        CORSTINITE_CHESTPLATE = register("corstinite_chestplate", (settings) ->
+                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.CHESTPLATE, settings));
+        CORSTINITE_LEGGINGS = register("corstinite_leggings", (settings) ->
+                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.LEGGINGS, settings));
+        CORSTINITE_BOOTS = register("corstinite_boots", (settings) ->
+                new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS, settings));
+
+        MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
+        MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
+
+    }
+
+    
     private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
         return (settings) -> new BlockItem(block, settings.useItemPrefixedTranslationKey());
     }
