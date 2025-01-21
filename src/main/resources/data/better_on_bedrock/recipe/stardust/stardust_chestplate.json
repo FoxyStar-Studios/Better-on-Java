@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "minecraft:netherite_chestplate",
+  "addition": "better_on_bedrock:stardust_ingot",
+  "template": "better_on_bedrock:stardust_smithing_template",
+  "result": {
+    "id": "better_on_bedrock:stardust_chestplate",
+    "count": 1
+  }
+}
