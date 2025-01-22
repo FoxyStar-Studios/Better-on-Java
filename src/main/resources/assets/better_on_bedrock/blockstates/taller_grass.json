@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "better_on_bedrock:block/nature/flowers/taller_grass/taller_grass_bottom"
+    },
+    "half=upper": {
+      "model": "better_on_bedrock:block/nature/flowers/taller_grass/taller_grass_top"
+    }
+  }
+}

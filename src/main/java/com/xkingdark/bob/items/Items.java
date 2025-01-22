@@ -50,6 +50,8 @@ public class Items {
 
     public static final Item PINK_LAVENDER;
     public static final Item TALL_LAVENDER;
+    public static final Item BLUEGROD;
+    public static final Item TALLER_GRASS;
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
@@ -101,6 +103,8 @@ public class Items {
 
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
+        BLUEGROD = register(Blocks.BLUEGROD);
+        TALLER_GRASS = register(Blocks.TALLER_GRASS);
     }
 
 
