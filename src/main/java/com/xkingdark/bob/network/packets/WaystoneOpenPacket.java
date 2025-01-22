@@ -7,9 +7,12 @@ import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.util.math.BlockPos;
 import com.xkingdark.bob.network.Packets;
 
-public record WaystoneOpenPacket(Boolean isBlock, BlockPos blockPos) implements CustomPayload {
+public record WaystoneOpenPacket(
+    Boolean isFromBlock,
+    BlockPos blockPos
+) implements CustomPayload {
     public static final PacketCodec<RegistryByteBuf, WaystoneOpenPacket> CODEC = PacketCodec.tuple(
-            PacketCodecs.BOOLEAN, WaystoneOpenPacket::isBlock,
+            PacketCodecs.BOOLEAN, WaystoneOpenPacket::isFromBlock,
             BlockPos.PACKET_CODEC, WaystoneOpenPacket::blockPos,
             WaystoneOpenPacket::new
     );

@@ -8,24 +8,32 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.ElementListWidget;
 import net.minecraft.text.Text;
+import net.minecraft.util.math.BlockPos;
 
 @Environment(EnvType.CLIENT)
 public class WaystoneScreen extends Screen {
-    public WaystoneScreen() {
+    public final Boolean isFromBlock;
+    public final BlockPos blockPos;
+
+
+    public WaystoneScreen(Boolean isFromBlock, BlockPos blockPos) {
         super(Text.literal("Waystone"));
+        this.isFromBlock = isFromBlock;
+        this.blockPos = blockPos;
     }
 
     @Override
     protected void init() {
         this.addDrawableChild(
-                ButtonWidget.builder(Text.literal("Button 1"), button -> {
-                    if (client == null || client.player == null)
-                        return;
+            ButtonWidget.builder(Text.literal("Button 1"), button -> {
+                if (client == null || client.player == null)
+                    return;
 
-
-                    client.setScreen(null);
-                    ClientPlayNetworking.send(new WaystoneHandlePacket(0));
-                }).build()
+                client.setScreen(null);
+                ClientPlayNetworking.send(
+                    new WaystoneHandlePacket(this.isFromBlock, this.blockPos, 0)
+                );
+            }).build()
         );
     }
 }
