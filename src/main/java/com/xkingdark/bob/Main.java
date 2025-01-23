@@ -1,6 +1,8 @@
 package com.xkingdark.bob;
 
+import com.xkingdark.bob.helpers.Registry;
 import com.xkingdark.bob.network.NetworkHandler;
+import com.xkingdark.bob.sound.SoundEvents;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +21,12 @@ public class Main implements ModInitializer {
     }
 
     static {
+        Registry.initialize();
+
         new Blocks();
         new Items();
         new ItemGroups();
+        new SoundEvents();
 
         NetworkHandler.registerServerPackets();
         NetworkHandler.registerReceivers();
