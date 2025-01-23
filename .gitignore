@@ -2,3 +2,4 @@
 /.idea
 /build
 /run
+src/client/java/com/xkingdark/bob/client/helpers/Registry.java

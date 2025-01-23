@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "better_on_bedrock:tall_lavender",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
+          "name": "better_on_bedrock:tall_lavender"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "better_on_bedrock:blocks/tall_lavenderWw"
+}

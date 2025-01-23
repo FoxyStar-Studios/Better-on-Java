@@ -1,4 +1,10 @@
 {
+  "ui.toast.challenge_complete": {
+    "replace": true,
+    "sounds": [
+      { "name": "better_on_bedrock:toasts/epic_toast", "stream": true }
+    ]
+  },
   "music.game": {
     "replace": false,
     "sounds": [
