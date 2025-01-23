@@ -7,6 +7,8 @@ import com.xkingdark.bob.client.screens.WaystoneScreen;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.minecraft.client.network.ClientAdvancementManager;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.util.InputUtil;

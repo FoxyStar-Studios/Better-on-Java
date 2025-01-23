@@ -1,0 +1,14 @@
+{
+  "music_disc.fox": {
+    "sounds": [ "better_on_bedrock:music/records/fox" ]
+  },
+  "music_disc.stardust": {
+    "sounds": [ "better_on_bedrock:music/records/stardust" ]
+  },
+  "music_disc.stellar_crystals": {
+    "sounds": [ "better_on_bedrock:music/records/stellar_crystals" ]
+  },
+  "music_disc.travelers": {
+    "sounds": [ "better_on_bedrock:music/records/travelers" ]
+  }
+}

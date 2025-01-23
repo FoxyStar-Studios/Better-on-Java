@@ -1,0 +1,10 @@
+{
+  "sound_event": {
+    "sound_id": "better_on_bedrock:music_disc.stellar_crystals"
+  },
+  "description": {
+    "translate": "jukebox_song.better_on_bedrock.stellar_crystals"
+  },
+  "comparator_output": 13,
+  "length_in_seconds": 166.0
+}

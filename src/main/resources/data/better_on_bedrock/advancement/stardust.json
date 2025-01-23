@@ -1,0 +1,31 @@
+{
+  "parent": "better_on_bedrock:root",
+  "display": {
+    "frame": "challenge",
+    "icon": {
+      "id": "better_on_bedrock:stardust_chestplate",
+      "count": 1
+    },
+    "title": { "translate": "advancements.better_on_bedrock.obtain_stardust.title" },
+    "description": { "translate": "advancements.better_on_bedrock.obtain_stardust.description" },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "sends_telemetry_event": true,
+  "requirements": [
+    [ "has_full_stardust_set" ]
+  ],
+  "criteria": {
+    "has_full_stardust_set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "better_on_bedrock:stardust_helmet" },
+          { "items": "better_on_bedrock:stardust_chestplate" },
+          { "items": "better_on_bedrock:stardust_leggings" },
+          { "items": "better_on_bedrock:stardust_boots" }
+        ]
+      }
+    }
+  }
+}

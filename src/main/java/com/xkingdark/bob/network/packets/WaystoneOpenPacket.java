@@ -12,9 +12,9 @@ public record WaystoneOpenPacket(
     BlockPos blockPos
 ) implements CustomPayload {
     public static final PacketCodec<RegistryByteBuf, WaystoneOpenPacket> CODEC = PacketCodec.tuple(
-            PacketCodecs.BOOLEAN, WaystoneOpenPacket::isFromBlock,
-            BlockPos.PACKET_CODEC, WaystoneOpenPacket::blockPos,
-            WaystoneOpenPacket::new
+        PacketCodecs.BOOLEAN, WaystoneOpenPacket::isFromBlock,
+        BlockPos.PACKET_CODEC, WaystoneOpenPacket::blockPos,
+        WaystoneOpenPacket::new
     );
 
     @Override

@@ -21,9 +21,9 @@ public final class Blocks {
 
     static {
         WAYSTONE = Blocks.register("waystone", WaystoneBlock::new,
-                AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
+            AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
         STARDUST_ORE = Blocks.register("stardust_ore",
-                AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
+            AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
         PINK_LAVENDER = Blocks.register("pink_lavender", ShortPlantBlock::new,
             AbstractBlock.Settings.create()
                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
@@ -33,22 +33,22 @@ public final class Blocks {
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         TALL_LAVENDER = Blocks.register("tall_lavender", TallFlowerBlock::new,
             AbstractBlock.Settings.create()
-                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                 .offset(AbstractBlock.OffsetType.XZ)
-                 .noCollision().burnable()
-                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XZ)
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         BLUEGROD = Blocks.register("bluegrod", TallFlowerBlock::new,
             AbstractBlock.Settings.create()
-                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                 .offset(AbstractBlock.OffsetType.XZ)
-                 .noCollision().burnable()
-                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XZ)
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         TALLER_GRASS = Blocks.register("taller_grass", TallFlowerBlock::new,
             AbstractBlock.Settings.create()
-                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                 .offset(AbstractBlock.OffsetType.XZ)
-                 .noCollision().burnable()
-                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XZ)
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
     }
 
 

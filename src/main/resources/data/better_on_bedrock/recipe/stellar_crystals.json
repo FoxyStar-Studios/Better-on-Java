@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "better_on_bedrock:broken_stellar_crystals",
+  "addition": "better_on_bedrock:stardust_ingot",
+  "template": "better_on_bedrock:stardust_upgrade_smithing_template",
+  "result": {
+    "id": "better_on_bedrock:music_disc_stellar_crystals",
+    "count": 1
+  }
+}

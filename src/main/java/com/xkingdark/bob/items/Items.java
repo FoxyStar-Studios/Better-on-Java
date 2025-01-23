@@ -2,6 +2,7 @@ package com.xkingdark.bob.items;
 
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
+import com.xkingdark.bob.blocks.jukebox.JukeboxSongs;
 import com.xkingdark.bob.items.components.FoodComponents;
 import com.xkingdark.bob.items.equipment.ArmorMaterials;
 import com.xkingdark.bob.items.tools.ToolMaterials;
@@ -47,6 +48,12 @@ public class Items {
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
     public static final Item BAGUETTE;
+
+    public static final Item MUSIC_DISC_FOX;
+    public static final Item MUSIC_DISC_STARDUST;
+    public static final Item MUSIC_DISC_STELLAR_CRYSTALS;
+    public static final Item MUSIC_DISC_TRAVELERS;
+    public static final Item BROKEN_STELLAR_CRYSTALS;
 
     public static final Item STARDUST_ORE;
 
@@ -105,6 +112,17 @@ public class Items {
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
         BAGUETTE = register("baguette", new Item.Settings().food(FoodComponents.BAGUETTE));
 
+        MUSIC_DISC_FOX = register("music_disc_fox",
+            new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON).jukeboxPlayable(JukeboxSongs.FOX));
+        MUSIC_DISC_STARDUST = register("music_disc_stardust",
+            new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON).jukeboxPlayable(JukeboxSongs.STARDUST));
+        MUSIC_DISC_STELLAR_CRYSTALS = register("music_disc_stellar_crystals",
+            new Item.Settings().maxCount(1).rarity(Rarity.RARE).jukeboxPlayable(JukeboxSongs.STELLAR_CRYSTALS));
+        MUSIC_DISC_TRAVELERS = register("music_disc_travelers",
+            new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON).jukeboxPlayable(JukeboxSongs.TRAVELERS));
+        BROKEN_STELLAR_CRYSTALS = register("broken_stellar_crystals", ItemDescription::new,
+            new Item.Settings().maxCount(1).rarity(Rarity.RARE));
+
         STARDUST_ORE = register(Blocks.STARDUST_ORE);
 
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
@@ -136,7 +154,7 @@ public class Items {
 
     public static Item register(Block block, UnaryOperator<Item.Settings> settingsOperator) {
         return register(block, (blockx, settings) ->
-                new BlockItem(blockx, (Item.Settings)settingsOperator.apply(settings)));
+            new BlockItem(blockx, (Item.Settings)settingsOperator.apply(settings)));
     }
 
     public static Item register(Block block, BiFunction<Block, Item.Settings, Item> factory) {

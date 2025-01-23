@@ -9,16 +9,16 @@ import java.util.Map;
 
 public interface ArmorMaterials {
     ArmorMaterial CORSTINITE = new ArmorMaterial(37, Map.of(
-            EquipmentType.HELMET, 3,
-            EquipmentType.CHESTPLATE, 8,
-            EquipmentType.LEGGINGS, 6,
-            EquipmentType.BOOTS, 3
+        EquipmentType.HELMET, 3,
+        EquipmentType.CHESTPLATE, 8,
+        EquipmentType.LEGGINGS, 6,
+        EquipmentType.BOOTS, 3
     ), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ItemTags.CORSTINITE, EquipmentAssetKeys.CORSTINITE);
 
     ArmorMaterial STARDUST = new ArmorMaterial(37, Map.of(
-            EquipmentType.HELMET, 3,
-            EquipmentType.CHESTPLATE, 8,
-            EquipmentType.LEGGINGS, 6,
-            EquipmentType.BOOTS, 3
+        EquipmentType.HELMET, 3,
+        EquipmentType.CHESTPLATE, 8,
+        EquipmentType.LEGGINGS, 6,
+        EquipmentType.BOOTS, 3
     ), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ItemTags.STARDUST, EquipmentAssetKeys.STARDUST);
 }

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "icon": {
+      "id": "minecraft:nether_star",
+      "count": 1
+    },
+    "title": { "translate": "advancements.better_on_bedrock.root.title" },
+    "description": { "translate": "advancements.better_on_bedrock.root.description" },
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "sends_telemetry_event": true,
+  "requirements": [
+    [ "move" ]
+  ],
+  "criteria": {
+    "move": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "movement": {
+            "speed": { "min": 0.01 }
+          }
+        }
+      }
+    }
+  }
+}

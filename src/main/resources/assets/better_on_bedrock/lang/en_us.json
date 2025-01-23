@@ -1,13 +1,18 @@
 {
+  "category.better_on_bedrock.keybinds": "Better on Bedrock",
+  "key.better_on_bedrock.test": "Test",
+
+  "advancements.better_on_bedrock.root.title": "First Day?",
+  "advancements.better_on_bedrock.root.description": "Play Better on Bedrock!",
+  "advancements.better_on_bedrock.obtain_stardust.title": "Stardust!",
+  "advancements.better_on_bedrock.obtain_stardust.description": "Obtain a full set of Stardust Armor",
+
   "itemGroup.betterOnBedrock.building": "Better on Bedrock: Building Blocks",
   "itemGroup.betterOnBedrock.natural": "Better on Bedrock: Natural Blocks",
-  "itemGroup.betterOnBedrock.tools": "Better on Bedrock: Tools",
+  "itemGroup.betterOnBedrock.tools": "Better on Bedrock: Tools & Utils",
   "itemGroup.betterOnBedrock.combat": "Better on Bedrock: Combat",
   "itemGroup.betterOnBedrock.upgrades": "Better on Bedrock: Upgrades",
   "itemGroup.betterOnBedrock.food": "Better on Bedrock: Food",
-
-  "category.better_on_bedrock.keybinds": "Better on Bedrock",
-  "key.better_on_bedrock.test": "Test",
 
 
   "block.better_on_bedrock.waystone": "Waystone",
@@ -49,8 +54,23 @@
   "item.better_on_bedrock.stardust": "Stardust",
   "item.better_on_bedrock.stardust_nugget": "Stardust Nugget",
 
-  "advancements.obtain_stardust.title": "Stardust!",
-  "advancements.obtain_stardust.description": "Obtain a full set of Stardust Armor",
+  "item.better_on_bedrock.music_disc_fox": "Music Disc",
+  "item.better_on_bedrock.music_disc_fox.desc": "PatchyTheFox - Fox",
+  "item.better_on_bedrock.music_disc_stardust": "Music Disc",
+  "item.better_on_bedrock.music_disc_stardust.desc": "PatchyTheFox - Stardust",
+  "item.better_on_bedrock.music_disc_stellar_crystals": "Music Disc",
+  "item.better_on_bedrock.music_disc_stellar_crystals.desc": "Elektrika - Stellar Crystals",
+  "item.better_on_bedrock.broken_stellar_crystals": "Broken Music Disc",
+  "item.better_on_bedrock.broken_stellar_crystals.desc": "Elektrika - Stellar Crystals",
+  "item.better_on_bedrock.music_disc_travelers": "Music Disc",
+  "item.better_on_bedrock.music_disc_travelers.desc": "J. Rivers - Travelers",
+
+  "tag.item.better_on_bedrock.copper_tool_materials": "Copper Tool Materials",
+
+  "jukebox_song.better_on_bedrock.fox": "PatchyTheFox - Fox",
+  "jukebox_song.better_on_bedrock.stardust": "PatchyTheFox - Stardust",
+  "jukebox_song.better_on_bedrock.stellar_crystals": "Elektrika - Stellar Crystals",
+  "jukebox_song.better_on_bedrock.travelers": "J. Rivers - Travelers",
   
   "enchantment.better_on_bedrock.vein_miner": "Vein Miner"
 }

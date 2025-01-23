@@ -2,14 +2,17 @@ package com.xkingdark.bob.items;
 
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import java.util.Objects;
+import java.util.stream.IntStream;
 
 public class ItemGroups {
     public static final RegistryKey<ItemGroup> BUILDING = keyOf("building");
@@ -39,6 +42,8 @@ public class ItemGroups {
             .entries((displayContext, entries) -> {
                 entries.add(Items.PINK_LAVENDER);
                 entries.add(Items.TALL_LAVENDER);
+                entries.add(Items.BLUEGROD);
+                entries.add(Items.TALLER_GRASS);
                 entries.add(Items.STARDUST_ORE);
             }).build()
         );
@@ -53,6 +58,10 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_PICKAXE);
                 entries.add(Items.STARDUST_SHOVEL);
                 entries.add(Items.STARDUST_HOE);
+
+                entries.add(Items.MUSIC_DISC_FOX);
+                entries.add(Items.MUSIC_DISC_STARDUST);
+                entries.add(Items.MUSIC_DISC_TRAVELERS);
             }).build()
         );
 
@@ -88,11 +97,57 @@ public class ItemGroups {
             .displayName(Text.translatable("itemGroup.betterOnBedrock.upgrades"))
             .icon(() -> new ItemStack(Items.STARDUST_UPGRADE))
             .entries((displayContext, entries) -> {
-                entries.add(Items.STARDUST_UPGRADE);
-                entries.add(Items.STARDUST_INGOT);
-                entries.add(Items.STARDUST);
                 entries.add(Items.STARDUST_NUGGET);
-            }).special().build()
+                entries.add(Items.STARDUST);
+                entries.add(Items.STARDUST_INGOT);
+                entries.add(Items.STARDUST_UPGRADE);
+
+                displayContext.lookup().getOptional(RegistryKeys.ENCHANTMENT).ifPresent(registryWrapper -> {
+					addMaxLevelEnchantedBooks(entries, registryWrapper, ItemGroup.StackVisibility.PARENT_TAB_ONLY);
+					addAllLevelEnchantedBooks(entries, registryWrapper, ItemGroup.StackVisibility.SEARCH_TAB_ONLY);
+				});
+            }).build()
         );
+    }
+
+    private static void addMaxLevelEnchantedBooks(
+        ItemGroup.Entries entries,
+        RegistryWrapper<Enchantment> registryWrapper,
+        ItemGroup.StackVisibility stackVisibility
+    ) {
+        registryWrapper.streamEntries()
+            .filter(entry -> {
+                Identifier identifier = Identifier.tryParse(entry.getIdAsString());
+                if (identifier == null)
+                    return false;
+
+                return identifier.getNamespace().equals(Main.MOD_ID);
+            })
+            .map(
+                enchantmentEntry -> EnchantmentHelper.getEnchantedBookWith(
+                    new EnchantmentLevelEntry(enchantmentEntry, ((Enchantment)enchantmentEntry.value()).getMaxLevel())
+                )
+            )
+            .forEach(stack -> entries.add(stack, stackVisibility));
+    }
+
+    private static void addAllLevelEnchantedBooks(
+        ItemGroup.Entries entries,
+        RegistryWrapper<Enchantment> registryWrapper,
+        ItemGroup.StackVisibility stackVisibility
+    ) {
+        registryWrapper.streamEntries()
+            .filter(entry -> {
+                Identifier identifier = Identifier.tryParse(entry.getIdAsString());
+                if (identifier == null)
+                    return false;
+
+                return identifier.getNamespace().equals(Main.MOD_ID);
+            })
+            .flatMap(
+                enchantmentEntry -> IntStream.rangeClosed(((Enchantment)enchantmentEntry.value()).getMinLevel(), ((Enchantment)enchantmentEntry.value()).getMaxLevel())
+                    .mapToObj(level -> EnchantmentHelper.getEnchantedBookWith(new EnchantmentLevelEntry(enchantmentEntry, level)))
+            )
+            .forEach(stack -> entries.add(stack, stackVisibility));
     }
 }

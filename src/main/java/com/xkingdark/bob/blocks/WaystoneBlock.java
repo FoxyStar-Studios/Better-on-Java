@@ -31,9 +31,9 @@ public class WaystoneBlock extends Block implements Waterloggable {
         super(settings);
 
         BlockState state = this.stateManager.getDefaultState()
-                .with(FACING, Direction.NORTH)
-                .with(HALF, DoubleBlockHalf.LOWER)
-                .with(WATERLOGGED, false);
+            .with(FACING, Direction.NORTH)
+            .with(HALF, DoubleBlockHalf.LOWER)
+            .with(WATERLOGGED, false);
         this.setDefaultState(state);
     }
 
@@ -46,8 +46,8 @@ public class WaystoneBlock extends Block implements Waterloggable {
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         FluidState fluidState = world.getFluidState(pos.up());
         BlockState blockState = state
-                .with(HALF, DoubleBlockHalf.UPPER)
-                .with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+            .with(HALF, DoubleBlockHalf.UPPER)
+            .with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
         world.setBlockState(pos.up(), blockState);
     }
 
@@ -102,9 +102,9 @@ public class WaystoneBlock extends Block implements Waterloggable {
         FluidState fluidState = world.getFluidState(blockPos);
         if (world.getBlockState(up).canReplace(context)) {
             return this.getDefaultState()
-                    .with(FACING, context.getHorizontalPlayerFacing().getOpposite())
-                    .with(HALF, DoubleBlockHalf.LOWER)
-                    .with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+                .with(FACING, context.getHorizontalPlayerFacing().getOpposite())
+                .with(HALF, DoubleBlockHalf.LOWER)
+                .with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
         }
 
         return null;
