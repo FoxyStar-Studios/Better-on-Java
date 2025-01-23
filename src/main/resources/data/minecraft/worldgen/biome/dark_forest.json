@@ -7,6 +7,7 @@
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,
+    "grass_color_modifier": "dark_forest",
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -82,15 +83,14 @@
     ],
     [
       "minecraft:glow_lichen",
+      "better_on_bedrock:trees_roofed",
       "minecraft:forest_flowers",
-      "better_on_bedrock:trees_forest",
       "minecraft:flower_default",
-      "better_on_bedrock:patch_grass_birch",
+      "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin",
-      "better_on_bedrock:desert_well"
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -132,12 +132,6 @@
         "maxCount": 4,
         "minCount": 4,
         "weight": 8
-      },
-      {
-        "type": "minecraft:wolf",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 5
       }
     ],
     "misc": [],

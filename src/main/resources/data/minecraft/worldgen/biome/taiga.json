@@ -13,19 +13,8 @@
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000
     },
-    "music": [
-      {
-        "data": {
-          "max_delay": 24000,
-          "min_delay": 12000,
-          "replace_current_music": false,
-          "sound": "minecraft:music.overworld.forest"
-        },
-        "weight": 1
-      }
-    ],
     "music_volume": 1.0,
-    "sky_color": 7972607,
+    "sky_color": 8233983,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
@@ -82,15 +71,15 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:forest_flowers",
-      "better_on_bedrock:trees_forest",
+      "minecraft:patch_large_fern",
+      "better_on_bedrock:trees_spruce",
       "minecraft:flower_default",
-      "better_on_bedrock:patch_grass_birch",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
+      "minecraft:patch_grass_taiga_2",
+      "minecraft:brown_mushroom_taiga",
+      "minecraft:red_mushroom_taiga",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "better_on_bedrock:desert_well"
+      "minecraft:patch_berry_common"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -137,7 +126,19 @@
         "type": "minecraft:wolf",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 5
+        "weight": 8
+      },
+      {
+        "type": "minecraft:rabbit",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 4
+      },
+      {
+        "type": "minecraft:fox",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 8
       }
     ],
     "misc": [],
@@ -202,5 +203,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.7
+  "temperature": 0.25
 }
