@@ -42,6 +42,8 @@ public class Items {
     public static final Item STARDUST;
     public static final Item STARDUST_NUGGET;
 
+     public static final Item COPPER_PICKAXE;
+
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
     public static final Item BAGUETTE;
@@ -81,7 +83,7 @@ public class Items {
             (new Item.Settings()).fireproof());
         STARDUST_PICKAXE = register("stardust_pickaxe", (settings) ->
                 new PickaxeItem(ToolMaterials.STARDUST, 1.0F, -2.8F, settings),
-            (new Item.Settings()).fireproof());
+            (new Item.Settings()));
         STARDUST_SHOVEL = register("stardust_shovel", (settings) ->
                 new ShovelItem(ToolMaterials.STARDUST, 1.5F, -3.0F, settings),
             (new Item.Settings()).fireproof());
@@ -94,6 +96,10 @@ public class Items {
         STARDUST_INGOT = register("stardust_ingot");
         STARDUST = register("stardust");
         STARDUST_NUGGET = register("stardust_nugget");
+
+        COPPER_PICKAXE = register("copper_pickaxe", (settings) ->
+                new PickaxeItem(ToolMaterials.COPPER, 1.0F, -2.8F, settings),
+            (new Item.Settings()));
 
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
