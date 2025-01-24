@@ -1,0 +1,14 @@
+{
+    "structures": [
+        {
+            "structure": "better_on_bedrock:cherry_village",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 2132768863,
+        "separation": 64,
+        "spacing": 80
+    }
+}

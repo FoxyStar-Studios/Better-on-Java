@@ -1,0 +1,78 @@
+{
+    "name": "better_on_bedrock:cherry_village/decorations",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 44,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/cherry_bench",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 20,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/cherry_tap",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 44,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/cherry_pond",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 37,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/campfire",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 37,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/log_pile",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 90,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/buildings/cherry_house_small",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 90,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_medium_house",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 90,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_large_house",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

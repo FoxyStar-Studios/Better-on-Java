@@ -1,0 +1,15 @@
+{
+    "name": "better_on_bedrock:cherry_village/villager",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 66,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/unemployed_villager",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

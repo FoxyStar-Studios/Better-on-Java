@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:jigsaw",
+    "biomes": [
+        "minecraft:cherry_grove"
+    ],
+    "step": "surface_structures",
+    "spawn_overrides": {},
+    "start_pool": "better_on_bedrock:cherry_village/roads/cherry_road_center",
+    "size": 6,
+    "start_height": {
+        "absolute": 1
+    },
+    "project_start_to_heightmap": "WORLD_SURFACE_WG",
+    "terrain_adaptation": "beard_thin",
+    "max_distance_from_center": 100,
+    "use_expansion_hack": true
+}

@@ -1,0 +1,15 @@
+{
+    "name": "better_on_bedrock:cherry_village/roads/cross_road",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 100,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/roads/cherry_cross_road_s",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

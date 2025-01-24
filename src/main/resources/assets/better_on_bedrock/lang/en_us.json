@@ -6,6 +6,8 @@
   "advancements.better_on_bedrock.root.description": "Play Better on Bedrock!",
   "advancements.better_on_bedrock.obtain_stardust.title": "Stardust!",
   "advancements.better_on_bedrock.obtain_stardust.description": "Obtain a full set of Stardust Armor",
+  "advancements.story.copper_tools.title": "Oxidized Tools!",
+  "advancements.story.copper_tools.description": "Obtain a Copper Pickaxe",
 
   "itemGroup.betterOnBedrock.building": "Better on Bedrock: Building Blocks",
   "itemGroup.betterOnBedrock.natural": "Better on Bedrock: Natural Blocks",
@@ -72,5 +74,6 @@
   "jukebox_song.better_on_bedrock.stellar_crystals": "Elektrika - Stellar Crystals",
   "jukebox_song.better_on_bedrock.travelers": "J. Rivers - Travelers",
   
-  "enchantment.better_on_bedrock.vein_miner": "Vein Miner"
+  "enchantment.better_on_bedrock.vein_miner": "Vein Miner",
+  "enchantment.better_on_bedrock.tree_capitator": "Tree Capitator"
 }

@@ -1,0 +1,15 @@
+{
+    "name": "better_on_bedrock:cherry_village/center_decorations",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 66,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/center_cherry_tree",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "better_on_bedrock:cherry_village/farm",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 66,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/pumpkin_farm",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 66,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/wheat_farm",
+                "processors": "better_on_bedrock:farm_cherry",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

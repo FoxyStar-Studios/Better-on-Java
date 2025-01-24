@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:story/upgrade_tools",
+  "display": {
+    "icon": {
+      "id": "better_on_bedrock:copper_pickaxe",
+      "count": 1
+    },
+    "title": { "translate": "advancements.story.copper_tools.title" },
+    "description": { "translate": "advancements.story.copper_tools.description" },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "sends_telemetry_event": true,
+  "requirements": [
+    [ "has_copper_pickaxe" ]
+  ],
+  "criteria": {
+    "has_copper_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "better_on_bedrock:copper_pickaxe" }
+        ]
+      }
+    }
+  }
+}

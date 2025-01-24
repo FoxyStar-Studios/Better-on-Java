@@ -52,6 +52,7 @@ public class Enchantments {
             pos.up(), pos.down(),
             pos.north(), pos.south(),
             pos.east(), pos.west()
+
         );
     }
 

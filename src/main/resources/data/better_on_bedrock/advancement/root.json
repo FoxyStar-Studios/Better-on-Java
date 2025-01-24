@@ -18,7 +18,7 @@
     "loot": [
       "minecraft:blocks/suspicious_gravel"
     ],
-    "experience": 50
+    "experience": 10
   },
   "criteria": {
     "move": {

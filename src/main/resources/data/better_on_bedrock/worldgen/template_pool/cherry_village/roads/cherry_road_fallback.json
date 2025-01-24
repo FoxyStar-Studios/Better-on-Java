@@ -1,0 +1,24 @@
+{
+    "name": "better_on_bedrock:cherry_village/roads/cherry_road_fallback",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 40,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_house_small",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 40,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_farmer_house",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}
