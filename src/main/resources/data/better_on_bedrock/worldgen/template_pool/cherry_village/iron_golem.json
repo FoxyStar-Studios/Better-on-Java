@@ -1,0 +1,24 @@
+{
+    "name": "better_on_bedrock:cherry_village/iron_golem",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 66,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/iron_golem",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 80,
+            "element": {
+                "location": "minecraft:empty",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}
