@@ -1,15 +1,82 @@
 package com.xkingdark.bob.items.components;
 
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.item.Item;
 
 public class FoodComponents {
     public static final FoodComponent MUTTON_CHOPS_RAW;
     public static final FoodComponent MUTTON_CHOPS_COOKED;
     public static final FoodComponent BAGUETTE;
+    public static final FoodComponent BAKED_EGGPLANT;
+    public static final FoodComponent BAKED_ONION;
+    public static final FoodComponent BARLEY_STEW;
+    public static final FoodComponent SWEET_BERRY_PIE;
+    public static final FoodComponent SWEET_BERRY_PIE_SLICE;
+    public static final FoodComponent CABBAGE_LEAF;
+    public static final FoodComponent EGGPLANT;
+    public static final FoodComponent GRAPE;
+    public static final FoodComponent BLUE_BERRY;
+    public static final FoodComponent HEALTHY_CARROT;
+    public static final FoodComponent ONION;
+    public static final FoodComponent OPENED_COCONUT;
+    public static final FoodComponent ORANGE;
+    public static final FoodComponent PEACH;
+    public static final FoodComponent SALAD;
+    public static final FoodComponent TOMATO;
+    public static final FoodComponent WILD_CARROT;
+    public static final FoodComponent FUNGUS_STEW;
+    public static final FoodComponent SANDWICH;
+    public static final FoodComponent RAW_DEER_MEAT;
+    public static final FoodComponent COOKED_DEER_MEAT;
+    public static final FoodComponent COOKED_BEEF_PATTY;
+    public static final FoodComponent RAW_BEEF_PATTY;
+    public static final FoodComponent LAVA_STEW;
+    public static final FoodComponent BURGER;
+    public static final FoodComponent FRIED_EGG;
+    public static final FoodComponent GRAPE_PIE;
+    public static final FoodComponent GRAPE_PIE_SLICE;
+    public static final FoodComponent EGG_SANDWICH;
+    public static final FoodComponent END_BERRY;
+    public static final FoodComponent VOIDBERRY_PIE;
+    public static final FoodComponent END_COOKIE;
+    public static final FoodComponent ENDER_STEW;
 
     static {
         MUTTON_CHOPS_RAW = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.3F).build();
         MUTTON_CHOPS_COOKED = (new FoodComponent.Builder()).nutrition(8).saturationModifier(0.8F).build();
-        BAGUETTE = (new FoodComponent.Builder()).nutrition(12).saturationModifier(0.8F).build();
+        BAGUETTE = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        BAKED_EGGPLANT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        BAKED_ONION = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        BARLEY_STEW = (new FoodComponent.Builder()).nutrition(6).saturationModifier(0.8F).build();
+        SWEET_BERRY_PIE = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        SWEET_BERRY_PIE_SLICE = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        CABBAGE_LEAF = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        EGGPLANT = (new FoodComponent.Builder()).nutrition(1).saturationModifier(0.8F).build();
+        GRAPE = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        BLUE_BERRY = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        HEALTHY_CARROT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        ONION = (new FoodComponent.Builder()).nutrition(1).saturationModifier(0.8F).build();
+        OPENED_COCONUT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        ORANGE = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        PEACH = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        SALAD = (new FoodComponent.Builder()).nutrition(4).saturationModifier(0.8F).build();
+        TOMATO = (new FoodComponent.Builder()).nutrition(1).saturationModifier(0.8F).build();
+        WILD_CARROT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        FUNGUS_STEW = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        LAVA_STEW = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        SANDWICH = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        RAW_DEER_MEAT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        COOKED_DEER_MEAT = (new FoodComponent.Builder()).nutrition(4).saturationModifier(0.8F).build();
+        RAW_BEEF_PATTY = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        COOKED_BEEF_PATTY = (new FoodComponent.Builder()).nutrition(4).saturationModifier(0.8F).build();
+        BURGER = (new FoodComponent.Builder()).nutrition(6).saturationModifier(0.8F).build();
+        FRIED_EGG = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        GRAPE_PIE = (new FoodComponent.Builder()).nutrition(4).saturationModifier(0.8F).build();
+        GRAPE_PIE_SLICE = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
+        EGG_SANDWICH = (new FoodComponent.Builder()).nutrition(6).saturationModifier(0.8F).build();
+        END_BERRY = (new FoodComponent.Builder()).nutrition(5).saturationModifier(0.8F).build();
+        VOIDBERRY_PIE = (new FoodComponent.Builder()).nutrition(7).saturationModifier(0.8F).build();
+        END_COOKIE = (new FoodComponent.Builder()).nutrition(5).saturationModifier(0.8F).build();
+        ENDER_STEW = (new FoodComponent.Builder()).nutrition(8).saturationModifier(0.8F).build();
     }
 }

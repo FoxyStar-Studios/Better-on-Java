@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "better_on_bedrock:blocks/stardust_ore",
+  "random_sequence": "better_on_bedrock:blocks/pink_lavender",
   "pools": [
     {
       "bonus_rolls": 0.0,

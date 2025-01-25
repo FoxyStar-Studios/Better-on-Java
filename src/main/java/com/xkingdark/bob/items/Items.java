@@ -28,6 +28,7 @@ public class Items {
     public static final Item CORSTINITE_LEGGINGS;
     public static final Item CORSTINITE_BOOTS;
 
+
     public static final Item STARDUST_HELMET;
     public static final Item STARDUST_CHESTPLATE;
     public static final Item STARDUST_LEGGINGS;
@@ -43,11 +44,53 @@ public class Items {
     public static final Item STARDUST;
     public static final Item STARDUST_NUGGET;
 
-     public static final Item COPPER_PICKAXE;
+    public static final Item COPPER_HELMET;
+    public static final Item COPPER_CHESTPLATE;
+    public static final Item COPPER_LEGGINGS;
+    public static final Item COPPER_BOOTS;
+    public static final Item COPPER_PICKAXE;
+    public static final Item COPPER_SWORD;
+    public static final Item COPPER_AXE;
+    public static final Item COPPER_SHOVEL;
+    public static final Item COPPER_HOE;
 
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
     public static final Item BAGUETTE;
+    public static final Item BAKED_EGGPLANT;
+    public static final Item BAKED_ONION;
+    public static final Item BARLEY_STEW;
+    public static final Item SWEET_BERRY_PIE;
+    public static final Item SWEET_BERRY_PIE_SLICE;
+    public static final Item CABBAGE_LEAF;
+    public static final Item EGGPLANT;
+    public static final Item GRAPE;
+    public static final Item BLUE_BERRY;
+    public static final Item HEALTHY_CARROT;
+    public static final Item ONION;
+    public static final Item OPENED_COCONUT;
+    public static final Item ORANGE;
+    public static final Item PEACH;
+    public static final Item SALAD;
+    public static final Item TOMATO;
+    public static final Item WILD_CARROT;
+    public static final Item FUNGUS_STEW;
+    public static final Item SANDWICH;
+    public static final Item RAW_DEER_MEAT;
+    public static final Item COOKED_DEER_MEAT;
+    public static final Item COOKED_BEEF_PATTY;
+    public static final Item RAW_BEEF_PATTY;
+    public static final Item LAVA_STEW;
+    public static final Item BURGER;
+    public static final Item FRIED_EGG;
+    public static final Item GRAPE_PIE;
+    public static final Item GRAPE_PIE_SLICE;
+    public static final Item EGG_SANDWICH;
+    public static final Item END_BERRY;
+    public static final Item VOIDBERRY_PIE;
+    public static final Item END_COOKIE;
+    public static final Item ENDER_STEW;
+    public static final Item COCONUT;
 
     public static final Item MUSIC_DISC_FOX;
     public static final Item MUSIC_DISC_STARDUST;
@@ -104,13 +147,68 @@ public class Items {
         STARDUST = register("stardust");
         STARDUST_NUGGET = register("stardust_nugget");
 
+        COPPER_HELMET = register("copper_helmet", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.HELMET, settings));
+        COPPER_CHESTPLATE = register("copper_chestplate", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.CHESTPLATE, settings));
+        COPPER_LEGGINGS = register("copper_leggings", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.LEGGINGS, settings));
+        COPPER_BOOTS = register("copper_boots", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.BOOTS, settings));
+        COPPER_SWORD = register("copper_sword", (settings) ->
+                new SwordItem(ToolMaterials.COPPER, 2.0F, -3.4F, settings),
+            (new Item.Settings()).fireproof());
+        COPPER_AXE = register("copper_axe", (settings) ->
+                new AxeItem(ToolMaterials.COPPER, 5.0F, -3.0F, settings),
+            (new Item.Settings()).fireproof());
         COPPER_PICKAXE = register("copper_pickaxe", (settings) ->
                 new PickaxeItem(ToolMaterials.COPPER, 1.0F, -2.8F, settings),
             (new Item.Settings()));
+        COPPER_SHOVEL = register("copper_shovel", (settings) ->
+                new ShovelItem(ToolMaterials.COPPER, 1.5F, -3.0F, settings),
+            (new Item.Settings()).fireproof());
+        COPPER_HOE = register("copper_hoe", (settings) ->
+                new HoeItem(ToolMaterials.COPPER, -4.0F, 0.0F, settings),
+            (new Item.Settings()).fireproof());
 
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
         BAGUETTE = register("baguette", new Item.Settings().food(FoodComponents.BAGUETTE));
+        BAKED_EGGPLANT = register("baked_eggplant", new Item.Settings().food(FoodComponents.BAKED_EGGPLANT));
+        BAKED_ONION = register("baked_onion", new Item.Settings().food(FoodComponents.BAKED_ONION));
+        BARLEY_STEW = register("barley_stew", new Item.Settings().food(FoodComponents.BARLEY_STEW));
+        SWEET_BERRY_PIE = register("sweet_berry_pie", new Item.Settings().food(FoodComponents.SWEET_BERRY_PIE));
+        SWEET_BERRY_PIE_SLICE = register("sweet_berry_pie_slice", new Item.Settings().food(FoodComponents.SWEET_BERRY_PIE_SLICE));
+        CABBAGE_LEAF = register("cabbage_leaf", new Item.Settings().food(FoodComponents.CABBAGE_LEAF));
+        EGGPLANT = register("eggplant", new Item.Settings().food(FoodComponents.EGGPLANT));
+        GRAPE = register("grape", new Item.Settings().food(FoodComponents.GRAPE));
+        BLUE_BERRY = register("blue_berry", new Item.Settings().food(FoodComponents.BLUE_BERRY));
+        HEALTHY_CARROT = register("healthy_carrot", new Item.Settings().food(FoodComponents.HEALTHY_CARROT));
+        ONION = register("onion", new Item.Settings().food(FoodComponents.ONION));
+        OPENED_COCONUT = register("opened_coconut", new Item.Settings().food(FoodComponents.OPENED_COCONUT));
+        ORANGE = register("orange", new Item.Settings().food(FoodComponents.ORANGE));
+        PEACH = register("peach", new Item.Settings().food(FoodComponents.PEACH));
+        SALAD = register("salad", new Item.Settings().food(FoodComponents.SALAD));
+        TOMATO = register("tomato", new Item.Settings().food(FoodComponents.TOMATO));
+        WILD_CARROT = register("wild_carrot", new Item.Settings().food(FoodComponents.WILD_CARROT));
+        FUNGUS_STEW = register("fungus_stew", new Item.Settings().food(FoodComponents.FUNGUS_STEW));
+        LAVA_STEW = register("lava_stew", new Item.Settings().food(FoodComponents.LAVA_STEW));
+        SANDWICH = register("sandwich", new Item.Settings().food(FoodComponents.SANDWICH));
+        RAW_DEER_MEAT = register("raw_deer_meat", new Item.Settings().food(FoodComponents.RAW_DEER_MEAT));
+        COOKED_DEER_MEAT = register("cooked_deer_meat", new Item.Settings().food(FoodComponents.COOKED_DEER_MEAT));
+        RAW_BEEF_PATTY = register("raw_beef_patty", new Item.Settings().food(FoodComponents.RAW_BEEF_PATTY));
+        COOKED_BEEF_PATTY = register("cooked_beef_patty", new Item.Settings().food(FoodComponents.COOKED_BEEF_PATTY));
+        BURGER = register("burger", new Item.Settings().food(FoodComponents.BURGER));
+        FRIED_EGG = register("fried_egg", new Item.Settings().food(FoodComponents.FRIED_EGG));
+        GRAPE_PIE = register("grape_pie", new Item.Settings().food(FoodComponents.GRAPE_PIE));
+        GRAPE_PIE_SLICE = register("grape_pie_slice", new Item.Settings().food(FoodComponents.GRAPE_PIE_SLICE));
+        EGG_SANDWICH = register("egg_sandwich", new Item.Settings().food(FoodComponents.EGG_SANDWICH));
+        END_BERRY = register("end_berry", new Item.Settings().food(FoodComponents.END_BERRY));
+        END_COOKIE = register("end_cookie", new Item.Settings().food(FoodComponents.END_COOKIE));
+        VOIDBERRY_PIE = register("voidberry_pie", new Item.Settings().food(FoodComponents.VOIDBERRY_PIE));
+        ENDER_STEW = register("ender_stew", new Item.Settings().food(FoodComponents.ENDER_STEW));
+        COCONUT = register("coconut");
+        
 
         MUSIC_DISC_FOX = register("music_disc_fox",
             new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON).jukeboxPlayable(JukeboxSongs.FOX));

@@ -19,6 +19,15 @@
                 "projection": "terrain_matching",
                 "element_type": "minecraft:single_pool_element"
             }
+        },
+        {
+            "weight": 100,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/buildings/cherry_house_small",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
         }
     ]
 }

@@ -23,7 +23,7 @@
           "input_predicate": {
             "block": "minecraft:wheat",
             "predicate_type": "minecraft:block_match",
-            "probability": 0.2
+            "probability": 0.3
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -39,7 +39,7 @@
           "input_predicate": {
             "block": "minecraft:wheat",
             "predicate_type": "minecraft:block_match",
-            "probability": 0.1
+            "probability": 0.3
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

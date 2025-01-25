@@ -3,7 +3,7 @@
     "fallback": "minecraft:empty",
     "elements": [
         {
-            "weight": 60,
+            "weight": 90,
             "element": {
                 "location": "better_on_bedrock:cherry_village/buildings/buildings/cherry_house_small",
                 "processors": "minecraft:empty",

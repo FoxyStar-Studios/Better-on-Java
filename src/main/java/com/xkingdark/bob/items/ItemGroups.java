@@ -59,6 +59,12 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_SHOVEL);
                 entries.add(Items.STARDUST_HOE);
 
+                entries.add(Items.COPPER_AXE);
+                entries.add(Items.COPPER_PICKAXE);
+                entries.add(Items.COPPER_SHOVEL);
+                entries.add(Items.COPPER_HOE);
+
+
                 entries.add(Items.MUSIC_DISC_FOX);
                 entries.add(Items.MUSIC_DISC_STARDUST);
                 entries.add(Items.MUSIC_DISC_TRAVELERS);
@@ -80,6 +86,13 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_BOOTS);
                 entries.add(Items.STARDUST_SWORD);
                 entries.add(Items.STARDUST_AXE);
+
+                entries.add(Items.COPPER_HELMET);
+                entries.add(Items.COPPER_CHESTPLATE);
+                entries.add(Items.COPPER_LEGGINGS);
+                entries.add(Items.COPPER_BOOTS);
+                entries.add(Items.COPPER_SWORD);
+                entries.add(Items.COPPER_AXE);
             }).build()
         );
 
@@ -87,9 +100,40 @@ public class ItemGroups {
             .displayName(Text.translatable("itemGroup.betterOnBedrock.food"))
             .icon(() -> new ItemStack(Items.BAGUETTE))
             .entries((displayContext, entries) -> {
-                entries.add(Items.MUTTON_CHOPS_RAW);
-                entries.add(Items.MUTTON_CHOPS_COOKED);
                 entries.add(Items.BAGUETTE);
+                entries.add(Items.BAKED_EGGPLANT);
+                entries.add(Items.BAKED_ONION);
+                entries.add(Items.BARLEY_STEW);
+                entries.add(Items.BLUE_BERRY);
+                entries.add(Items.BURGER);
+                entries.add(Items.CABBAGE_LEAF);
+                entries.add(Items.COCONUT);
+                entries.add(Items.COOKED_BEEF_PATTY);
+                entries.add(Items.COOKED_DEER_MEAT);
+                entries.add(Items.EGGPLANT);
+                entries.add(Items.EGG_SANDWICH);
+                entries.add(Items.END_BERRY);
+                entries.add(Items.END_COOKIE);
+                entries.add(Items.ENDER_STEW);
+                entries.add(Items.FRIED_EGG);
+                entries.add(Items.FUNGUS_STEW);
+                entries.add(Items.GRAPE);
+                entries.add(Items.HEALTHY_CARROT);
+                entries.add(Items.LAVA_STEW);
+                entries.add(Items.MUTTON_CHOPS_RAW); 
+                entries.add(Items.MUTTON_CHOPS_COOKED);
+                entries.add(Items.ONION);
+                entries.add(Items.OPENED_COCONUT);
+                entries.add(Items.PEACH);
+                entries.add(Items.RAW_BEEF_PATTY);
+                entries.add(Items.RAW_DEER_MEAT);
+                entries.add(Items.SALAD);
+                entries.add(Items.SANDWICH);
+                entries.add(Items.SWEET_BERRY_PIE);
+                entries.add(Items.SWEET_BERRY_PIE_SLICE);
+                entries.add(Items.TOMATO);
+                entries.add(Items.VOIDBERRY_PIE);
+                entries.add(Items.WILD_CARROT);
             }).build()
         );
 
