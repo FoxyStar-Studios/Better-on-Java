@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "better_on_bedrock:chorus_fence_gate",
+    "better_on_bedrock:vacant_fence_gate",
+    "better_on_bedrock:voiding_fence_gate"
+  ]
+}

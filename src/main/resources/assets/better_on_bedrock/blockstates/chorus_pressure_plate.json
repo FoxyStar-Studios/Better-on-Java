@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "better_on_bedrock:block/wood/chorus/chorus_pressure_plate"
+    },
+    "powered=true": {
+      "model": "better_on_bedrock:block/wood/chorus/chorus_pressure_plate_down"
+    }
+  }
+}

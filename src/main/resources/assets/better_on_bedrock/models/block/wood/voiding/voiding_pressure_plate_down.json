@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "better_on_bedrock:block/wood/voiding/voiding_planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "chest_boat",
+  "ingredients": [
+    "minecraft:chest",
+    "better_on_bedrock:voiding_boat"
+  ],
+  "result": {
+    "count": 1,
+    "id": "better_on_bedrock:voiding_chest_boat"
+  }
+}

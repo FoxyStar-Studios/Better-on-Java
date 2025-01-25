@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_top",
+  "textures": {
+    "texture": "better_on_bedrock:block/wood/voiding/voiding_trapdoor"
+  }
+}

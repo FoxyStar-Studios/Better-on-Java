@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "better_on_bedrock:block/wood/voiding/voiding_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "better_on_bedrock:block/wood/voiding/voiding_wood"
+    },
+    "axis=z": {
+      "model": "better_on_bedrock:block/wood/voiding/voiding_wood",
+      "x": 90
+    }
+  }
+}

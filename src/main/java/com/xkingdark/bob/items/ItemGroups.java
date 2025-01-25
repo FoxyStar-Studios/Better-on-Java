@@ -30,9 +30,55 @@ public class ItemGroups {
         // Top
         Registry.register(Registries.ITEM_GROUP, BUILDING, ItemGroup.create(ItemGroup.Row.TOP, 0)
             .displayName(Text.translatable("itemGroup.betterOnBedrock.building"))
-            .icon(() -> new ItemStack(net.minecraft.item.Items.STONE))
+            .icon(() -> new ItemStack(Items.VACANT_LOG))
             .entries((displayContext, entries) -> {
-                entries.add(net.minecraft.item.Items.STONE);
+                entries.add(Items.CHORUS_LOG);
+                entries.add(Items.CHORUS_WOOD);
+                entries.add(Items.STRIPPED_CHORUS_LOG);
+                entries.add(Items.STRIPPED_CHORUS_WOOD);
+                entries.add(Items.CHORUS_PLANKS);
+                entries.add(Items.CHORUS_STAIRS);
+                entries.add(Items.CHORUS_SLAB);
+                entries.add(Items.CHORUS_FENCE);
+                entries.add(Items.CHORUS_FENCE_GATE);
+                entries.add(Items.CHORUS_DOOR);
+                entries.add(Items.CHORUS_TRAPDOOR);
+                entries.add(Items.CHORUS_PRESSURE_PLATE);
+                entries.add(Items.CHORUS_BUTTON);
+                entries.add(Items.CHORUS_SIGN);
+                entries.add(Items.CHORUS_HANGING_SIGN);
+
+                entries.add(Items.VACANT_LOG);
+                entries.add(Items.VACANT_WOOD);
+                entries.add(Items.STRIPPED_VACANT_LOG);
+                entries.add(Items.STRIPPED_VACANT_WOOD);
+                entries.add(Items.VACANT_PLANKS);
+                entries.add(Items.VACANT_STAIRS);
+                entries.add(Items.VACANT_SLAB);
+                entries.add(Items.VACANT_FENCE);
+                entries.add(Items.VACANT_FENCE_GATE);
+                entries.add(Items.VACANT_DOOR);
+                entries.add(Items.VACANT_TRAPDOOR);
+                entries.add(Items.VACANT_PRESSURE_PLATE);
+                entries.add(Items.VACANT_BUTTON);
+                entries.add(Items.VACANT_SIGN);
+                entries.add(Items.VACANT_HANGING_SIGN);
+
+                entries.add(Items.VOIDING_LOG);
+                entries.add(Items.VOIDING_WOOD);
+                entries.add(Items.STRIPPED_VOIDING_LOG);
+                entries.add(Items.STRIPPED_VOIDING_WOOD);
+                entries.add(Items.VOIDING_PLANKS);
+                entries.add(Items.VOIDING_STAIRS);
+                entries.add(Items.VOIDING_SLAB);
+                entries.add(Items.VOIDING_FENCE);
+                entries.add(Items.VOIDING_FENCE_GATE);
+                entries.add(Items.VOIDING_DOOR);
+                entries.add(Items.VOIDING_TRAPDOOR);
+                entries.add(Items.VOIDING_PRESSURE_PLATE);
+                entries.add(Items.VOIDING_BUTTON);
+                entries.add(Items.VOIDING_SIGN);
+                entries.add(Items.VOIDING_HANGING_SIGN);
             }).build()
         );
 
@@ -68,6 +114,13 @@ public class ItemGroups {
                 entries.add(Items.MUSIC_DISC_FOX);
                 entries.add(Items.MUSIC_DISC_STARDUST);
                 entries.add(Items.MUSIC_DISC_TRAVELERS);
+
+                entries.add(Items.CHORUS_BOAT);
+                entries.add(Items.CHORUS_CHEST_BOAT);
+                entries.add(Items.VACANT_BOAT);
+                entries.add(Items.VACANT_CHEST_BOAT);
+                entries.add(Items.VOIDING_BOAT);
+                entries.add(Items.VOIDING_CHEST_BOAT);
             }).build()
         );
 

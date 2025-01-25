@@ -3,6 +3,7 @@ package com.xkingdark.bob.items;
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
 import com.xkingdark.bob.blocks.jukebox.JukeboxSongs;
+import com.xkingdark.bob.entities.EntityTypes;
 import com.xkingdark.bob.items.components.FoodComponents;
 import com.xkingdark.bob.items.equipment.ArmorMaterials;
 import com.xkingdark.bob.items.tools.ToolMaterials;
@@ -104,6 +105,60 @@ public class Items {
     public static final Item TALL_LAVENDER;
     public static final Item BLUEGROD;
     public static final Item TALLER_GRASS;
+
+    public static final Item CHORUS_LOG;
+    public static final Item CHORUS_WOOD;
+    public static final Item STRIPPED_CHORUS_LOG;
+    public static final Item STRIPPED_CHORUS_WOOD;
+    public static final Item CHORUS_PLANKS;
+    public static final Item CHORUS_DOOR;
+    public static final Item CHORUS_PRESSURE_PLATE;
+    public static final Item CHORUS_TRAPDOOR;
+    public static final Item CHORUS_BUTTON;
+    public static final Item CHORUS_STAIRS;
+    public static final Item CHORUS_SLAB;
+    public static final Item CHORUS_SIGN;
+    public static final Item CHORUS_HANGING_SIGN;
+    public static final Item CHORUS_FENCE;
+    public static final Item CHORUS_FENCE_GATE;
+    public static final Item CHORUS_BOAT;
+    public static final Item CHORUS_CHEST_BOAT;
+
+    public static final Item VACANT_LOG;
+    public static final Item VACANT_WOOD;
+    public static final Item STRIPPED_VACANT_LOG;
+    public static final Item STRIPPED_VACANT_WOOD;
+    public static final Item VACANT_PLANKS;
+    public static final Item VACANT_DOOR;
+    public static final Item VACANT_PRESSURE_PLATE;
+    public static final Item VACANT_TRAPDOOR;
+    public static final Item VACANT_BUTTON;
+    public static final Item VACANT_STAIRS;
+    public static final Item VACANT_SLAB;
+    public static final Item VACANT_SIGN;
+    public static final Item VACANT_HANGING_SIGN;
+    public static final Item VACANT_FENCE;
+    public static final Item VACANT_FENCE_GATE;
+    public static final Item VACANT_BOAT;
+    public static final Item VACANT_CHEST_BOAT;
+
+    public static final Item VOIDING_LOG;
+    public static final Item VOIDING_WOOD;
+    public static final Item STRIPPED_VOIDING_LOG;
+    public static final Item STRIPPED_VOIDING_WOOD;
+    public static final Item VOIDING_PLANKS;
+    public static final Item VOIDING_DOOR;
+    public static final Item VOIDING_PRESSURE_PLATE;
+    public static final Item VOIDING_TRAPDOOR;
+    public static final Item VOIDING_BUTTON;
+    public static final Item VOIDING_STAIRS;
+    public static final Item VOIDING_SLAB;
+    public static final Item VOIDING_SIGN;
+    public static final Item VOIDING_HANGING_SIGN;
+    public static final Item VOIDING_FENCE;
+    public static final Item VOIDING_FENCE_GATE;
+    public static final Item VOIDING_BOAT;
+    public static final Item VOIDING_CHEST_BOAT;
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
@@ -227,6 +282,72 @@ public class Items {
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
         BLUEGROD = register(Blocks.BLUEGROD);
         TALLER_GRASS = register(Blocks.TALLER_GRASS);
+
+        CHORUS_LOG = register(Blocks.CHORUS_LOG);
+        CHORUS_WOOD = register(Blocks.CHORUS_WOOD);
+        STRIPPED_CHORUS_LOG = register(Blocks.STRIPPED_CHORUS_LOG);
+        STRIPPED_CHORUS_WOOD = register(Blocks.STRIPPED_CHORUS_WOOD);
+        CHORUS_PLANKS = register(Blocks.CHORUS_PLANKS);
+        CHORUS_DOOR = register(Blocks.CHORUS_DOOR);
+        CHORUS_PRESSURE_PLATE = register(Blocks.CHORUS_PRESSURE_PLATE);
+        CHORUS_TRAPDOOR = register(Blocks.CHORUS_TRAPDOOR);
+        CHORUS_BUTTON = register(Blocks.CHORUS_BUTTON);
+        CHORUS_STAIRS = register(Blocks.CHORUS_STAIRS);
+        CHORUS_SLAB = register(Blocks.CHORUS_SLAB);
+        CHORUS_SIGN = register(Blocks.CHORUS_SIGN, (block, settings) ->
+            new SignItem(block, Blocks.CHORUS_WALL_SIGN, settings), new Item.Settings().maxCount(16));
+        CHORUS_HANGING_SIGN = register(Blocks.CHORUS_HANGING_SIGN, (block, settings) ->
+            new HangingSignItem(block, Blocks.CHORUS_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16));
+        CHORUS_FENCE = register(Blocks.CHORUS_FENCE);
+        CHORUS_FENCE_GATE = register(Blocks.CHORUS_FENCE_GATE);
+        CHORUS_BOAT = register("chorus_boat", settings ->
+            new BoatItem(EntityTypes.CHORUS_BOAT, settings), new Item.Settings().maxCount(1));
+        CHORUS_CHEST_BOAT = register("chorus_chest_boat", settings ->
+            new BoatItem(EntityTypes.CHORUS_CHEST_BOAT, settings), new Item.Settings().maxCount(1));
+
+        VACANT_LOG = register(Blocks.VACANT_LOG);
+        VACANT_WOOD = register(Blocks.VACANT_WOOD);
+        STRIPPED_VACANT_LOG = register(Blocks.STRIPPED_VACANT_LOG);
+        STRIPPED_VACANT_WOOD = register(Blocks.STRIPPED_VACANT_WOOD);
+        VACANT_PLANKS = register(Blocks.VACANT_PLANKS);
+        VACANT_DOOR = register(Blocks.VACANT_DOOR);
+        VACANT_PRESSURE_PLATE = register(Blocks.VACANT_PRESSURE_PLATE);
+        VACANT_TRAPDOOR = register(Blocks.VACANT_TRAPDOOR);
+        VACANT_BUTTON = register(Blocks.VACANT_BUTTON);
+        VACANT_STAIRS = register(Blocks.VACANT_STAIRS);
+        VACANT_SLAB = register(Blocks.VACANT_SLAB);
+        VACANT_SIGN = register(Blocks.VACANT_SIGN, (block, settings) ->
+            new SignItem(block, Blocks.VACANT_WALL_SIGN, settings), new Item.Settings().maxCount(16));
+        VACANT_HANGING_SIGN = register(Blocks.VACANT_HANGING_SIGN, (block, settings) ->
+            new HangingSignItem(block, Blocks.VACANT_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16));
+        VACANT_FENCE = register(Blocks.VACANT_FENCE);
+        VACANT_FENCE_GATE = register(Blocks.VACANT_FENCE_GATE);
+        VACANT_BOAT = register("vacant_boat", settings ->
+            new BoatItem(EntityTypes.VACANT_BOAT, settings), new Item.Settings().maxCount(1));
+        VACANT_CHEST_BOAT = register("vacant_chest_boat", settings ->
+            new BoatItem(EntityTypes.VACANT_CHEST_BOAT, settings), new Item.Settings().maxCount(1));
+
+        VOIDING_LOG = register(Blocks.VOIDING_LOG);
+        VOIDING_WOOD = register(Blocks.VOIDING_WOOD);
+        STRIPPED_VOIDING_LOG = register(Blocks.STRIPPED_VOIDING_LOG);
+        STRIPPED_VOIDING_WOOD = register(Blocks.STRIPPED_VOIDING_WOOD);
+        VOIDING_PLANKS = register(Blocks.VOIDING_PLANKS);
+        VOIDING_DOOR = register(Blocks.VOIDING_DOOR);
+        VOIDING_PRESSURE_PLATE = register(Blocks.VOIDING_PRESSURE_PLATE);
+        VOIDING_TRAPDOOR = register(Blocks.VOIDING_TRAPDOOR);
+        VOIDING_BUTTON = register(Blocks.VOIDING_BUTTON);
+        VOIDING_STAIRS = register(Blocks.VOIDING_STAIRS);
+        VOIDING_SLAB = register(Blocks.VOIDING_SLAB);
+        VOIDING_SIGN = register(Blocks.VOIDING_SIGN, (block, settings) ->
+            new SignItem(block, Blocks.VOIDING_WALL_SIGN, settings), new Item.Settings().maxCount(16));
+        VOIDING_HANGING_SIGN = register(Blocks.VOIDING_HANGING_SIGN, (block, settings) ->
+            new HangingSignItem(block, Blocks.VOIDING_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16));
+        VOIDING_FENCE = register(Blocks.VOIDING_FENCE);
+        VOIDING_FENCE_GATE = register(Blocks.VOIDING_FENCE_GATE);
+        VOIDING_BOAT = register("voiding_boat", settings ->
+            new BoatItem(EntityTypes.VOIDING_BOAT, settings), new Item.Settings().maxCount(1));
+        VOIDING_CHEST_BOAT = register("voiding_chest_boat", settings ->
+            new BoatItem(EntityTypes.VOIDING_CHEST_BOAT, settings), new Item.Settings().maxCount(1));
     }
 
 

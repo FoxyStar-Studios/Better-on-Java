@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "better_on_bedrock:blocks/chorus_door",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        { "condition": "minecraft:survives_explosion" }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "better_on_bedrock:chorus_door",
+          "conditions": [
+            {
+              "block": "better_on_bedrock:chorus_door",
+              "condition": "minecraft:block_state_property",
+              "properties": { "half": "lower" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

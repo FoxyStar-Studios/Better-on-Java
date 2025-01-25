@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "better_on_bedrock:block/wood/chorus/voiding_planks"
+  }
+}

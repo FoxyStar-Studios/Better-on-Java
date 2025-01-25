@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "better_on_bedrock:block/wood/voiding/voiding_hanging_sign" }
+  }
+}

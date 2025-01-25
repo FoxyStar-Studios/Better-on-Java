@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "better_on_bedrock:block/wood/chorus/chorus_planks"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#better_on_bedrock:chorus_logs"
+  ],
+  "result": {
+    "count": 4,
+    "id": "better_on_bedrock:chorus_planks"
+  }
+}

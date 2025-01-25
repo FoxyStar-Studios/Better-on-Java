@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "better_on_bedrock:block/wood/chorus/vacant_door_bottom",
+    "top": "better_on_bedrock:block/wood/vacant/vacant_door_top"
+  }
+}

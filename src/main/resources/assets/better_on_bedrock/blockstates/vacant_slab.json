@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "better_on_bedrock:block/wood/vacant/vacant_slab"
+    },
+    "type=double": {
+      "model": "better_on_bedrock:block/wood/vacant/vacant_planks"
+    },
+    "type=top": {
+      "model": "better_on_bedrock:block/wood/vacant/vacant_slab_top"
+    }
+  }
+}

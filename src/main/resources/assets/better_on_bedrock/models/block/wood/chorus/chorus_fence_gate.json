@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "better_on_bedrock:block/wood/chorus/chorus_planks"
+  }
+}
