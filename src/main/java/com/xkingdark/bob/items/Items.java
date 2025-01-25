@@ -283,6 +283,7 @@ public class Items {
         BLUEGROD = register(Blocks.BLUEGROD);
         TALLER_GRASS = register(Blocks.TALLER_GRASS);
 
+        // Chorus Woodset
         CHORUS_LOG = register(Blocks.CHORUS_LOG);
         CHORUS_WOOD = register(Blocks.CHORUS_WOOD);
         STRIPPED_CHORUS_LOG = register(Blocks.STRIPPED_CHORUS_LOG);
@@ -305,6 +306,7 @@ public class Items {
         CHORUS_CHEST_BOAT = register("chorus_chest_boat", settings ->
             new BoatItem(EntityTypes.CHORUS_CHEST_BOAT, settings), new Item.Settings().maxCount(1));
 
+        // Vacant Woodset
         VACANT_LOG = register(Blocks.VACANT_LOG);
         VACANT_WOOD = register(Blocks.VACANT_WOOD);
         STRIPPED_VACANT_LOG = register(Blocks.STRIPPED_VACANT_LOG);
@@ -327,6 +329,7 @@ public class Items {
         VACANT_CHEST_BOAT = register("vacant_chest_boat", settings ->
             new BoatItem(EntityTypes.VACANT_CHEST_BOAT, settings), new Item.Settings().maxCount(1));
 
+        // Voiding Woodset
         VOIDING_LOG = register(Blocks.VOIDING_LOG);
         VOIDING_WOOD = register(Blocks.VOIDING_WOOD);
         STRIPPED_VOIDING_LOG = register(Blocks.STRIPPED_VOIDING_LOG);
