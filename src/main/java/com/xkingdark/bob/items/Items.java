@@ -24,6 +24,9 @@ import java.util.function.UnaryOperator;
 public class Items {
     public static final Item WAYSTONE;
 
+    public static final Item BANE_SPIKE;
+    public static final Item BLADE_OF_THE_NETHER;
+
     public static final Item COPPER_HELMET;
     public static final Item COPPER_CHESTPLATE;
     public static final Item COPPER_LEGGINGS;
@@ -176,6 +179,9 @@ public class Items {
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
+
+        BANE_SPIKE = register("bane_spike", BaneSpikeItem::new);
+        BLADE_OF_THE_NETHER = register("blade_of_the_nether", BladeOfTheNetherItem::new);
 
         COPPER_HELMET = register("copper_helmet", (settings) ->
             new ArmorItem(ArmorMaterials.COPPER, EquipmentType.HELMET, settings));

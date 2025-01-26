@@ -83,6 +83,10 @@
   "entity.better_on_bedrock.voiding_chest_boat": "Voiding Chest Boat",
 
 
+  "item.better_on_bedrock.blade_of_the_nether": "Blade of the Nether",
+  "item.better_on_bedrock.bane_spike": "§pBane Spike§r",
+  "item.better_on_bedrock.bane_spike.desc": "Poisons any hit target",
+
   "item.better_on_bedrock.copper_helmet": "Copper Helmet",
   "item.better_on_bedrock.copper_chestplate": "Copper Chestplate",
   "item.better_on_bedrock.copper_leggings": "Copper Leggings",

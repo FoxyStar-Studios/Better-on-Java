@@ -1,0 +1,28 @@
+package com.xkingdark.bob.items;
+
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
+
+public class BladeOfTheNetherItem extends SwordItem {
+    public BladeOfTheNetherItem(Settings settings) {
+        super(new ToolMaterial(
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+            1569, 5.0F, 2.0F, 8,
+            null
+        ), 12.0F, -2.4F, settings);
+    }
+
+    @Override
+    public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        super.postDamageEntity(stack, target, attacker);
+
+        World world = attacker.getWorld();
+        int TicksPerSecond = MathHelper.floor(world.getTickManager().getTickRate());
+        target.setOnFireForTicks(6 * TicksPerSecond);
+    }
+}

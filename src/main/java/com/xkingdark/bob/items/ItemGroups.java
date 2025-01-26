@@ -216,6 +216,9 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_CHESTPLATE);
                 entries.add(Items.STARDUST_LEGGINGS);
                 entries.add(Items.STARDUST_BOOTS);
+
+                entries.add(Items.BANE_SPIKE);
+                entries.add(Items.BLADE_OF_THE_NETHER);
             }).build()
         );
 
