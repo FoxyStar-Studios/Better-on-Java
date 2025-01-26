@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "better_on_bedrock:copper_helmet",
+    "better_on_bedrock:amethyst_helmet",
+    "better_on_bedrock:shulker_helmet",
     "better_on_bedrock:corstinite_helmet",
     "better_on_bedrock:stardust_helmet"
   ]

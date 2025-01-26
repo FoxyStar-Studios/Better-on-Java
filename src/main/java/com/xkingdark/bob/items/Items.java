@@ -24,11 +24,35 @@ import java.util.function.UnaryOperator;
 public class Items {
     public static final Item WAYSTONE;
 
+    public static final Item COPPER_HELMET;
+    public static final Item COPPER_CHESTPLATE;
+    public static final Item COPPER_LEGGINGS;
+    public static final Item COPPER_BOOTS;
+    public static final Item COPPER_SWORD;
+    public static final Item COPPER_AXE;
+    public static final Item COPPER_PICKAXE;
+    public static final Item COPPER_SHOVEL;
+    public static final Item COPPER_HOE;
+
+    public static final Item AMETHYST_HELMET;
+    public static final Item AMETHYST_CHESTPLATE;
+    public static final Item AMETHYST_LEGGINGS;
+    public static final Item AMETHYST_BOOTS;
+    public static final Item AMETHYST_SWORD;
+    public static final Item AMETHYST_AXE;
+    public static final Item AMETHYST_PICKAXE;
+    public static final Item AMETHYST_SHOVEL;
+    public static final Item AMETHYST_HOE;
+
+    public static final Item SHULKER_HELMET;
+    public static final Item SHULKER_CHESTPLATE;
+    public static final Item SHULKER_LEGGINGS;
+    public static final Item SHULKER_BOOTS;
+
     public static final Item CORSTINITE_HELMET;
     public static final Item CORSTINITE_CHESTPLATE;
     public static final Item CORSTINITE_LEGGINGS;
     public static final Item CORSTINITE_BOOTS;
-
 
     public static final Item STARDUST_HELMET;
     public static final Item STARDUST_CHESTPLATE;
@@ -44,16 +68,6 @@ public class Items {
     public static final Item STARDUST_INGOT;
     public static final Item STARDUST;
     public static final Item STARDUST_NUGGET;
-
-    public static final Item COPPER_HELMET;
-    public static final Item COPPER_CHESTPLATE;
-    public static final Item COPPER_LEGGINGS;
-    public static final Item COPPER_BOOTS;
-    public static final Item COPPER_PICKAXE;
-    public static final Item COPPER_SWORD;
-    public static final Item COPPER_AXE;
-    public static final Item COPPER_SHOVEL;
-    public static final Item COPPER_HOE;
 
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
@@ -163,6 +177,63 @@ public class Items {
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
 
+        COPPER_HELMET = register("copper_helmet", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.HELMET, settings));
+        COPPER_CHESTPLATE = register("copper_chestplate", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.CHESTPLATE, settings));
+        COPPER_LEGGINGS = register("copper_leggings", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.LEGGINGS, settings));
+        COPPER_BOOTS = register("copper_boots", (settings) ->
+            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.BOOTS, settings));
+        COPPER_SWORD = register("copper_sword", (settings) ->
+                new SwordItem(ToolMaterials.COPPER, 2.0F, -2.4F, settings),
+            (new Item.Settings()).fireproof());
+        COPPER_AXE = register("copper_axe", (settings) ->
+                new AxeItem(ToolMaterials.COPPER, 6.0F, -3.1F, settings),
+            (new Item.Settings()).fireproof());
+        COPPER_PICKAXE = register("copper_pickaxe", (settings) ->
+                new PickaxeItem(ToolMaterials.COPPER, 0.5F, -2.8F, settings),
+            (new Item.Settings()));
+        COPPER_SHOVEL = register("copper_shovel", (settings) ->
+                new ShovelItem(ToolMaterials.COPPER, 1.0F, -3.0F, settings),
+            (new Item.Settings()).fireproof());
+        COPPER_HOE = register("copper_hoe", (settings) ->
+                new HoeItem(ToolMaterials.COPPER, -2.0F, -2.0F, settings),
+            (new Item.Settings()).fireproof());
+
+        AMETHYST_HELMET = register("amethyst_helmet", (settings) ->
+            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.HELMET, settings));
+        AMETHYST_CHESTPLATE = register("amethyst_chestplate", (settings) ->
+            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.CHESTPLATE, settings));
+        AMETHYST_LEGGINGS = register("amethyst_leggings", (settings) ->
+            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.LEGGINGS, settings));
+        AMETHYST_BOOTS = register("amethyst_boots", (settings) ->
+            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.BOOTS, settings));
+        AMETHYST_SWORD = register("amethyst_sword", (settings) ->
+                new SwordItem(ToolMaterials.AMETHYST, 3.0F, -2.4F, settings),
+            (new Item.Settings()).fireproof());
+        AMETHYST_AXE = register("amethyst_axe", (settings) ->
+                new AxeItem(ToolMaterials.AMETHYST, 6.0F, -3.1F, settings),
+            (new Item.Settings()).fireproof());
+        AMETHYST_PICKAXE = register("amethyst_pickaxe", (settings) ->
+                new PickaxeItem(ToolMaterials.AMETHYST, 1.0F, -2.8F, settings),
+            (new Item.Settings()));
+        AMETHYST_SHOVEL = register("amethyst_shovel", (settings) ->
+                new ShovelItem(ToolMaterials.AMETHYST, 1.5F, -3.0F, settings),
+            (new Item.Settings()).fireproof());
+        AMETHYST_HOE = register("amethyst_hoe", (settings) ->
+                new HoeItem(ToolMaterials.AMETHYST, -2.0F, -1.0F, settings),
+            (new Item.Settings()).fireproof());
+
+        SHULKER_HELMET = register("shulker_helmet", (settings) ->
+            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.HELMET, settings));
+        SHULKER_CHESTPLATE = register("shulker_chestplate", (settings) ->
+            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.CHESTPLATE, settings));
+        SHULKER_LEGGINGS = register("shulker_leggings", (settings) ->
+            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.LEGGINGS, settings));
+        SHULKER_BOOTS = register("shulker_boots", (settings) ->
+            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.BOOTS, settings));
+
         CORSTINITE_HELMET = register("corstinite_helmet", (settings) ->
             new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));
         CORSTINITE_CHESTPLATE = register("corstinite_chestplate", (settings) ->
@@ -201,30 +272,6 @@ public class Items {
         STARDUST_INGOT = register("stardust_ingot");
         STARDUST = register("stardust");
         STARDUST_NUGGET = register("stardust_nugget");
-
-        COPPER_HELMET = register("copper_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.HELMET, settings));
-        COPPER_CHESTPLATE = register("copper_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.CHESTPLATE, settings));
-        COPPER_LEGGINGS = register("copper_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.LEGGINGS, settings));
-        COPPER_BOOTS = register("copper_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.BOOTS, settings));
-        COPPER_SWORD = register("copper_sword", (settings) ->
-                new SwordItem(ToolMaterials.COPPER, 2.0F, -3.4F, settings),
-            (new Item.Settings()).fireproof());
-        COPPER_AXE = register("copper_axe", (settings) ->
-                new AxeItem(ToolMaterials.COPPER, 5.0F, -3.0F, settings),
-            (new Item.Settings()).fireproof());
-        COPPER_PICKAXE = register("copper_pickaxe", (settings) ->
-                new PickaxeItem(ToolMaterials.COPPER, 1.0F, -2.8F, settings),
-            (new Item.Settings()));
-        COPPER_SHOVEL = register("copper_shovel", (settings) ->
-                new ShovelItem(ToolMaterials.COPPER, 1.5F, -3.0F, settings),
-            (new Item.Settings()).fireproof());
-        COPPER_HOE = register("copper_hoe", (settings) ->
-                new HoeItem(ToolMaterials.COPPER, -4.0F, 0.0F, settings),
-            (new Item.Settings()).fireproof());
 
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));

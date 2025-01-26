@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "better_on_bedrock:copper_pickaxe",
+    "better_on_bedrock:amethyst_pickaxe",
     "better_on_bedrock:stardust_pickaxe"
   ]
 }

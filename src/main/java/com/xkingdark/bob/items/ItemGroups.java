@@ -100,16 +100,21 @@ public class ItemGroups {
             .icon(() -> new ItemStack(Items.WAYSTONE))
             .entries((displayContext, entries) -> {
                 entries.add(Items.WAYSTONE);
-                entries.add(Items.STARDUST_AXE);
-                entries.add(Items.STARDUST_PICKAXE);
-                entries.add(Items.STARDUST_SHOVEL);
-                entries.add(Items.STARDUST_HOE);
 
                 entries.add(Items.COPPER_AXE);
                 entries.add(Items.COPPER_PICKAXE);
                 entries.add(Items.COPPER_SHOVEL);
                 entries.add(Items.COPPER_HOE);
 
+                entries.add(Items.AMETHYST_AXE);
+                entries.add(Items.AMETHYST_PICKAXE);
+                entries.add(Items.AMETHYST_SHOVEL);
+                entries.add(Items.AMETHYST_HOE);
+
+                entries.add(Items.STARDUST_AXE);
+                entries.add(Items.STARDUST_PICKAXE);
+                entries.add(Items.STARDUST_SHOVEL);
+                entries.add(Items.STARDUST_HOE);
 
                 entries.add(Items.MUSIC_DISC_FOX);
                 entries.add(Items.MUSIC_DISC_STARDUST);
@@ -128,6 +133,25 @@ public class ItemGroups {
             .displayName(Text.translatable("itemGroup.betterOnBedrock.combat"))
             .icon(() -> new ItemStack(Items.CORSTINITE_CHESTPLATE))
             .entries((displayContext, entries) -> {
+                entries.add(Items.COPPER_HELMET);
+                entries.add(Items.COPPER_CHESTPLATE);
+                entries.add(Items.COPPER_LEGGINGS);
+                entries.add(Items.COPPER_BOOTS);
+                entries.add(Items.COPPER_SWORD);
+                entries.add(Items.COPPER_AXE);
+
+                entries.add(Items.AMETHYST_HELMET);
+                entries.add(Items.AMETHYST_CHESTPLATE);
+                entries.add(Items.AMETHYST_LEGGINGS);
+                entries.add(Items.AMETHYST_BOOTS);
+                entries.add(Items.AMETHYST_SWORD);
+                entries.add(Items.AMETHYST_AXE);
+
+                entries.add(Items.SHULKER_HELMET);
+                entries.add(Items.SHULKER_CHESTPLATE);
+                entries.add(Items.SHULKER_LEGGINGS);
+                entries.add(Items.SHULKER_BOOTS);
+
                 entries.add(Items.CORSTINITE_HELMET);
                 entries.add(Items.CORSTINITE_CHESTPLATE);
                 entries.add(Items.CORSTINITE_LEGGINGS);
@@ -139,13 +163,6 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_BOOTS);
                 entries.add(Items.STARDUST_SWORD);
                 entries.add(Items.STARDUST_AXE);
-
-                entries.add(Items.COPPER_HELMET);
-                entries.add(Items.COPPER_CHESTPLATE);
-                entries.add(Items.COPPER_LEGGINGS);
-                entries.add(Items.COPPER_BOOTS);
-                entries.add(Items.COPPER_SWORD);
-                entries.add(Items.COPPER_AXE);
             }).build()
         );
 
