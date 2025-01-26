@@ -1,5 +1,6 @@
 package com.xkingdark.bob;
 
+import com.xkingdark.bob.blocks.entity.PedestalBlockEntityType;
 import com.xkingdark.bob.helpers.Registry;
 import com.xkingdark.bob.network.NetworkHandler;
 import com.xkingdark.bob.sound.SoundEvents;
@@ -22,6 +23,7 @@ public class Main implements ModInitializer {
 
     static {
         Registry.initialize();
+        PedestalBlockEntityType.initialize();
 
         new Blocks();
         new Items();

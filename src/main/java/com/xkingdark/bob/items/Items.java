@@ -23,6 +23,7 @@ import java.util.function.UnaryOperator;
 
 public class Items {
     public static final Item WAYSTONE;
+    public static final Item PEDESTAL;
 
     public static final Item BANE_SPIKE;
     public static final Item BLADE_OF_THE_NETHER;
@@ -333,6 +334,7 @@ public class Items {
             new Item.Settings().maxCount(1).rarity(Rarity.RARE));
 
         STARDUST_ORE = register(Blocks.STARDUST_ORE);
+        PEDESTAL = register(Blocks.PEDESTAL);
 
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);

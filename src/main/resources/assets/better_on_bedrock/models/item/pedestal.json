@@ -1,0 +1,6 @@
+{
+  "parent": "better_on_bedrock:block/pedestal",
+  "textures": {
+    "layer0": "better_on_bedrock:block/pedestal"
+  }
+}

@@ -2,6 +2,7 @@ package com.xkingdark.bob.blocks;
 
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.crops.CabbageBlock;
+import com.xkingdark.bob.blocks.pedestal.Pedestal;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
@@ -28,6 +29,8 @@ public final class Blocks {
 
     //Crops
     public static final Block CABBAGE_CROP;
+
+    public static final Block PEDESTAL;
 
     // Chorus Woodset
     public static final Block CHORUS_LOG;
@@ -122,6 +125,8 @@ public final class Blocks {
                 .noCollision()
                 .ticksRandomly()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+
+        PEDESTAL = Blocks.register("pedestal", Pedestal::new, AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
 
         // Chorus Woodset
         CHORUS_LOG = register("chorus_log", PillarBlock::new,

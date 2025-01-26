@@ -1,0 +1,85 @@
+{
+	"parent": "better_on_bedrock:pedestal",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "better_on_bedrock:block/pedestal",
+		"particle": "minecraft:block/cobblestone"
+	},
+	"elements": [
+		{
+			"name": "body",
+			"from": [3, 0, 3],
+			"to": [13, 2, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [9.5, 4, 7.25, 3.5], "texture": "#0"},
+				"east": {"uv": [9.5, 4, 7.25, 3.5], "texture": "#0"},
+				"south": {"uv": [9.5, 4, 7.25, 3.5], "texture": "#0"},
+				"west": {"uv": [9.5, 4, 7.25, 3.5], "texture": "#0"},
+				"up": {"uv": [9.5, 4, 7.25, 3.5], "texture": "#0"},
+				"down": {"uv": [9.5, 4, 7.25, 3.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "body",
+			"from": [4, 2, 4],
+			"to": [12, 14, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 5, 2, 8], "texture": "#0"},
+				"east": {"uv": [0, 5, 2, 8], "texture": "#0"},
+				"south": {"uv": [0, 5, 2, 8], "texture": "#0"},
+				"west": {"uv": [0, 5, 2, 8], "texture": "#0"},
+				"up": {"uv": [0, 5, 2, 8], "texture": "#0"},
+				"down": {"uv": [0, 5, 2, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "top",
+			"from": [3, 14, 3],
+			"to": [13, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7, 3.5, 9.5, 4], "texture": "#0"},
+				"east": {"uv": [7, 3.5, 9.5, 4], "texture": "#0"},
+				"south": {"uv": [7, 3.5, 9.5, 4], "texture": "#0"},
+				"west": {"uv": [7, 3.5, 9.5, 4], "texture": "#0"},
+				"up": {"uv": [5, 2.5, 2.5, 0], "texture": "#0"},
+				"down": {"uv": [7.5, 0, 5, 2.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [30, -45, 0],
+			"scale": [0.75, 0.75, 0.75]
+		}
+	},
+	"groups": [
+		{
+			"name": "body",
+			"origin": [8, 24, 8],
+			"color": 0,
+			"children": [0, 1]
+		},
+		{
+			"name": "top",
+			"origin": [8, 12, 8],
+			"color": 1,
+			"children": [2]
+		}
+	]
+}
