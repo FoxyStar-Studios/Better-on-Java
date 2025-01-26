@@ -25,6 +25,9 @@ public final class Blocks {
     public static final Block BLUEGROD;
     public static final Block TALLER_GRASS;
 
+    //Crops
+    public static final Block CABBAGE_CROP;
+
     // Chorus Woodset
     public static final Block CHORUS_LOG;
     public static final Block CHORUS_WOOD;
@@ -112,6 +115,7 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        CABBAGE_CROP = Blocks.register("cabbage_crop", CabbageCrop::new, AbstractBlock.Settings.create().breakInstantly().noCollision().noBlockBreakParticles());
 
         // Chorus Woodset
         CHORUS_LOG = register("chorus_log", PillarBlock::new,
