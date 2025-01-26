@@ -7,7 +7,7 @@
   "slots": [ "mainhand" ],
   "supported_items": "#minecraft:axes",
   "effects": {},
-  "anvil_cost": 3,
+  "anvil_cost": 5,
   "min_cost": {
     "base": 25,
     "per_level_above_first": 0
