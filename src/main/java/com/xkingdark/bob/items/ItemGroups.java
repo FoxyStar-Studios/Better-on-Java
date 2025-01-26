@@ -17,6 +17,7 @@ import java.util.stream.IntStream;
 public class ItemGroups {
     public static final RegistryKey<ItemGroup> BUILDING = keyOf("building");
     public static final RegistryKey<ItemGroup> NATURAL = keyOf("natural");
+    public static final RegistryKey<ItemGroup> FUNCTIONAL = keyOf("functional");
     public static final RegistryKey<ItemGroup> TOOLS = keyOf("tools");
     public static final RegistryKey<ItemGroup> COMBAT = keyOf("combat");
     public static final RegistryKey<ItemGroup> UPGRADES = keyOf("upgrades");
@@ -28,7 +29,7 @@ public class ItemGroups {
 
     static {
         // Top
-        Registry.register(Registries.ITEM_GROUP, BUILDING, ItemGroup.create(ItemGroup.Row.TOP, 0)
+        Registry.register(Registries.ITEM_GROUP, BUILDING, new ItemGroup.Builder(ItemGroup.Row.TOP, 0)
             .displayName(Text.translatable("itemGroup.betterOnBedrock.building"))
             .icon(() -> new ItemStack(Items.VACANT_LOG))
             .entries((displayContext, entries) -> {
@@ -45,8 +46,6 @@ public class ItemGroups {
                 entries.add(Items.CHORUS_TRAPDOOR);
                 entries.add(Items.CHORUS_PRESSURE_PLATE);
                 entries.add(Items.CHORUS_BUTTON);
-                entries.add(Items.CHORUS_SIGN);
-                entries.add(Items.CHORUS_HANGING_SIGN);
 
                 entries.add(Items.VACANT_LOG);
                 entries.add(Items.VACANT_WOOD);
@@ -61,8 +60,6 @@ public class ItemGroups {
                 entries.add(Items.VACANT_TRAPDOOR);
                 entries.add(Items.VACANT_PRESSURE_PLATE);
                 entries.add(Items.VACANT_BUTTON);
-                entries.add(Items.VACANT_SIGN);
-                entries.add(Items.VACANT_HANGING_SIGN);
 
                 entries.add(Items.VOIDING_LOG);
                 entries.add(Items.VOIDING_WOOD);
@@ -77,30 +74,86 @@ public class ItemGroups {
                 entries.add(Items.VOIDING_TRAPDOOR);
                 entries.add(Items.VOIDING_PRESSURE_PLATE);
                 entries.add(Items.VOIDING_BUTTON);
+            }).build()
+        );
+
+        Registry.register(Registries.ITEM_GROUP, NATURAL, new ItemGroup.Builder(ItemGroup.Row.TOP, 1)
+            .displayName(Text.translatable("itemGroup.betterOnBedrock.natural"))
+            .icon(() -> new ItemStack(Items.PINK_LAVENDER))
+            .entries((displayContext, entries) -> {
+                entries.add(Items.STARDUST_ORE);
+                entries.add(Items.PINK_LAVENDER);
+                entries.add(Items.TALL_LAVENDER);
+                entries.add(Items.BLUEGROD);
+                entries.add(Items.TALLER_GRASS);
+            }).build()
+        );
+
+        Registry.register(Registries.ITEM_GROUP, FUNCTIONAL, new ItemGroup.Builder(ItemGroup.Row.TOP, 2)
+            .displayName(Text.translatable("itemGroup.betterOnBedrock.functional"))
+            .icon(() -> new ItemStack(Items.WAYSTONE))
+            .entries((displayContext, entries) -> {
+                entries.add(Items.WAYSTONE);
+
+                entries.add(Items.CHORUS_SIGN);
+                entries.add(Items.CHORUS_HANGING_SIGN);
+                entries.add(Items.VACANT_SIGN);
+                entries.add(Items.VACANT_HANGING_SIGN);
                 entries.add(Items.VOIDING_SIGN);
                 entries.add(Items.VOIDING_HANGING_SIGN);
             }).build()
         );
 
-        Registry.register(Registries.ITEM_GROUP, NATURAL, ItemGroup.create(ItemGroup.Row.TOP, 1)
-            .displayName(Text.translatable("itemGroup.betterOnBedrock.natural"))
-            .icon(() -> new ItemStack(Items.PINK_LAVENDER))
+        Registry.register(Registries.ITEM_GROUP, FOOD, new ItemGroup.Builder(ItemGroup.Row.TOP, 3)
+            .displayName(Text.translatable("itemGroup.betterOnBedrock.food"))
+            .icon(() -> new ItemStack(Items.SWEET_BERRY_PIE_SLICE))
             .entries((displayContext, entries) -> {
-                entries.add(Items.PINK_LAVENDER);
-                entries.add(Items.TALL_LAVENDER);
-                entries.add(Items.BLUEGROD);
-                entries.add(Items.TALLER_GRASS);
-                entries.add(Items.STARDUST_ORE);
+                entries.add(Items.EGGPLANT);
+                entries.add(Items.BAKED_EGGPLANT);
+                entries.add(Items.ONION);
+                entries.add(Items.BAKED_ONION);
+                entries.add(Items.TOMATO);
+                entries.add(Items.CABBAGE_LEAF);
+                entries.add(Items.HEALTHY_CARROT);
+                entries.add(Items.WILD_CARROT);
+
+                entries.add(Items.RAW_DEER_MEAT);
+                entries.add(Items.COOKED_DEER_MEAT);
+                entries.add(Items.RAW_BEEF_PATTY);
+                entries.add(Items.COOKED_BEEF_PATTY);
+                entries.add(Items.MUTTON_CHOPS_RAW);
+                entries.add(Items.MUTTON_CHOPS_COOKED);
+
+                entries.add(Items.BAGUETTE);
+                entries.add(Items.SANDWICH);
+                entries.add(Items.FRIED_EGG);
+                entries.add(Items.EGG_SANDWICH);
+                entries.add(Items.BURGER);
+
+                entries.add(Items.SALAD);
+                entries.add(Items.BARLEY_STEW);
+                entries.add(Items.ENDER_STEW);
+                entries.add(Items.FUNGUS_STEW);
+                entries.add(Items.LAVA_STEW);
+
+                entries.add(Items.PEACH);
+                entries.add(Items.BLUE_BERRY);
+                entries.add(Items.GRAPE);
+                entries.add(Items.COCONUT);
+                entries.add(Items.OPENED_COCONUT);
+                entries.add(Items.END_BERRY);
+                entries.add(Items.END_COOKIE);
+                entries.add(Items.VOIDBERRY_PIE);
+                entries.add(Items.SWEET_BERRY_PIE);
+                entries.add(Items.SWEET_BERRY_PIE_SLICE);
             }).build()
         );
 
         // Bottom
-        Registry.register(Registries.ITEM_GROUP, TOOLS, ItemGroup.create(ItemGroup.Row.BOTTOM, 0)
+        Registry.register(Registries.ITEM_GROUP, TOOLS, new ItemGroup.Builder(ItemGroup.Row.BOTTOM, 0)
             .displayName(Text.translatable("itemGroup.betterOnBedrock.tools"))
-            .icon(() -> new ItemStack(Items.WAYSTONE))
+            .icon(() -> new ItemStack(Items.AMETHYST_PICKAXE))
             .entries((displayContext, entries) -> {
-                entries.add(Items.WAYSTONE);
-
                 entries.add(Items.COPPER_AXE);
                 entries.add(Items.COPPER_PICKAXE);
                 entries.add(Items.COPPER_SHOVEL);
@@ -116,36 +169,36 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_SHOVEL);
                 entries.add(Items.STARDUST_HOE);
 
-                entries.add(Items.MUSIC_DISC_FOX);
-                entries.add(Items.MUSIC_DISC_STARDUST);
-                entries.add(Items.MUSIC_DISC_TRAVELERS);
-
                 entries.add(Items.CHORUS_BOAT);
                 entries.add(Items.CHORUS_CHEST_BOAT);
                 entries.add(Items.VACANT_BOAT);
                 entries.add(Items.VACANT_CHEST_BOAT);
                 entries.add(Items.VOIDING_BOAT);
                 entries.add(Items.VOIDING_CHEST_BOAT);
+
+                entries.add(Items.MUSIC_DISC_FOX);
+                entries.add(Items.MUSIC_DISC_STARDUST);
+                entries.add(Items.MUSIC_DISC_TRAVELERS);
             }).build()
         );
 
-        Registry.register(Registries.ITEM_GROUP, COMBAT, ItemGroup.create(ItemGroup.Row.BOTTOM, 1)
+        Registry.register(Registries.ITEM_GROUP, COMBAT, new ItemGroup.Builder(ItemGroup.Row.BOTTOM, 1)
             .displayName(Text.translatable("itemGroup.betterOnBedrock.combat"))
-            .icon(() -> new ItemStack(Items.CORSTINITE_CHESTPLATE))
+            .icon(() -> new ItemStack(Items.AMETHYST_SWORD))
             .entries((displayContext, entries) -> {
+                entries.add(Items.COPPER_SWORD);
+                entries.add(Items.COPPER_AXE);
                 entries.add(Items.COPPER_HELMET);
                 entries.add(Items.COPPER_CHESTPLATE);
                 entries.add(Items.COPPER_LEGGINGS);
                 entries.add(Items.COPPER_BOOTS);
-                entries.add(Items.COPPER_SWORD);
-                entries.add(Items.COPPER_AXE);
 
+                entries.add(Items.AMETHYST_SWORD);
+                entries.add(Items.AMETHYST_AXE);
                 entries.add(Items.AMETHYST_HELMET);
                 entries.add(Items.AMETHYST_CHESTPLATE);
                 entries.add(Items.AMETHYST_LEGGINGS);
                 entries.add(Items.AMETHYST_BOOTS);
-                entries.add(Items.AMETHYST_SWORD);
-                entries.add(Items.AMETHYST_AXE);
 
                 entries.add(Items.SHULKER_HELMET);
                 entries.add(Items.SHULKER_CHESTPLATE);
@@ -157,57 +210,16 @@ public class ItemGroups {
                 entries.add(Items.CORSTINITE_LEGGINGS);
                 entries.add(Items.CORSTINITE_BOOTS);
 
+                entries.add(Items.STARDUST_SWORD);
+                entries.add(Items.STARDUST_AXE);
                 entries.add(Items.STARDUST_HELMET);
                 entries.add(Items.STARDUST_CHESTPLATE);
                 entries.add(Items.STARDUST_LEGGINGS);
                 entries.add(Items.STARDUST_BOOTS);
-                entries.add(Items.STARDUST_SWORD);
-                entries.add(Items.STARDUST_AXE);
             }).build()
         );
 
-        Registry.register(Registries.ITEM_GROUP, FOOD, ItemGroup.create(ItemGroup.Row.BOTTOM, 2)
-            .displayName(Text.translatable("itemGroup.betterOnBedrock.food"))
-            .icon(() -> new ItemStack(Items.BAGUETTE))
-            .entries((displayContext, entries) -> {
-                entries.add(Items.BAGUETTE);
-                entries.add(Items.BAKED_EGGPLANT);
-                entries.add(Items.BAKED_ONION);
-                entries.add(Items.BARLEY_STEW);
-                entries.add(Items.BLUE_BERRY);
-                entries.add(Items.BURGER);
-                entries.add(Items.CABBAGE_LEAF);
-                entries.add(Items.COCONUT);
-                entries.add(Items.COOKED_BEEF_PATTY);
-                entries.add(Items.COOKED_DEER_MEAT);
-                entries.add(Items.EGGPLANT);
-                entries.add(Items.EGG_SANDWICH);
-                entries.add(Items.END_BERRY);
-                entries.add(Items.END_COOKIE);
-                entries.add(Items.ENDER_STEW);
-                entries.add(Items.FRIED_EGG);
-                entries.add(Items.FUNGUS_STEW);
-                entries.add(Items.GRAPE);
-                entries.add(Items.HEALTHY_CARROT);
-                entries.add(Items.LAVA_STEW);
-                entries.add(Items.MUTTON_CHOPS_RAW); 
-                entries.add(Items.MUTTON_CHOPS_COOKED);
-                entries.add(Items.ONION);
-                entries.add(Items.OPENED_COCONUT);
-                entries.add(Items.PEACH);
-                entries.add(Items.RAW_BEEF_PATTY);
-                entries.add(Items.RAW_DEER_MEAT);
-                entries.add(Items.SALAD);
-                entries.add(Items.SANDWICH);
-                entries.add(Items.SWEET_BERRY_PIE);
-                entries.add(Items.SWEET_BERRY_PIE_SLICE);
-                entries.add(Items.TOMATO);
-                entries.add(Items.VOIDBERRY_PIE);
-                entries.add(Items.WILD_CARROT);
-            }).build()
-        );
-
-        Registry.register(Registries.ITEM_GROUP, UPGRADES, ItemGroup.create(ItemGroup.Row.BOTTOM, 3)
+        Registry.register(Registries.ITEM_GROUP, UPGRADES, new ItemGroup.Builder(ItemGroup.Row.BOTTOM, 2)
             .displayName(Text.translatable("itemGroup.betterOnBedrock.upgrades"))
             .icon(() -> new ItemStack(Items.STARDUST_UPGRADE))
             .entries((displayContext, entries) -> {
