@@ -86,6 +86,8 @@ public class ItemGroups {
                 entries.add(Items.TALL_LAVENDER);
                 entries.add(Items.BLUEGROD);
                 entries.add(Items.TALLER_GRASS);
+
+                entries.add(Items.CABBAGE_SEEDS);
             }).build()
         );
 

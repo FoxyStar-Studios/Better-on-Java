@@ -165,6 +165,8 @@
   "item.better_on_bedrock.ender_stew": "Ender Stew",
   "item.better_on_bedrock.coconut": "Coconut",
 
+  "item.better_on_bedrock.cabbage_seeds": "Cabbage Seeds",
+
   "item.better_on_bedrock.smithing_template.stardust_upgrade.applies_to": "Netherite Equipment",
   "item.better_on_bedrock.smithing_template.stardust_upgrade.ingredients": "Stardust Ingot",
   "item.better_on_bedrock.smithing_template.stardust_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",

@@ -110,7 +110,7 @@ public class Items {
     public static final Item ENDER_STEW;
     public static final Item COCONUT;
 
-    public static final Item CABBAGE_CROP;
+    public static final Item CABBAGE_SEEDS;
 
     public static final Item MUSIC_DISC_FOX;
     public static final Item MUSIC_DISC_STARDUST;
@@ -319,7 +319,7 @@ public class Items {
         ENDER_STEW = register("ender_stew", new Item.Settings().food(FoodComponents.ENDER_STEW));
         COCONUT = register("coconut");
         
-        CABBAGE_CROP = register(Blocks.CABBAGE_CROP);
+        CABBAGE_SEEDS = register("cabbage_seeds", createBlockItemWithUniqueName(Blocks.CABBAGE_CROP));
 
         MUSIC_DISC_FOX = register("music_disc_fox",
             new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON).jukeboxPlayable(JukeboxSongs.FOX));

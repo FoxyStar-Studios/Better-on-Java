@@ -1,6 +1,7 @@
 package com.xkingdark.bob.blocks;
 
 import com.xkingdark.bob.Main;
+import com.xkingdark.bob.blocks.crops.CabbageBlock;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
@@ -115,7 +116,12 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
-        CABBAGE_CROP = Blocks.register("cabbage_crop", CabbageCrop::new, AbstractBlock.Settings.create().breakInstantly().noCollision().noBlockBreakParticles());
+        CABBAGE_CROP = Blocks.register("cabbage_crop", CabbageBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
 
         // Chorus Woodset
         CHORUS_LOG = register("chorus_log", PillarBlock::new,
