@@ -16,7 +16,7 @@ import net.minecraft.nbt.NbtCompound;
 
 
 public class PedestalBlockEntity extends BlockEntity implements pedestalInventory {
-    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(2, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(1, ItemStack.EMPTY);
 
     @Override
     public DefaultedList<ItemStack> getItems() {
@@ -53,4 +53,10 @@ public class PedestalBlockEntity extends BlockEntity implements pedestalInventor
     }
 
 
+
+
+    @Override
+    public ItemStack removeStack(int slot) {
+        return null;
+    }
 }

@@ -45,13 +45,20 @@ public class Pedestal extends BlockWithEntity {
                 blockEntity.setStack(0, player.getStackInHand(hand).copy());
                 // Remove the stack from the player's hand
                 player.getStackInHand(hand).setCount(0);
-            } else if (blockEntity.getStack(1).isEmpty()) {
-                blockEntity.setStack(1, player.getStackInHand(hand).copy());
-                player.getStackInHand(hand).setCount(0);
             } else {
-                // If the inventory is full we'll notify the player
-                player.sendMessage(Text.literal("The inventory is full! The first slot holds "), true);
+                // If the player is not holding anything we'll get give him the items in the block entity one by one
+
+                // Find the first slot that has an item and give it to the player
+                if (!blockEntity.getStack(0).isEmpty()) {
+                    // Give the player the stack in the inventory
+                    player.getInventory().offerOrDrop(blockEntity.getStack(0));
+                    // Remove the stack from the inventory
+                    blockEntity.removeStack(0, 1);
+                } else {
+                    return ActionResult.SUCCESS;
+                }
             }
+
         }
         return ActionResult.SUCCESS;
     }

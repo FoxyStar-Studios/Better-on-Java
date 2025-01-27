@@ -1,10 +1,16 @@
 package com.xkingdark.bob.blocks.pedestal;
 
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 public interface pedestalInventory extends Inventory {
 
@@ -114,6 +120,11 @@ public interface pedestalInventory extends Inventory {
     @Override
     default void markDirty() {
         // Override if you want behavior.
+    }
+
+    @Nullable
+    public default Packet<ClientPlayPacketListener> toUpdatePacket() {
+        return BlockEntityUpdateS2CPacket.create((BlockEntity) this);
     }
 
     /**

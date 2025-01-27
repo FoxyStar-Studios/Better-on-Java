@@ -10,7 +10,7 @@ import net.minecraft.block.entity.BlockEntityType;
 
 public class PedestalBlockEntityType {
     public static <T extends BlockEntityType<?>> T register(String path, T blockEntityType) {
-        return Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of("tutorial", path), blockEntityType);
+        return Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of("better_on_bedrock", path), blockEntityType);
     }
 
     public static final BlockEntityType<PedestalBlockEntity> PEDESTAL = register(
