@@ -1,7 +1,13 @@
 package com.xkingdark.bob.entities;
 
 import com.xkingdark.bob.Main;
+import com.xkingdark.bob.blocks.Blocks;
+import com.xkingdark.bob.blocks.pedestal.PedestalBlockEntity;
 import com.xkingdark.bob.items.Items;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.minecraft.block.Block;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -17,6 +23,8 @@ import net.minecraft.util.Identifier;
 import java.util.function.Supplier;
 
 public class EntityTypes {
+    public static final BlockEntityType<PedestalBlockEntity> PEDESTAL;
+
     public static final EntityType<BoatEntity> CHORUS_BOAT;
     public static final EntityType<ChestBoatEntity> CHORUS_CHEST_BOAT;
     public static final EntityType<BoatEntity> VACANT_BOAT;
@@ -25,6 +33,9 @@ public class EntityTypes {
     public static final EntityType<ChestBoatEntity> VOIDING_CHEST_BOAT;
 
     static {
+        PEDESTAL = register("pedestal", PedestalBlockEntity::new,
+            Blocks.PEDESTAL);
+
         CHORUS_BOAT = register("chorus_boat",
             EntityType.Builder.create(getBoatFactory(() -> Items.CHORUS_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
@@ -69,6 +80,28 @@ public class EntityTypes {
         );
     }
 
+    private static <T extends BlockEntity> BlockEntityType<T> register(
+        RegistryKey<BlockEntityType<?>> key,
+        FabricBlockEntityTypeBuilder.Factory<T> type,
+        Block... blocks
+    ) {
+        return Registry.register(Registries.BLOCK_ENTITY_TYPE, key,
+            FabricBlockEntityTypeBuilder.create(type, blocks).build());
+    }
+
+    private static RegistryKey<BlockEntityType<?>> keyOfBlock(String id) {
+        return RegistryKey.of(RegistryKeys.BLOCK_ENTITY_TYPE, Identifier.of(Main.MOD_ID, id));
+    }
+
+    private static <T extends BlockEntity> BlockEntityType<T> register(
+        String id,
+        FabricBlockEntityTypeBuilder.Factory<T> type,
+        Block... blocks
+    ) {
+        return register(keyOfBlock(id), type, blocks);
+    }
+
+
     private static <T extends Entity> EntityType<T> register(RegistryKey<EntityType<?>> key, EntityType.Builder<T> type) {
         return Registry.register(Registries.ENTITY_TYPE, key, type.build(key));
     }
@@ -80,6 +113,7 @@ public class EntityTypes {
     private static <T extends Entity> EntityType<T> register(String id, EntityType.Builder<T> type) {
         return register(keyOf(id), type);
     }
+
 
     private static EntityType.EntityFactory<BoatEntity> getBoatFactory(Supplier<Item> itemSupplier) {
         return (type, world) -> new BoatEntity(type, world, itemSupplier);

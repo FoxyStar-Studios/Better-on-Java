@@ -4,9 +4,11 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.*;
 import net.minecraft.util.*;
 
@@ -16,7 +18,7 @@ public class Pedestal extends BlockWithEntity {
     }
 
     @Override
-    protected MapCodec<Pedestal> getCodec() {
+    public MapCodec<Pedestal> getCodec() {
         return createCodec(Pedestal::new);
     }
 
@@ -26,40 +28,64 @@ public class Pedestal extends BlockWithEntity {
     }
 
     @Override
-    protected BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+        return Block.createCuboidShape(
+            4.0, 0.0, 4.0,
+            12.0, 16.0, 12.0
+        );
     }
 
-    protected ActionResult.Success onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (world.isClient) return ActionResult.SUCCESS;
-
-        Object ItemActionResult;
-        if (!(world.getBlockEntity(pos) instanceof PedestalBlockEntity blockEntity)) {
+    @Override
+    public ActionResult.Success onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (world.isClient)
             return ActionResult.SUCCESS;
-        }
+
+        if (!(world.getBlockEntity(pos) instanceof PedestalBlockEntity blockEntity))
+            return ActionResult.SUCCESS;
 
         if (!player.getStackInHand(hand).isEmpty()) {
-            // Check what is the first open slot and put an item from the player's hand there
-            if (blockEntity.getStack(0).isEmpty()) {
-                // Put the stack the player is holding into the inventory
-                blockEntity.setStack(0, player.getStackInHand(hand).copy());
-                // Remove the stack from the player's hand
-                player.getStackInHand(hand).setCount(0);
-            } else {
-                // If the player is not holding anything we'll get give him the items in the block entity one by one
-
-                // Find the first slot that has an item and give it to the player
-                if (!blockEntity.getStack(0).isEmpty()) {
-                    // Give the player the stack in the inventory
-                    player.getInventory().offerOrDrop(blockEntity.getStack(0));
-                    // Remove the stack from the inventory
-                    blockEntity.removeStack(0, 1);
-                } else {
-                    return ActionResult.SUCCESS;
-                }
+            if (!blockEntity.getStack(0).isEmpty()) {
+                player.sendMessage(
+                    Text.literal("The pedestal already has enough items.").formatted(Formatting.RED),
+                    true
+                );
+                return ActionResult.SUCCESS;
             }
 
+            // Copy the item stack from the player's hand into the pedestal's inventory
+            blockEntity.setStack(0, player.getStackInHand(hand).copy());
+            player.getStackInHand(hand).setCount(0);
+
+            blockEntity.markDirty();
+            world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
         }
+        else {
+            if (blockEntity.getStack(0).isEmpty())
+                return ActionResult.SUCCESS;
+
+            player.getInventory().offerOrDrop(blockEntity.getStack(0));
+            blockEntity.removeStack(0);
+
+            blockEntity.markDirty();
+            world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
+        }
+
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        ItemScatterer.onStateReplaced(state, newState, world, pos);
+        super.onStateReplaced(state, world, pos, newState, moved);
+    }
+
+    @Override
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+        return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
     }
 }

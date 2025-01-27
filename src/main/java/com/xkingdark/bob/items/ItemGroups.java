@@ -96,6 +96,7 @@ public class ItemGroups {
             .icon(() -> new ItemStack(Items.WAYSTONE))
             .entries((displayContext, entries) -> {
                 entries.add(Items.WAYSTONE);
+                entries.add(Items.PEDESTAL);
 
                 entries.add(Items.CHORUS_SIGN);
                 entries.add(Items.CHORUS_HANGING_SIGN);

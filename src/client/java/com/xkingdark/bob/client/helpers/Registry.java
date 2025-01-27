@@ -3,6 +3,7 @@ import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
 import com.xkingdark.bob.client.Client;
 
+import com.xkingdark.bob.client.blocks.PedestalBlockEntityDisplay;
 import com.xkingdark.bob.client.entities.EntityModelLayers;
 import com.xkingdark.bob.client.screens.WaystoneScreen;
 import com.xkingdark.bob.entities.EntityTypes;
@@ -15,6 +16,7 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.client.network.ClientAdvancementManager;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.BlazeEntityRenderer;
 import net.minecraft.client.render.entity.BoatEntityRenderer;
 import net.minecraft.client.render.entity.model.BoatEntityModel;
@@ -45,6 +47,8 @@ public class Registry {
         });
 
         // Entities
+        BlockEntityRendererFactories.register(EntityTypes.PEDESTAL, PedestalBlockEntityDisplay::new);
+
         //  Chorus
         EntityRendererRegistry.register(EntityTypes.CHORUS_BOAT, (context) ->
             new BoatEntityRenderer(context, EntityModelLayers.CHORUS_BOAT));

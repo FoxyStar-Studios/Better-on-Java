@@ -92,6 +92,9 @@ public final class Blocks {
     static {
         WAYSTONE = Blocks.register("waystone", WaystoneBlock::new,
             AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
+        PEDESTAL = Blocks.register("pedestal", Pedestal::new,
+            AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
+
         STARDUST_ORE = Blocks.register("stardust_ore",
             AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
         PINK_LAVENDER = Blocks.register("pink_lavender", ShortPlantBlock::new,
@@ -125,8 +128,6 @@ public final class Blocks {
                 .noCollision()
                 .ticksRandomly()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
-
-        PEDESTAL = Blocks.register("pedestal", Pedestal::new, AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
 
         // Chorus Woodset
         CHORUS_LOG = register("chorus_log", PillarBlock::new,

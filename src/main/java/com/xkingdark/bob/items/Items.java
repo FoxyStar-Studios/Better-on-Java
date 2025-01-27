@@ -182,6 +182,7 @@ public class Items {
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
+        PEDESTAL = register(Blocks.PEDESTAL);
 
         BANE_SPIKE = register("bane_spike", BaneSpikeItem::new);
         BLADE_OF_THE_NETHER = register("blade_of_the_nether", BladeOfTheNetherItem::new);
@@ -334,7 +335,6 @@ public class Items {
             new Item.Settings().maxCount(1).rarity(Rarity.RARE));
 
         STARDUST_ORE = register(Blocks.STARDUST_ORE);
-        PEDESTAL = register(Blocks.PEDESTAL);
 
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
