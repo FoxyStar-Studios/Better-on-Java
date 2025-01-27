@@ -3,39 +3,50 @@ package com.xkingdark.bob.client.blocks;
 import com.xkingdark.bob.blocks.pedestal.PedestalBlockEntity;
 import com.xkingdark.bob.items.Items;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.item.ItemModelManager;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
+import net.minecraft.client.render.entity.ItemEntityRenderer;
+import net.minecraft.client.render.entity.state.ItemStackEntityRenderState;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ModelTransformationMode;
 import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
 
 public class PedestalBlockEntityDisplay implements BlockEntityRenderer<PedestalBlockEntity> {
-    public PedestalBlockEntityDisplay(BlockEntityRendererFactory.Context ctx) {
+    public PedestalBlockEntityDisplay(BlockEntityRendererFactory.Context context) {
         super();
     }
 
     @Override
     public void render(PedestalBlockEntity blockEntity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        if (blockEntity.getWorld() == null)
+        World world = blockEntity.getWorld();
+        if (world == null)
             return;
 
-        float time = blockEntity.getWorld().getTime() + tickDelta;
+        ItemStack itemStack = blockEntity.getStack(0);
+        if (itemStack.isEmpty())
+            return;
+
+        float time = world.getTime() + tickDelta;
         matrices.push();
 
         // Calculate the current offset in the y value
-        double offset = Math.sin((time) / 8.0) / 6.0;
+        //double offset = Math.sin((time) / 8.0) / 6.0;
 
         // Move the item
-        matrices.translate(0.5, 1.25 + offset, 0.5);
+        matrices.translate(0.5, 1.15, 0.5);
 
         // Rotate the item
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees((time) * 2));
+        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees((float)(time * 1.75)));
 
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         itemRenderer.renderItem(
-            blockEntity.getStack(0),
+            itemStack,
             ModelTransformationMode.GROUND,
             light, overlay, matrices, vertexConsumers, blockEntity.getWorld(), 0
         );

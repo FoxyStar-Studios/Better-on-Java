@@ -1,5 +1,4 @@
 {
-	"parent": "better_on_bedrock:pedestal",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "better_on_bedrock:block/pedestal",
