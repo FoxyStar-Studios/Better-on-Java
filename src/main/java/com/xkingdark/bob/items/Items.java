@@ -377,12 +377,10 @@ public class Items {
 
         STARDUST_ORE = register(Blocks.STARDUST_ORE);
 
-
+        //Flowers
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
         BLUEGROD = register(Blocks.BLUEGROD);
         LUSH_GRASS = register(Blocks.LUSH_GRASS);
-
-        //Flowers
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALLER_GRASS = register(Blocks.TALLER_GRASS);
         LILAC_HEADS = register(Blocks.LILAC_HEADS);

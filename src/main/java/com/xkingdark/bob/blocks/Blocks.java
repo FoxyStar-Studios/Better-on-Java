@@ -22,12 +22,10 @@ public final class Blocks {
     public static final Block WAYSTONE;
     public static final Block STARDUST_ORE;
 
-    //Double Plants
+    //Flowers
     public static final Block TALL_LAVENDER;
     public static final Block BLUEGROD;
     public static final Block LUSH_GRASS;
-
-    //Flowers
     public static final Block PINK_LAVENDER;
     public static final Block TALLER_GRASS;
     public static final Block LILAC_HEADS;
