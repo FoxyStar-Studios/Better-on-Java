@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "better_on_bedrock:block/nature/crops/peach_leaves" }
+  }
+}

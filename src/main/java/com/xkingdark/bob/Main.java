@@ -23,8 +23,8 @@ public class Main implements ModInitializer {
     static {
         Registry.initialize();
 
-        new Blocks();
         new Items();
+        new Blocks();
         new ItemGroups();
         new SoundEvents();
 

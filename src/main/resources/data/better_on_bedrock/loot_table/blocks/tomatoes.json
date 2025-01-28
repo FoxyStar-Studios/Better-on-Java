@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "better_on_bedrock:blocks/tomatoes",
+  "functions": [
+    { "function": "minecraft:explosion_decay" }
+  ],
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "better_on_bedrock:tomato"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "better_on_bedrock:tomatoes",
+          "condition": "minecraft:block_state_property",
+          "properties": { "age": "2" }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "better_on_bedrock:tomato",
+          "functions": [
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.5714286
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -18,9 +18,9 @@ public class CabbageBlock extends CropBlock {
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
         Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0),
         Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0),
-        Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0),
-        Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0),
-        Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0)
+        Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 8.0, 14.0),
+        Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+        Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0)
     };
 
     public CabbageBlock(AbstractBlock.Settings settings) {

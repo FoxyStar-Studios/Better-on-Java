@@ -1,0 +1,9 @@
+{
+    "variants": {
+      "age=0": { "model": "better_on_bedrock:block/nature/crops/onion_stage0" },
+      "age=1": { "model": "better_on_bedrock:block/nature/crops/onion_stage1" },
+      "age=2": { "model": "better_on_bedrock:block/nature/crops/onion_stage2" },
+      "age=3": { "model": "better_on_bedrock:block/nature/crops/onion_stage3" },
+      "age=4": { "model": "better_on_bedrock:block/nature/crops/onion_stage4" }
+    }
+  }

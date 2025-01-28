@@ -1,7 +1,6 @@
 package com.xkingdark.bob.items;
 
 import com.xkingdark.bob.Main;
-import com.xkingdark.bob.blocks.Blocks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
@@ -11,7 +10,6 @@ import net.minecraft.registry.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import java.util.Objects;
 import java.util.stream.IntStream;
 
 public class ItemGroups {
@@ -82,12 +80,18 @@ public class ItemGroups {
             .icon(() -> new ItemStack(Items.PINK_LAVENDER))
             .entries((displayContext, entries) -> {
                 entries.add(Items.STARDUST_ORE);
+
+                entries.add(Items.PEACH_LEAVES);
+                entries.add(Items.ORANGE_LEAVES);
+
                 entries.add(Items.PINK_LAVENDER);
                 entries.add(Items.TALL_LAVENDER);
                 entries.add(Items.BLUEGROD);
                 entries.add(Items.TALLER_GRASS);
 
+                entries.add(Items.BARLEY_SEEDS);
                 entries.add(Items.CABBAGE_SEEDS);
+                entries.add(Items.EGGPLANT_SEEDS);
             }).build()
         );
 
@@ -140,8 +144,8 @@ public class ItemGroups {
                 entries.add(Items.LAVA_STEW);
 
                 entries.add(Items.PEACH);
-                entries.add(Items.BLUE_BERRY);
-                entries.add(Items.GRAPE);
+                entries.add(Items.BLUE_BERRIES);
+                entries.add(Items.GRAPES);
                 entries.add(Items.COCONUT);
                 entries.add(Items.OPENED_COCONUT);
                 entries.add(Items.END_BERRY);
@@ -232,6 +236,12 @@ public class ItemGroups {
                 entries.add(Items.STARDUST_NUGGET);
                 entries.add(Items.STARDUST);
                 entries.add(Items.STARDUST_INGOT);
+
+                entries.add(Items.BLANK_POTTERY_SHERD);
+                entries.add(Items.PARTY_POTTERY_SHERD);
+                entries.add(Items.FORGER_POTTERY_SHERD);
+                entries.add(Items.PIGLIN_POTTERY_SHERD);
+
                 entries.add(Items.STARDUST_UPGRADE);
 
                 displayContext.lookup().getOptional(RegistryKeys.ENCHANTMENT).ifPresent(registryWrapper -> {

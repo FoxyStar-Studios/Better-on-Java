@@ -1,7 +1,7 @@
 package com.xkingdark.bob.blocks;
 
 import com.xkingdark.bob.Main;
-import com.xkingdark.bob.blocks.crops.CabbageBlock;
+import com.xkingdark.bob.blocks.crops.*;
 import com.xkingdark.bob.blocks.pedestal.Pedestal;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
@@ -17,6 +17,7 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 import static net.minecraft.block.Blocks.createLogSettings;
+import static net.minecraft.block.Blocks.createLeavesSettings;
 import static net.minecraft.block.Blocks.createButtonSettings;
 
 public final class Blocks {
@@ -28,7 +29,17 @@ public final class Blocks {
     public static final Block TALLER_GRASS;
 
     //Crops
+    public static final Block BARLEY_CROP;
+    public static final Block BLUE_BERRY_BUSH;
+    public static final Block GRAPE_BUSH;
     public static final Block CABBAGE_CROP;
+    public static final Block EGGPLANT_CROP;
+    public static final Block HEALTHY_CARROT_CROP;
+    public static final Block ONION_CROP;
+    public static final Block TOMATO_CROP;
+
+    public static final Block PEACH_LEAVES;
+    public static final Block ORANGE_LEAVES;
 
     public static final Block PEDESTAL;
 
@@ -122,12 +133,61 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
-        CABBAGE_CROP = Blocks.register("cabbage_crop", CabbageBlock::new,
+
+        // Crops
+        BARLEY_CROP = Blocks.register("barley", BarleyBlock::new,
             AbstractBlock.Settings.create()
                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
                 .noCollision()
                 .ticksRandomly()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        BLUE_BERRY_BUSH = Blocks.register("blue_berry_bush", BlueBerryBushBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        GRAPE_BUSH = Blocks.register("grape_bush", GrapeBushBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        CABBAGE_CROP = Blocks.register("cabbage", CabbageBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        EGGPLANT_CROP = Blocks.register("eggplants", EggplantBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        HEALTHY_CARROT_CROP = Blocks.register("healthy_carrots", HealthyCarrotBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        ONION_CROP = Blocks.register("onions", OnionBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        TOMATO_CROP = Blocks.register("tomatoes", TomatoBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.CROP)
+                .noCollision()
+                .ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+
+        PEACH_LEAVES = register("peach_leaves", LeavesBlock::new,
+            createLeavesSettings(BlockSoundGroup.GRASS));
+        ORANGE_LEAVES = register("orange_leaves", LeavesBlock::new,
+            createLeavesSettings(BlockSoundGroup.GRASS));
 
         // Chorus Woodset
         CHORUS_LOG = register("chorus_log", PillarBlock::new,

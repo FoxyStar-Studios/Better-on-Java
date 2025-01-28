@@ -83,8 +83,8 @@ public class Items {
     public static final Item SWEET_BERRY_PIE_SLICE;
     public static final Item CABBAGE_LEAF;
     public static final Item EGGPLANT;
-    public static final Item GRAPE;
-    public static final Item BLUE_BERRY;
+    public static final Item GRAPES;
+    public static final Item BLUE_BERRIES;
     public static final Item HEALTHY_CARROT;
     public static final Item ONION;
     public static final Item OPENED_COCONUT;
@@ -111,7 +111,19 @@ public class Items {
     public static final Item ENDER_STEW;
     public static final Item COCONUT;
 
+    public static final Item BARLEY;
+    public static final Item BARLEY_SEEDS;
     public static final Item CABBAGE_SEEDS;
+    public static final Item EGGPLANT_SEEDS;
+
+    public static final Item PEACH_LEAVES;
+    public static final Item ORANGE_LEAVES;
+
+
+    public static final Item BLANK_POTTERY_SHERD;
+    public static final Item PARTY_POTTERY_SHERD;
+    public static final Item FORGER_POTTERY_SHERD;
+    public static final Item PIGLIN_POTTERY_SHERD;
 
     public static final Item MUSIC_DISC_FOX;
     public static final Item MUSIC_DISC_STARDUST;
@@ -293,15 +305,20 @@ public class Items {
         SWEET_BERRY_PIE_SLICE = register("sweet_berry_pie_slice", new Item.Settings().food(FoodComponents.SWEET_BERRY_PIE_SLICE));
         CABBAGE_LEAF = register("cabbage_leaf", new Item.Settings().food(FoodComponents.CABBAGE_LEAF));
         EGGPLANT = register("eggplant", new Item.Settings().food(FoodComponents.EGGPLANT));
-        GRAPE = register("grape", new Item.Settings().food(FoodComponents.GRAPE));
-        BLUE_BERRY = register("blue_berry", new Item.Settings().food(FoodComponents.BLUE_BERRY));
-        HEALTHY_CARROT = register("healthy_carrot", new Item.Settings().food(FoodComponents.HEALTHY_CARROT));
-        ONION = register("onion", new Item.Settings().food(FoodComponents.ONION));
+        GRAPES = register("grapes", createBlockItemWithUniqueName(Blocks.GRAPE_BUSH),
+            new Item.Settings().food(FoodComponents.GRAPES));
+        BLUE_BERRIES = register("blue_berries", createBlockItemWithUniqueName(Blocks.BLUE_BERRY_BUSH),
+            new Item.Settings().food(FoodComponents.BLUE_BERRIES));
+        HEALTHY_CARROT = register("healthy_carrot", createBlockItemWithUniqueName(Blocks.HEALTHY_CARROT_CROP),
+            new Item.Settings().food(FoodComponents.HEALTHY_CARROT));
+        ONION = register("onion", createBlockItemWithUniqueName(Blocks.ONION_CROP),
+            new Item.Settings().food(FoodComponents.ONION));
         OPENED_COCONUT = register("opened_coconut", new Item.Settings().food(FoodComponents.OPENED_COCONUT));
         ORANGE = register("orange", new Item.Settings().food(FoodComponents.ORANGE));
         PEACH = register("peach", new Item.Settings().food(FoodComponents.PEACH));
         SALAD = register("salad", new Item.Settings().food(FoodComponents.SALAD));
-        TOMATO = register("tomato", new Item.Settings().food(FoodComponents.TOMATO));
+        TOMATO = register("tomato", createBlockItemWithUniqueName(Blocks.TOMATO_CROP),
+            new Item.Settings().food(FoodComponents.TOMATO));
         WILD_CARROT = register("wild_carrot", new Item.Settings().food(FoodComponents.WILD_CARROT));
         FUNGUS_STEW = register("fungus_stew", new Item.Settings().food(FoodComponents.FUNGUS_STEW));
         LAVA_STEW = register("lava_stew", new Item.Settings().food(FoodComponents.LAVA_STEW));
@@ -320,8 +337,19 @@ public class Items {
         VOIDBERRY_PIE = register("voidberry_pie", new Item.Settings().food(FoodComponents.VOIDBERRY_PIE));
         ENDER_STEW = register("ender_stew", new Item.Settings().food(FoodComponents.ENDER_STEW));
         COCONUT = register("coconut");
-        
+
+        BARLEY = register("barley");
+        BARLEY_SEEDS = register("barley_seeds", createBlockItemWithUniqueName(Blocks.BARLEY_CROP));
         CABBAGE_SEEDS = register("cabbage_seeds", createBlockItemWithUniqueName(Blocks.CABBAGE_CROP));
+        EGGPLANT_SEEDS = register("eggplant_seeds", createBlockItemWithUniqueName(Blocks.EGGPLANT_CROP));
+
+        PEACH_LEAVES = register(Blocks.PEACH_LEAVES);
+        ORANGE_LEAVES = register(Blocks.ORANGE_LEAVES);
+
+        BLANK_POTTERY_SHERD = register("blank_pottery_sherd", new Item.Settings().rarity(Rarity.UNCOMMON));
+        PARTY_POTTERY_SHERD = register("party_pottery_sherd", new Item.Settings().rarity(Rarity.UNCOMMON));
+        FORGER_POTTERY_SHERD = register("forger_pottery_sherd", new Item.Settings().rarity(Rarity.UNCOMMON));
+        PIGLIN_POTTERY_SHERD = register("piglin_pottery_sherd", new Item.Settings().rarity(Rarity.UNCOMMON));
 
         MUSIC_DISC_FOX = register("music_disc_fox",
             new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON).jukeboxPlayable(JukeboxSongs.FOX));

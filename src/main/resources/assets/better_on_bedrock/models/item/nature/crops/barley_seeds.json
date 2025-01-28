@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "better_on_bedrock:item/food/grape"
+    "layer0": "better_on_bedrock:item/crops/barley_seeds"
   }
 }

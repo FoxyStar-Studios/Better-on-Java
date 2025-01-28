@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": { "crop": "better_on_bedrock:block/nature/crops/barley_stage1" }
+}

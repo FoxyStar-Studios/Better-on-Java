@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "better_on_bedrock:blocks/cabbage_crop",
+  "random_sequence": "better_on_bedrock:blocks/cabbage",
   "functions": [
     { "function": "minecraft:explosion_decay" }
   ],
@@ -14,14 +14,14 @@
           "children": [
             {
               "type": "minecraft:item",
+              "name": "better_on_bedrock:cabbage_leaf",
               "conditions": [
                 {
-                  "block": "better_on_bedrock:cabbage_crop",
+                  "block": "better_on_bedrock:cabbage",
                   "condition": "minecraft:block_state_property",
                   "properties": { "age": "4" }
                 }
-              ],
-              "name": "better_on_bedrock:cabbage_leaf"
+              ]
             },
             {
               "type": "minecraft:item",
@@ -36,7 +36,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "better_on_bedrock:cabbage_crop",
+          "block": "better_on_bedrock:cabbage",
           "condition": "minecraft:block_state_property",
           "properties": { "age": "4" }
         }

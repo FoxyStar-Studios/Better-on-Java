@@ -14,8 +14,8 @@ public class FoodComponents {
     public static final FoodComponent SWEET_BERRY_PIE_SLICE;
     public static final FoodComponent CABBAGE_LEAF;
     public static final FoodComponent EGGPLANT;
-    public static final FoodComponent GRAPE;
-    public static final FoodComponent BLUE_BERRY;
+    public static final FoodComponent GRAPES;
+    public static final FoodComponent BLUE_BERRIES;
     public static final FoodComponent HEALTHY_CARROT;
     public static final FoodComponent ONION;
     public static final FoodComponent OPENED_COCONUT;
@@ -52,8 +52,8 @@ public class FoodComponents {
         SWEET_BERRY_PIE_SLICE = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
         CABBAGE_LEAF = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
         EGGPLANT = (new FoodComponent.Builder()).nutrition(1).saturationModifier(0.8F).build();
-        GRAPE = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
-        BLUE_BERRY = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        GRAPES = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
+        BLUE_BERRIES = (new FoodComponent.Builder()).nutrition(3).saturationModifier(0.8F).build();
         HEALTHY_CARROT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
         ONION = (new FoodComponent.Builder()).nutrition(1).saturationModifier(0.8F).build();
         OPENED_COCONUT = (new FoodComponent.Builder()).nutrition(2).saturationModifier(0.8F).build();
