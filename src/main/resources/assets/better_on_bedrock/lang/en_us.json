@@ -35,6 +35,7 @@
   "block.better_on_bedrock.big_sprout": "Big Sprout",
   "block.better_on_bedrock.bellflower": "Bellflower",
   "block.better_on_bedrock.anemone": "Anemone",
+  "block.better_on_bedrock.tiny_sprout": "Tiny Sprout",
   "block.better_on_bedrock.wildflower": "Wildflower",
   "block.better_on_bedrock.purple_hydrangea": "Purple Hydrangea",
 
@@ -189,7 +190,7 @@
 
 
   "item.better_on_bedrock.blank_pottery_sherd": "Blank Pottery Sherd",
-  "item.better_on_bedrock.cake_pottery_sherd": "Cake Pottery Sherd",
+  "item.better_on_bedrock.party_pottery_sherd": "Party Pottery Sherd",
   "item.better_on_bedrock.forger_pottery_sherd": "Forger Pottery Sherd",
   "item.better_on_bedrock.piglin_pottery_sherd": "Piglin Pottery Sherd",
 
