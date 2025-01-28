@@ -136,7 +136,7 @@ public class Items {
     public static final Item PINK_LAVENDER;
     public static final Item TALL_LAVENDER;
     public static final Item BLUEGROD;
-    public static final Item TALLER_GRASS;
+    public static final Item LUSH_GRASS;
 
     public static final Item CHORUS_LOG;
     public static final Item CHORUS_WOOD;
@@ -367,7 +367,7 @@ public class Items {
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
         BLUEGROD = register(Blocks.BLUEGROD);
-        TALLER_GRASS = register(Blocks.TALLER_GRASS);
+        LUSH_GRASS = register(Blocks.LUSH_GRASS);
 
         // Chorus Woodset
         CHORUS_LOG = register(Blocks.CHORUS_LOG);

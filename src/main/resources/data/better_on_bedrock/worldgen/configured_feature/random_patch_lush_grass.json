@@ -8,7 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "better_on_bedrock:taller_grass",
+              "Name": "better_on_bedrock:lush_grass",
               "Properties": {
                 "half": "lower"
               }

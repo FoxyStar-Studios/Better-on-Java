@@ -87,7 +87,7 @@ public class ItemGroups {
                 entries.add(Items.PINK_LAVENDER);
                 entries.add(Items.TALL_LAVENDER);
                 entries.add(Items.BLUEGROD);
-                entries.add(Items.TALLER_GRASS);
+                entries.add(Items.LUSH_GRASS);
 
                 entries.add(Items.BARLEY_SEEDS);
                 entries.add(Items.CABBAGE_SEEDS);

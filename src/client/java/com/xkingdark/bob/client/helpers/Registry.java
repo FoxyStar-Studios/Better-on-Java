@@ -77,7 +77,7 @@ public class Registry {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PINK_LAVENDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TALL_LAVENDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BLUEGROD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TALLER_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.LUSH_GRASS, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PEACH_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.ORANGE_LEAVES, RenderLayer.getCutout());

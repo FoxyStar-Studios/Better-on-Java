@@ -8,13 +8,12 @@ import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.world.*;
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
 
-public class PedestalBlockEntity extends BlockEntity implements PedestalInventory {
+public class PedestalBlockEntity extends BlockEntity implements pedestalInventory {
     private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
 
     public PedestalBlockEntity(BlockPos pos, BlockState state) {

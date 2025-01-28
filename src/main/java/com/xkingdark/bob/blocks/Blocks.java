@@ -23,10 +23,14 @@ import static net.minecraft.block.Blocks.createButtonSettings;
 public final class Blocks {
     public static final Block WAYSTONE;
     public static final Block STARDUST_ORE;
-    public static final Block PINK_LAVENDER;
+
+    //Double Plants
     public static final Block TALL_LAVENDER;
     public static final Block BLUEGROD;
-    public static final Block TALLER_GRASS;
+    public static final Block LUSH_GRASS;
+
+    //Flowers
+    public static final Block PINK_LAVENDER;
 
     //Crops
     public static final Block BARLEY_CROP;
@@ -127,7 +131,7 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
-        TALLER_GRASS = Blocks.register("taller_grass", TallFlowerBlock::new,
+        LUSH_GRASS = Blocks.register("lush_grass", TallFlowerBlock::new,
             AbstractBlock.Settings.create()
                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
                 .offset(AbstractBlock.OffsetType.XZ)
