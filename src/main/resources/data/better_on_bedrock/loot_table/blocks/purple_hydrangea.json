@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "better_on_bedrock:blocks/purple_hydrangea",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "conditions": [
+        { "condition": "minecraft:survives_explosion" }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "better_on_bedrock:purple_hydrangea",
+          "conditions": [
+            {
+              "block": "better_on_bedrock:purple_hydrangea",
+              "condition": "minecraft:block_state_property"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
