@@ -16,9 +16,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
-import static net.minecraft.block.Blocks.createLogSettings;
-import static net.minecraft.block.Blocks.createLeavesSettings;
-import static net.minecraft.block.Blocks.createButtonSettings;
+import static net.minecraft.block.Blocks.*;
 
 public final class Blocks {
     public static final Block WAYSTONE;
@@ -31,6 +29,17 @@ public final class Blocks {
 
     //Flowers
     public static final Block PINK_LAVENDER;
+    public static final Block TALLER_GRASS;
+    public static final Block LILAC_HEADS;
+    public static final Block IRIS;
+    public static final Block HYDRANGEA;
+    public static final Block CLEMATIS;
+    public static final Block BIG_SPROUT;
+    public static final Block BELLFLOWER;
+    public static final Block ANEMONE;
+    public static final Block TINY_SPROUT;
+    public static final Block WILDFLOWER;
+    public static final Block PURPLE_HYDRANGEA;
 
     //Crops
     public static final Block BARLEY_CROP;
@@ -112,13 +121,6 @@ public final class Blocks {
 
         STARDUST_ORE = Blocks.register("stardust_ore",
             AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
-        PINK_LAVENDER = Blocks.register("pink_lavender", ShortPlantBlock::new,
-            AbstractBlock.Settings.create()
-                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                .offset(AbstractBlock.OffsetType.XYZ)
-                .replaceable()
-                .noCollision().burnable()
-                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         TALL_LAVENDER = Blocks.register("tall_lavender", TallFlowerBlock::new,
             AbstractBlock.Settings.create()
                 .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
@@ -137,6 +139,92 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+
+        //Flowers
+        PINK_LAVENDER = Blocks.register("pink_lavender", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        TALLER_GRASS = Blocks.register("taller_grass", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        LILAC_HEADS = Blocks.register("lilac_heads", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        IRIS = Blocks.register("iris", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        HYDRANGEA = Blocks.register("hydrangea", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        CLEMATIS = Blocks.register("clematis", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        BIG_SPROUT = Blocks.register("big_sprout", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        BELLFLOWER = Blocks.register("bellflower", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        ANEMONE = Blocks.register("anemone", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        TINY_SPROUT = Blocks.register("tiny_sprout", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        WILDFLOWER = Blocks.register("wildflower", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        PURPLE_HYDRANGEA = Blocks.register("purple_hydrangea", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XYZ)
+                        .replaceable()
+                        .noCollision().burnable()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
 
         // Crops
         BARLEY_CROP = Blocks.register("barley", BarleyBlock::new,

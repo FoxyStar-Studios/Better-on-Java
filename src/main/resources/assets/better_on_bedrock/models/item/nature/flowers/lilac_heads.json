@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "better_on_bedrock:block/nature/flowers/lilac_heads"
+  }
+}

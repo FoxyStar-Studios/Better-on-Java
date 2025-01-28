@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": { "cross": "better_on_bedrock:block/nature/flowers/wildflower" }
+}

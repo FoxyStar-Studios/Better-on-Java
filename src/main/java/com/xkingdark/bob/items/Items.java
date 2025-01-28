@@ -133,10 +133,23 @@ public class Items {
 
     public static final Item STARDUST_ORE;
 
-    public static final Item PINK_LAVENDER;
     public static final Item TALL_LAVENDER;
     public static final Item BLUEGROD;
     public static final Item LUSH_GRASS;
+
+    //Flowers
+    public static final Item PINK_LAVENDER;
+    public static final Item TALLER_GRASS;
+    public static final Item LILAC_HEADS;
+    public static final Item IRIS;
+    public static final Item HYDRANGEA;
+    public static final Item CLEMATIS;
+    public static final Item BIG_SPROUT;
+    public static final Item BELLFLOWER;
+    public static final Item ANEMONE;
+    public static final Item TINY_SPROUT;
+    public static final Item WILDFLOWER;
+    public static final Item PURPLE_HYDRANGEA;
 
     public static final Item CHORUS_LOG;
     public static final Item CHORUS_WOOD;
@@ -364,10 +377,24 @@ public class Items {
 
         STARDUST_ORE = register(Blocks.STARDUST_ORE);
 
-        PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
+
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
         BLUEGROD = register(Blocks.BLUEGROD);
         LUSH_GRASS = register(Blocks.LUSH_GRASS);
+
+        //Flowers
+        PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
+        TALLER_GRASS = register(Blocks.TALLER_GRASS);
+        LILAC_HEADS = register(Blocks.LILAC_HEADS);
+        IRIS = register(Blocks.IRIS);
+        HYDRANGEA = register(Blocks.HYDRANGEA);
+        CLEMATIS = register(Blocks.CLEMATIS);
+        BIG_SPROUT = register(Blocks.BIG_SPROUT);
+        BELLFLOWER = register(Blocks.BELLFLOWER);
+        ANEMONE = register(Blocks.ANEMONE);
+        TINY_SPROUT = register(Blocks.TINY_SPROUT);
+        WILDFLOWER = register(Blocks.WILDFLOWER);
+        PURPLE_HYDRANGEA = register(Blocks.PURPLE_HYDRANGEA);
 
         // Chorus Woodset
         CHORUS_LOG = register(Blocks.CHORUS_LOG);

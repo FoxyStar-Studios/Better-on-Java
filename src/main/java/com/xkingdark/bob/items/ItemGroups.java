@@ -84,10 +84,24 @@ public class ItemGroups {
                 entries.add(Items.PEACH_LEAVES);
                 entries.add(Items.ORANGE_LEAVES);
 
-                entries.add(Items.PINK_LAVENDER);
                 entries.add(Items.TALL_LAVENDER);
                 entries.add(Items.BLUEGROD);
                 entries.add(Items.LUSH_GRASS);
+
+                entries.add(Items.PINK_LAVENDER);
+                entries.add(Items.TALLER_GRASS);
+                entries.add(Items.LILAC_HEADS);
+                entries.add(Items.IRIS);
+                entries.add(Items.HYDRANGEA);
+                entries.add(Items.CLEMATIS);
+                entries.add(Items.BIG_SPROUT);
+                entries.add(Items.BELLFLOWER);
+                entries.add(Items.ANEMONE);
+                entries.add(Items.TINY_SPROUT);
+                entries.add(Items.WILDFLOWER);
+                entries.add(Items.PURPLE_HYDRANGEA);
+
+
 
                 entries.add(Items.BARLEY_SEEDS);
                 entries.add(Items.CABBAGE_SEEDS);
