@@ -322,7 +322,7 @@ public class Items {
             new Item.Settings().food(FoodComponents.GRAPES));
         BLUE_BERRIES = register("blue_berries", createBlockItemWithUniqueName(Blocks.BLUE_BERRY_BUSH),
             new Item.Settings().food(FoodComponents.BLUE_BERRIES));
-        HEALTHY_CARROT = register("healthy_carrot", createBlockItemWithUniqueName(Blocks.HEALTHY_CARROT_CROP),
+        HEALTHY_CARROT = register("healthy_carrot",
             new Item.Settings().food(FoodComponents.HEALTHY_CARROT));
         ONION = register("onion", createBlockItemWithUniqueName(Blocks.ONION_CROP),
             new Item.Settings().food(FoodComponents.ONION));
@@ -332,7 +332,7 @@ public class Items {
         SALAD = register("salad", new Item.Settings().food(FoodComponents.SALAD));
         TOMATO = register("tomato", createBlockItemWithUniqueName(Blocks.TOMATO_CROP),
             new Item.Settings().food(FoodComponents.TOMATO));
-        WILD_CARROT = register("wild_carrot", new Item.Settings().food(FoodComponents.WILD_CARROT));
+        WILD_CARROT = register("wild_carrot", createBlockItemWithUniqueName(Blocks.HEALTHY_CARROT_CROP), new Item.Settings().food(FoodComponents.WILD_CARROT));
         FUNGUS_STEW = register("fungus_stew", new Item.Settings().food(FoodComponents.FUNGUS_STEW));
         LAVA_STEW = register("lava_stew", new Item.Settings().food(FoodComponents.LAVA_STEW));
         SANDWICH = register("sandwich", new Item.Settings().food(FoodComponents.SANDWICH));

@@ -48,6 +48,7 @@ public final class Blocks {
     public static final Block HEALTHY_CARROT_CROP;
     public static final Block ONION_CROP;
     public static final Block TOMATO_CROP;
+    public static final Block WILD_CARROT;
 
     public static final Block PEACH_LEAVES;
     public static final Block ORANGE_LEAVES;
@@ -273,6 +274,11 @@ public final class Blocks {
                 .noCollision()
                 .ticksRandomly()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        WILD_CARROT = Blocks.register("wild_carrot", ShortPlantBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                        .noCollision()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
 
         PEACH_LEAVES = register("peach_leaves", LeavesBlock::new,
             createLeavesSettings(BlockSoundGroup.GRASS));
