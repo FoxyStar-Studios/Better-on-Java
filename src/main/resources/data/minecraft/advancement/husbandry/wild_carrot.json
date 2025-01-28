@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "frame": "challenge",
+    "icon": {
+      "id": "better_on_bedrock:wild_carrot",
+      "count": 1
+    },
+    "title": { "translate": "advancements.husbandry.wild_carrot.title" },
+    "description": { "translate": "advancements.husbandry.wild_carrot.description" },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "sends_telemetry_event": true,
+  "requirements": [
+    [ "wild_carrot" ]
+  ],
+  "criteria": {
+    "wild_carrot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "better_on_bedrock:wild_carrot" }
+        ]
+      }
+    }
+  }
+}
