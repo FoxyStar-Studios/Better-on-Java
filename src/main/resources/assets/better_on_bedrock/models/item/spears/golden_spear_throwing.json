@@ -1,0 +1,7 @@
+{
+  "parent": "better_on_bedrock:item/spears/spear_throwing",
+  "textures": {
+    "item": "better_on_bedrock:item/spears/golden_spear",
+    "spear": "better_on_bedrock:item/spears/entity/golden_spear"
+  }
+}

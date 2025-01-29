@@ -8,6 +8,7 @@ import com.xkingdark.bob.items.components.FoodComponents;
 import com.xkingdark.bob.items.equipment.ArmorMaterials;
 import com.xkingdark.bob.items.tools.ToolMaterials;
 import net.minecraft.block.Block;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -27,6 +28,13 @@ public class Items {
 
     public static final Item BANE_SPIKE;
     public static final Item BLADE_OF_THE_NETHER;
+    public static final Item WOODEN_SPEAR;
+    public static final Item STONE_SPEAR;
+    public static final Item GOLDEN_SPEAR;
+    public static final Item AMETHYST_SPEAR;
+    public static final Item IRON_SPEAR;
+    public static final Item DIAMOND_SPEAR;
+    public static final Item STARDUST_SPEAR;
 
     public static final Item COPPER_HELMET;
     public static final Item COPPER_CHESTPLATE;
@@ -212,6 +220,48 @@ public class Items {
 
         BANE_SPIKE = register("bane_spike", BaneSpikeItem::new);
         BLADE_OF_THE_NETHER = register("blade_of_the_nether", BladeOfTheNetherItem::new);
+        WOODEN_SPEAR = register("wooden_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(60)
+                .attributeModifiers(SpearItem.createAttributeModifiers(4))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
+        STONE_SPEAR = register("stone_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(132)
+                .attributeModifiers(SpearItem.createAttributeModifiers(5))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
+        GOLDEN_SPEAR = register("golden_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(33)
+                .attributeModifiers(SpearItem.createAttributeModifiers(7))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
+        AMETHYST_SPEAR = register("amethyst_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(125)
+                .attributeModifiers(SpearItem.createAttributeModifiers(6))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
+        IRON_SPEAR = register("iron_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(251)
+                .attributeModifiers(SpearItem.createAttributeModifiers(6))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
+        DIAMOND_SPEAR = register("diamond_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(1562)
+                .attributeModifiers(SpearItem.createAttributeModifiers(8))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
+        STARDUST_SPEAR = register("stardust_spear", SpearItem::new,
+            new Item.Settings()
+                .maxDamage(2531)
+                .attributeModifiers(SpearItem.createAttributeModifiers(9))
+                .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
+                .enchantable(1));
 
         COPPER_HELMET = register("copper_helmet", (settings) ->
             new ArmorItem(ArmorMaterials.COPPER, EquipmentType.HELMET, settings));
@@ -333,7 +383,8 @@ public class Items {
         SALAD = register("salad", new Item.Settings().food(FoodComponents.SALAD));
         TOMATO = register("tomato", createBlockItemWithUniqueName(Blocks.TOMATO_CROP),
             new Item.Settings().food(FoodComponents.TOMATO));
-        WILD_CARROT = register("wild_carrot", createBlockItemWithUniqueName(Blocks.HEALTHY_CARROT_CROP), new Item.Settings().food(FoodComponents.WILD_CARROT));
+        WILD_CARROT = register("wild_carrot", createBlockItemWithUniqueName(Blocks.HEALTHY_CARROT_CROP),
+            new Item.Settings().food(FoodComponents.WILD_CARROT));
         FUNGUS_STEW = register("fungus_stew", new Item.Settings().food(FoodComponents.FUNGUS_STEW));
         LAVA_STEW = register("lava_stew", new Item.Settings().food(FoodComponents.LAVA_STEW));
         SANDWICH = register("sandwich", new Item.Settings().food(FoodComponents.SANDWICH));

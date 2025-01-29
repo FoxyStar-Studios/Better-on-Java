@@ -3,6 +3,7 @@ package com.xkingdark.bob.entities;
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
 import com.xkingdark.bob.blocks.pedestal.PedestalBlockEntity;
+import com.xkingdark.bob.entities.spears.*;
 import com.xkingdark.bob.items.Items;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
@@ -25,6 +26,14 @@ import java.util.function.Supplier;
 public class EntityTypes {
     public static final BlockEntityType<PedestalBlockEntity> PEDESTAL;
 
+    public static final EntityType<WoodenSpearEntity> WOODEN_SPEAR;
+    public static final EntityType<StoneSpearEntity> STONE_SPEAR;
+    public static final EntityType<GoldenSpearEntity> GOLDEN_SPEAR;
+    public static final EntityType<IronSpearEntity> IRON_SPEAR;
+    public static final EntityType<AmethystSpearEntity> AMETHYST_SPEAR;
+    public static final EntityType<DiamondSpearEntity> DIAMOND_SPEAR;
+    public static final EntityType<StardustSpearEntity> STARDUST_SPEAR;
+
     public static final EntityType<BoatEntity> CHORUS_BOAT;
     public static final EntityType<ChestBoatEntity> CHORUS_CHEST_BOAT;
     public static final EntityType<BoatEntity> VACANT_BOAT;
@@ -36,48 +45,92 @@ public class EntityTypes {
         PEDESTAL = register("pedestal", PedestalBlockEntity::new,
             Blocks.PEDESTAL);
 
+        WOODEN_SPEAR = register("wooden_spear",
+            EntityType.Builder.create(WoodenSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+        STONE_SPEAR = register("stone_spear",
+            EntityType.Builder.create(StoneSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+        GOLDEN_SPEAR = register("golden_spear",
+            EntityType.Builder.create(GoldenSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+        AMETHYST_SPEAR = register("amethyst_spear",
+            EntityType.Builder.create(AmethystSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+        IRON_SPEAR = register("iron_spear",
+            EntityType.Builder.create(IronSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+        DIAMOND_SPEAR = register("diamond_spear",
+            EntityType.Builder.create(DiamondSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+        STARDUST_SPEAR = register("stardust_spear",
+            EntityType.Builder.create(StardustSpearEntity::new, SpawnGroup.MISC)
+                .dropsNothing()
+                .dimensions(0.5F, 0.5F)
+                .eyeHeight(0.13F)
+                .maxTrackingRange(4)
+                .trackingTickInterval(20));
+
         CHORUS_BOAT = register("chorus_boat",
             EntityType.Builder.create(getBoatFactory(() -> Items.CHORUS_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
-                .maxTrackingRange(10)
-        );
+                .maxTrackingRange(10));
         CHORUS_CHEST_BOAT = register("chorus_chest_boat",
             EntityType.Builder.create(getChestBoatFactory(() -> Items.CHORUS_CHEST_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
-                .maxTrackingRange(10)
-        );
+                .maxTrackingRange(10));
         VACANT_BOAT = register("vacant_boat",
             EntityType.Builder.create(getBoatFactory(() -> Items.VACANT_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
-                .maxTrackingRange(10)
-        );
+                .maxTrackingRange(10));
         VACANT_CHEST_BOAT = register("vacant_chest_boat",
             EntityType.Builder.create(getChestBoatFactory(() -> Items.VACANT_CHEST_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
-                .maxTrackingRange(10)
-        );
+                .maxTrackingRange(10));
         VOIDING_BOAT = register("voiding_boat",
             EntityType.Builder.create(getBoatFactory(() -> Items.VOIDING_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
-                .maxTrackingRange(10)
-        );
+                .maxTrackingRange(10));
         VOIDING_CHEST_BOAT = register("voiding_chest_boat",
             EntityType.Builder.create(getChestBoatFactory(() -> Items.VOIDING_CHEST_BOAT), SpawnGroup.MISC)
                 .dropsNothing()
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
-                .maxTrackingRange(10)
-        );
+                .maxTrackingRange(10));
     }
 
     private static <T extends BlockEntity> BlockEntityType<T> register(

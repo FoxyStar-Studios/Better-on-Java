@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "X": "minecraft:flint",
+    "#": "minecraft:stick"
+  },
+  "pattern": [
+    "A",
+    "X",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "better_on_bedrock:iron_spear"
+  }
+}

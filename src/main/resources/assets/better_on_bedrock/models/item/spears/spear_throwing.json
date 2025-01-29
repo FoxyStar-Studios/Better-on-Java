@@ -1,0 +1,26 @@
+{
+  "parent": "better_on_bedrock:item/spears/spear_in_hand",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [180, 0, 0],
+      "translation": [0, -1.5, 2]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [180, 0, 0],
+      "translation": [0, -1.5, 2]
+    },
+    "firstperson_righthand": {
+      "rotation": [-25, 15, 0],
+      "translation": [9.5, -8, 0]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-25, 15, 0],
+      "translation": [9.5, -8, 0]
+    },
+    "fixed": {
+      "rotation": [0, 90, 0],
+      "translation": [0, -4.75, 0],
+      "scale": [0.75, 0.75, 0.75]
+    }
+  }
+}

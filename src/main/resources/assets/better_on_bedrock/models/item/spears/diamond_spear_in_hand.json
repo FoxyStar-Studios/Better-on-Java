@@ -1,0 +1,7 @@
+{
+  "parent": "better_on_bedrock:item/spears/spear_in_hand",
+  "textures": {
+    "item": "better_on_bedrock:item/spears/diamond_spear",
+    "spear": "better_on_bedrock:item/spears/entity/diamond_spear"
+  }
+}

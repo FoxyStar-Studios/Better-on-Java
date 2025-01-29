@@ -106,8 +106,15 @@
 
 
   "item.better_on_bedrock.blade_of_the_nether": "Blade of the Nether",
-  "item.better_on_bedrock.bane_spike": "§pBane Spike§r",
+  "item.better_on_bedrock.bane_spike": "Bane Spike",
   "item.better_on_bedrock.bane_spike.desc": "Poisons any hit target",
+  "item.better_on_bedrock.wooden_spear": "Wooden Spear",
+  "item.better_on_bedrock.stone_spear": "Stone Spear",
+  "item.better_on_bedrock.golden_spear": "Golden Spear",
+  "item.better_on_bedrock.iron_spear": "Iron Spear",
+  "item.better_on_bedrock.diamond_spear": "Diamond Spear",
+  "item.better_on_bedrock.amethyst_spear": "Amethyst Spear",
+  "item.better_on_bedrock.stardust_spear": "Stardust Spear",
 
   "item.better_on_bedrock.copper_helmet": "Copper Helmet",
   "item.better_on_bedrock.copper_chestplate": "Copper Chestplate",

@@ -241,6 +241,13 @@ public class ItemGroups {
 
                 entries.add(Items.BANE_SPIKE);
                 entries.add(Items.BLADE_OF_THE_NETHER);
+                entries.add(Items.WOODEN_SPEAR);
+                entries.add(Items.STONE_SPEAR);
+                entries.add(Items.GOLDEN_SPEAR);
+                entries.add(Items.AMETHYST_SPEAR);
+                entries.add(Items.IRON_SPEAR);
+                entries.add(Items.DIAMOND_SPEAR);
+                entries.add(Items.STARDUST_SPEAR);
             }).build()
         );
 

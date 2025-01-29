@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 
 public class DamageTypes {
     public static final RegistryKey<DamageType> BLUE_BERRY_BUSH = of("blue_berry_bush");
+    public static final RegistryKey<DamageType> SPEAR = of("spear");
 
     public static DamageSource getSource(World world, RegistryKey<DamageType> key) {
         Registry<DamageType> registry = world.getRegistryManager().getOrThrow(RegistryKeys.DAMAGE_TYPE);
