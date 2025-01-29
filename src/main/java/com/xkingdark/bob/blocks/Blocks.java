@@ -38,6 +38,7 @@ public final class Blocks {
     public static final Block TINY_SPROUT;
     public static final Block WILDFLOWER;
     public static final Block PURPLE_HYDRANGEA;
+    public static final Block TALL_EYEBLOSSOM;
 
     //Crops
     public static final Block BARLEY_CROP;
@@ -138,6 +139,12 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        TALL_EYEBLOSSOM = Blocks.register("tall_eyeblossom", TallEyeblossomBlock::new,
+                AbstractBlock.Settings.create()
+                        .mapColor(MapColor.DEEPSLATE_GRAY).sounds(BlockSoundGroup.GRASS)
+                        .offset(AbstractBlock.OffsetType.XZ)
+                        .noCollision().burnable().ticksRandomly()
+                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
 
         //Flowers
         PINK_LAVENDER = Blocks.register("pink_lavender", ShortPlantBlock::new,

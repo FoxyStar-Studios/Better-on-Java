@@ -1,0 +1,33 @@
+{
+    "name": "better_on_bedrock:cherry_village/house/buildings",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 90,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_house_small",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 20,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_medium_house",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 20,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/buildings/cherry_large_house",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

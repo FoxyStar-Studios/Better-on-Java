@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "half=lower,open=true": {
+      "model": "better_on_bedrock:block/nature/flowers/eyepale_blossom/lower_eyeblossom"
+    },
+    "half=upper,open=true": {
+      "model": "better_on_bedrock:block/nature/flowers/eyepale_blossom/upper_eyeblossom"
+    },
+    "half=lower,open=false": {
+      "model": "better_on_bedrock:block/nature/flowers/eyepale_blossom/lower_eyeblossom_closed"
+    },
+    "half=upper,open=false": {
+      "model": "better_on_bedrock:block/nature/flowers/eyepale_blossom/upper_eyeblossom_closed"
+    }
+  }
+}

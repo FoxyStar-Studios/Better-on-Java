@@ -3,15 +3,6 @@
     "fallback": "minecraft:empty",
     "elements": [
         {
-            "weight": 90,
-            "element": {
-                "location": "better_on_bedrock:cherry_village/buildings/buildings/cherry_house_small",
-                "processors": "minecraft:empty",
-                "projection": "rigid",
-                "element_type": "minecraft:single_pool_element"
-            }
-        },
-        {
             "weight": 60,
             "element": {
                 "location": "better_on_bedrock:cherry_village/buildings/cherry_farmer_house",
@@ -60,15 +51,6 @@
             "weight": 25,
             "element": {
                 "location": "better_on_bedrock:cherry_village/buildings/cherry_butcher",
-                "processors": "minecraft:empty",
-                "projection": "rigid",
-                "element_type": "minecraft:single_pool_element"
-            }
-        },
-        {
-            "weight": 80,
-            "element": {
-                "location": "better_on_bedrock:cherry_village/buildings/cherry_medium_house",
                 "processors": "minecraft:empty",
                 "projection": "rigid",
                 "element_type": "minecraft:single_pool_element"

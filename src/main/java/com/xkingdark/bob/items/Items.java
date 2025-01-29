@@ -136,6 +136,7 @@ public class Items {
     public static final Item TALL_LAVENDER;
     public static final Item BLUEGROD;
     public static final Item LUSH_GRASS;
+    public static final Item TALL_EYEBLOSSOM;
 
     //Flowers
     public static final Item PINK_LAVENDER;
@@ -381,6 +382,7 @@ public class Items {
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
         BLUEGROD = register(Blocks.BLUEGROD);
         LUSH_GRASS = register(Blocks.LUSH_GRASS);
+        TALL_EYEBLOSSOM = register(Blocks.TALL_EYEBLOSSOM);
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALLER_GRASS = register(Blocks.TALLER_GRASS);
         LILAC_HEADS = register(Blocks.LILAC_HEADS);
