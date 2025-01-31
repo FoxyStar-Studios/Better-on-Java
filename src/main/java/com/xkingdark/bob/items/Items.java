@@ -81,6 +81,7 @@ public class Items {
     public static final Item STARDUST;
     public static final Item STARDUST_NUGGET;
 
+    // Food
     public static final Item MUTTON_CHOPS_RAW;
     public static final Item MUTTON_CHOPS_COOKED;
     public static final Item BAGUETTE;
@@ -119,6 +120,7 @@ public class Items {
     public static final Item ENDER_STEW;
     public static final Item COCONUT;
 
+    // Crops
     public static final Item BARLEY;
     public static final Item BARLEY_SEEDS;
     public static final Item CABBAGE_SEEDS;
@@ -160,6 +162,7 @@ public class Items {
     public static final Item WILDFLOWER;
     public static final Item PURPLE_HYDRANGEA;
 
+    // Chorus Woodset
     public static final Item CHORUS_LOG;
     public static final Item CHORUS_WOOD;
     public static final Item STRIPPED_CHORUS_LOG;
@@ -178,6 +181,7 @@ public class Items {
     public static final Item CHORUS_BOAT;
     public static final Item CHORUS_CHEST_BOAT;
 
+    // Vacant Woodset
     public static final Item VACANT_LOG;
     public static final Item VACANT_WOOD;
     public static final Item STRIPPED_VACANT_LOG;
@@ -196,6 +200,7 @@ public class Items {
     public static final Item VACANT_BOAT;
     public static final Item VACANT_CHEST_BOAT;
 
+    // Voiding Woodset
     public static final Item VOIDING_LOG;
     public static final Item VOIDING_WOOD;
     public static final Item STRIPPED_VOIDING_LOG;
@@ -213,6 +218,58 @@ public class Items {
     public static final Item VOIDING_FENCE_GATE;
     public static final Item VOIDING_BOAT;
     public static final Item VOIDING_CHEST_BOAT;
+
+    // Decorative Blocks
+    public static final Item COBBLED_ANDESITE;
+    public static final Item COBBLED_ANDESITE_STAIRS;
+    public static final Item COBBLED_ANDESITE_SLAB;
+    public static final Item COBBLED_ANDESITE_WALL;
+    public static final Item ANDESITE_BRICKS;
+    public static final Item ANDESITE_BRICK_STAIRS;
+    public static final Item ANDESITE_BRICK_SLAB;
+    public static final Item ANDESITE_BRICK_WALL;
+    public static final Item CRACKED_ANDESITE_BRICKS;
+    public static final Item CRACKED_ANDESITE_BRICK_STAIRS;
+    public static final Item CRACKED_ANDESITE_BRICK_SLAB;
+    public static final Item CRACKED_ANDESITE_BRICK_WALL;
+    public static final Item MOSSY_ANDESITE_BRICKS;
+    public static final Item MOSSY_ANDESITE_BRICK_STAIRS;
+    public static final Item MOSSY_ANDESITE_BRICK_SLAB;
+    public static final Item MOSSY_ANDESITE_BRICK_WALL;
+    public static final Item CHISELED_ANDESITE;
+    public static final Item CHISELED_ANDESITE_STAIRS;
+    public static final Item CHISELED_ANDESITE_SLAB;
+    public static final Item CHISELED_ANDESITE_WALL;
+    public static final Item CHISELED_POLISHED_ANDESITE;
+    public static final Item CHISELED_POLISHED_ANDESITE_STAIRS;
+    public static final Item CHISELED_POLISHED_ANDESITE_SLAB;
+    public static final Item CHISELED_POLISHED_ANDESITE_WALL;
+
+    public static final Item COBBLED_DIORITE;
+    public static final Item DIORITE_BRICKS;
+    public static final Item CRACKED_DIORITE_BRICKS;
+    public static final Item MOSSY_DIORITE_BRICKS;
+    public static final Item CHISELED_POLISHED_DIORITE;
+
+    public static final Item COBBLED_GRANITE;
+    public static final Item GRANITE_BRICKS;
+    public static final Item CRACKED_GRANITE_BRICKS;
+    public static final Item MOSSY_GRANITE_BRICKS;
+    public static final Item CHISELED_GRANITE;
+    public static final Item CHISELED_POLISHED_GRANITE;
+
+    public static final Item POLISHED_CALCITE;
+    public static final Item CALCITE_BRICKS;
+    public static final Item CHISELED_CALCITE_BRICKS;
+    public static final Item CRACKED_CALCITE_BRICKS;
+    public static final Item POLISHED_CALCITE_BRICKS;
+    public static final Item CRACKED_POLISHED_CALCITE_BRICKS;
+
+    public static final Item SLICED_TUFF;
+
+    public static final Item CUT_RESIN;
+    public static final Item SMOOTH_RESIN;
+    public static final Item RESIN_LAMP;
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
@@ -359,6 +416,7 @@ public class Items {
         STARDUST = register("stardust");
         STARDUST_NUGGET = register("stardust_nugget");
 
+        // Food
         MUTTON_CHOPS_RAW = register("mutton_chops_raw", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_RAW));
         MUTTON_CHOPS_COOKED = register("mutton_chops_cooked", new Item.Settings().food(FoodComponents.MUTTON_CHOPS_COOKED));
         BAGUETTE = register("baguette", new Item.Settings().food(FoodComponents.BAGUETTE));
@@ -403,6 +461,7 @@ public class Items {
         ENDER_STEW = register("ender_stew", new Item.Settings().food(FoodComponents.ENDER_STEW));
         COCONUT = register("coconut");
 
+        // Crops
         BARLEY = register("barley");
         BARLEY_SEEDS = register("barley_seeds", createBlockItemWithUniqueName(Blocks.BARLEY_CROP));
         CABBAGE_SEEDS = register("cabbage_seeds", createBlockItemWithUniqueName(Blocks.CABBAGE_CROP));
@@ -515,6 +574,58 @@ public class Items {
             new BoatItem(EntityTypes.VOIDING_BOAT, settings), new Item.Settings().maxCount(1));
         VOIDING_CHEST_BOAT = register("voiding_chest_boat", settings ->
             new BoatItem(EntityTypes.VOIDING_CHEST_BOAT, settings), new Item.Settings().maxCount(1));
+
+        // Decorative Blocks
+        COBBLED_ANDESITE = register(Blocks.COBBLED_ANDESITE);
+        COBBLED_ANDESITE_STAIRS = register(Blocks.COBBLED_ANDESITE_STAIRS);
+        COBBLED_ANDESITE_SLAB = register(Blocks.COBBLED_ANDESITE_SLAB);
+        COBBLED_ANDESITE_WALL = register(Blocks.COBBLED_ANDESITE_WALL);
+        ANDESITE_BRICKS = register(Blocks.ANDESITE_BRICKS);
+        ANDESITE_BRICK_STAIRS = register(Blocks.ANDESITE_BRICK_STAIRS);
+        ANDESITE_BRICK_SLAB = register(Blocks.ANDESITE_BRICK_SLAB);
+        ANDESITE_BRICK_WALL = register(Blocks.ANDESITE_BRICK_WALL);
+        CRACKED_ANDESITE_BRICKS = register(Blocks.CRACKED_ANDESITE_BRICKS);
+        CRACKED_ANDESITE_BRICK_STAIRS = register(Blocks.CRACKED_ANDESITE_BRICK_STAIRS);
+        CRACKED_ANDESITE_BRICK_SLAB = register(Blocks.CRACKED_ANDESITE_BRICK_SLAB);
+        CRACKED_ANDESITE_BRICK_WALL = register(Blocks.CRACKED_ANDESITE_BRICK_WALL);
+        MOSSY_ANDESITE_BRICKS = register(Blocks.MOSSY_ANDESITE_BRICKS);
+        MOSSY_ANDESITE_BRICK_STAIRS = register(Blocks.MOSSY_ANDESITE_BRICK_STAIRS);
+        MOSSY_ANDESITE_BRICK_SLAB = register(Blocks.MOSSY_ANDESITE_BRICK_SLAB);
+        MOSSY_ANDESITE_BRICK_WALL = register(Blocks.MOSSY_ANDESITE_BRICK_WALL);
+        CHISELED_ANDESITE = register(Blocks.CHISELED_ANDESITE);
+        CHISELED_ANDESITE_STAIRS = register(Blocks.CHISELED_ANDESITE_STAIRS);
+        CHISELED_ANDESITE_SLAB = register(Blocks.CHISELED_ANDESITE_SLAB);
+        CHISELED_ANDESITE_WALL = register(Blocks.CHISELED_ANDESITE_WALL);
+        CHISELED_POLISHED_ANDESITE = register(Blocks.CHISELED_POLISHED_ANDESITE);
+        CHISELED_POLISHED_ANDESITE_STAIRS = register(Blocks.CHISELED_POLISHED_ANDESITE_STAIRS);
+        CHISELED_POLISHED_ANDESITE_SLAB = register(Blocks.CHISELED_POLISHED_ANDESITE_SLAB);
+        CHISELED_POLISHED_ANDESITE_WALL = register(Blocks.CHISELED_POLISHED_ANDESITE_WALL);
+
+        COBBLED_DIORITE = register(Blocks.COBBLED_DIORITE);
+        DIORITE_BRICKS = register(Blocks.DIORITE_BRICKS);
+        CRACKED_DIORITE_BRICKS = register(Blocks.CRACKED_DIORITE_BRICKS);
+        MOSSY_DIORITE_BRICKS = register(Blocks.MOSSY_DIORITE_BRICKS);
+        CHISELED_POLISHED_DIORITE = register(Blocks.CHISELED_POLISHED_DIORITE);
+
+        COBBLED_GRANITE = register(Blocks.COBBLED_GRANITE);
+        GRANITE_BRICKS = register(Blocks.GRANITE_BRICKS);
+        CRACKED_GRANITE_BRICKS = register(Blocks.CRACKED_GRANITE_BRICKS);
+        MOSSY_GRANITE_BRICKS = register(Blocks.MOSSY_GRANITE_BRICKS);
+        CHISELED_GRANITE = register(Blocks.CHISELED_GRANITE);
+        CHISELED_POLISHED_GRANITE = register(Blocks.CHISELED_POLISHED_GRANITE);
+
+        POLISHED_CALCITE = register(Blocks.POLISHED_CALCITE);
+        CALCITE_BRICKS = register(Blocks.CALCITE_BRICKS);
+        CHISELED_CALCITE_BRICKS = register(Blocks.CHISELED_CALCITE_BRICKS);
+        CRACKED_CALCITE_BRICKS = register(Blocks.CRACKED_CALCITE_BRICKS);
+        POLISHED_CALCITE_BRICKS = register(Blocks.POLISHED_CALCITE_BRICKS);
+        CRACKED_POLISHED_CALCITE_BRICKS = register(Blocks.CRACKED_POLISHED_CALCITE_BRICKS);
+
+        SLICED_TUFF = register(Blocks.SLICED_TUFF);
+
+        CUT_RESIN = register(Blocks.CUT_RESIN);
+        SMOOTH_RESIN = register(Blocks.SMOOTH_RESIN);
+        RESIN_LAMP = register(Blocks.RESIN_LAMP);
     }
 
 

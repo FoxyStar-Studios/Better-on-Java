@@ -72,6 +72,56 @@ public class ItemGroups {
                 entries.add(Items.VOIDING_TRAPDOOR);
                 entries.add(Items.VOIDING_PRESSURE_PLATE);
                 entries.add(Items.VOIDING_BUTTON);
+
+                entries.add(Items.COBBLED_GRANITE);
+                entries.add(Items.GRANITE_BRICKS);
+                entries.add(Items.CRACKED_GRANITE_BRICKS);
+                entries.add(Items.CHISELED_GRANITE);
+                entries.add(Items.MOSSY_GRANITE_BRICKS);
+                entries.add(Items.CHISELED_POLISHED_GRANITE);
+
+                entries.add(Items.COBBLED_DIORITE);
+                entries.add(Items.DIORITE_BRICKS);
+                entries.add(Items.CRACKED_DIORITE_BRICKS);
+                entries.add(Items.MOSSY_DIORITE_BRICKS);
+                entries.add(Items.CHISELED_POLISHED_DIORITE);
+
+                entries.add(Items.COBBLED_ANDESITE);
+                entries.add(Items.COBBLED_ANDESITE_STAIRS);
+                entries.add(Items.COBBLED_ANDESITE_SLAB);
+                entries.add(Items.COBBLED_ANDESITE_WALL);
+                entries.add(Items.ANDESITE_BRICKS);
+                entries.add(Items.ANDESITE_BRICK_STAIRS);
+                entries.add(Items.ANDESITE_BRICK_SLAB);
+                entries.add(Items.ANDESITE_BRICK_WALL);
+                entries.add(Items.CRACKED_ANDESITE_BRICKS);
+                entries.add(Items.CRACKED_ANDESITE_BRICK_STAIRS);
+                entries.add(Items.CRACKED_ANDESITE_BRICK_SLAB);
+                entries.add(Items.CRACKED_ANDESITE_BRICK_WALL);
+                entries.add(Items.CHISELED_ANDESITE);
+                entries.add(Items.CHISELED_ANDESITE_STAIRS);
+                entries.add(Items.CHISELED_ANDESITE_SLAB);
+                entries.add(Items.CHISELED_ANDESITE_WALL);
+                entries.add(Items.MOSSY_ANDESITE_BRICKS);
+                entries.add(Items.MOSSY_ANDESITE_BRICK_STAIRS);
+                entries.add(Items.MOSSY_ANDESITE_BRICK_SLAB);
+                entries.add(Items.MOSSY_ANDESITE_BRICK_WALL);
+                entries.add(Items.CHISELED_POLISHED_ANDESITE);
+                entries.add(Items.CHISELED_POLISHED_ANDESITE_STAIRS);
+                entries.add(Items.CHISELED_POLISHED_ANDESITE_SLAB);
+                entries.add(Items.CHISELED_POLISHED_ANDESITE_WALL);
+
+                entries.add(Items.POLISHED_CALCITE);
+                entries.add(Items.CALCITE_BRICKS);
+                entries.add(Items.CHISELED_CALCITE_BRICKS);
+                entries.add(Items.CRACKED_CALCITE_BRICKS);
+                entries.add(Items.POLISHED_CALCITE_BRICKS);
+                entries.add(Items.CRACKED_POLISHED_CALCITE_BRICKS);
+
+                entries.add(Items.SLICED_TUFF);
+
+                entries.add(Items.CUT_RESIN);
+                entries.add(Items.SMOOTH_RESIN);
             }).build()
         );
 
@@ -114,6 +164,8 @@ public class ItemGroups {
             .displayName(Text.translatable("itemGroup.betterOnBedrock.functional"))
             .icon(() -> new ItemStack(Items.WAYSTONE))
             .entries((displayContext, entries) -> {
+                entries.add(Items.RESIN_LAMP);
+
                 entries.add(Items.WAYSTONE);
                 entries.add(Items.PEDESTAL);
 

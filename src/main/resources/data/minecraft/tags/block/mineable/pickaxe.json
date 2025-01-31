@@ -3,6 +3,9 @@
   "values": [
     "better_on_bedrock:waystone",
     "better_on_bedrock:stardust_ore",
-    "better_on_bedrock:pedestal"
+    "better_on_bedrock:pedestal",
+
+    "better_on_bedrock:cut_resin",
+    "better_on_bedrock:smooth_resin"
   ]
 }

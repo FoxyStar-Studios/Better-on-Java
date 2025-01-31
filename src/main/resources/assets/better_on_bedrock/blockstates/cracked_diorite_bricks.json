@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "better_on_bedrock:block/deco/diorite/cracked_diorite_bricks" }
+  }
+}

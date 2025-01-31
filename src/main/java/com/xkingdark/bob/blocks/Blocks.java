@@ -113,6 +113,58 @@ public final class Blocks {
     public static final Block VOIDING_FENCE;
     public static final Block VOIDING_FENCE_GATE;
 
+    // Decorative Blocks
+    public static final Block COBBLED_ANDESITE;
+    public static final Block COBBLED_ANDESITE_STAIRS;
+    public static final Block COBBLED_ANDESITE_SLAB;
+    public static final Block COBBLED_ANDESITE_WALL;
+    public static final Block ANDESITE_BRICKS;
+    public static final Block ANDESITE_BRICK_STAIRS;
+    public static final Block ANDESITE_BRICK_SLAB;
+    public static final Block ANDESITE_BRICK_WALL;
+    public static final Block CRACKED_ANDESITE_BRICKS;
+    public static final Block CRACKED_ANDESITE_BRICK_STAIRS;
+    public static final Block CRACKED_ANDESITE_BRICK_SLAB;
+    public static final Block CRACKED_ANDESITE_BRICK_WALL;
+    public static final Block MOSSY_ANDESITE_BRICKS;
+    public static final Block MOSSY_ANDESITE_BRICK_STAIRS;
+    public static final Block MOSSY_ANDESITE_BRICK_SLAB;
+    public static final Block MOSSY_ANDESITE_BRICK_WALL;
+    public static final Block CHISELED_ANDESITE;
+    public static final Block CHISELED_ANDESITE_STAIRS;
+    public static final Block CHISELED_ANDESITE_SLAB;
+    public static final Block CHISELED_ANDESITE_WALL;
+    public static final Block CHISELED_POLISHED_ANDESITE;
+    public static final Block CHISELED_POLISHED_ANDESITE_STAIRS;
+    public static final Block CHISELED_POLISHED_ANDESITE_SLAB;
+    public static final Block CHISELED_POLISHED_ANDESITE_WALL;
+
+    public static final Block COBBLED_DIORITE;
+    public static final Block DIORITE_BRICKS;
+    public static final Block CRACKED_DIORITE_BRICKS;
+    public static final Block MOSSY_DIORITE_BRICKS;
+    public static final Block CHISELED_POLISHED_DIORITE;
+
+    public static final Block COBBLED_GRANITE;
+    public static final Block GRANITE_BRICKS;
+    public static final Block CRACKED_GRANITE_BRICKS;
+    public static final Block MOSSY_GRANITE_BRICKS;
+    public static final Block CHISELED_GRANITE;
+    public static final Block CHISELED_POLISHED_GRANITE;
+
+    public static final Block POLISHED_CALCITE;
+    public static final Block CALCITE_BRICKS;
+    public static final Block CHISELED_CALCITE_BRICKS;
+    public static final Block CRACKED_CALCITE_BRICKS;
+    public static final Block POLISHED_CALCITE_BRICKS;
+    public static final Block CRACKED_POLISHED_CALCITE_BRICKS;
+
+    public static final Block SLICED_TUFF;
+
+    public static final Block CUT_RESIN;
+    public static final Block SMOOTH_RESIN;
+    public static final Block RESIN_LAMP;
+
     static {
         WAYSTONE = Blocks.register("waystone", WaystoneBlock::new,
             AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
@@ -441,6 +493,76 @@ public final class Blocks {
             WoodTypes.createFenceSettings(VOIDING_PLANKS).sounds(BlockSoundGroup.WOOD));
         VOIDING_FENCE_GATE = register("voiding_fence_gate", settings ->
             new FenceGateBlock(WoodTypes.VOIDING, settings), WoodTypes.createFenceSettings(VOIDING_PLANKS));
+
+        // Decorative Blocks
+        COBBLED_ANDESITE = register("cobbled_andesite", AbstractBlock.Settings.copyShallow(ANDESITE));
+        COBBLED_ANDESITE_STAIRS = registerStairsBlock("cobbled_andesite_stairs", COBBLED_ANDESITE);
+        COBBLED_ANDESITE_SLAB = register("cobbled_andesite_slab", SlabBlock::new,
+            AbstractBlock.Settings.copyShallow(COBBLED_ANDESITE));
+        COBBLED_ANDESITE_WALL = register("cobbled_andesite_wall", WallBlock::new,
+            AbstractBlock.Settings.copyShallow(COBBLED_ANDESITE));
+        ANDESITE_BRICKS = register("andesite_bricks", AbstractBlock.Settings.copyShallow(ANDESITE));
+        ANDESITE_BRICK_STAIRS = registerStairsBlock("andesite_brick_stairs", ANDESITE_BRICKS);
+        ANDESITE_BRICK_SLAB = register("andesite_brick_slab", SlabBlock::new,
+            AbstractBlock.Settings.copyShallow(ANDESITE_BRICKS));
+        ANDESITE_BRICK_WALL = register("andesite_brick_wall", WallBlock::new,
+            AbstractBlock.Settings.copyShallow(ANDESITE_BRICKS));
+        CRACKED_ANDESITE_BRICKS = register("cracked_andesite_bricks", AbstractBlock.Settings.copyShallow(ANDESITE));
+        CRACKED_ANDESITE_BRICK_STAIRS = registerStairsBlock("cracked_andesite_brick_stairs", CRACKED_ANDESITE_BRICKS);
+        CRACKED_ANDESITE_BRICK_SLAB = register("cracked_andesite_brick_slab", SlabBlock::new,
+            AbstractBlock.Settings.copyShallow(CRACKED_ANDESITE_BRICKS));
+        CRACKED_ANDESITE_BRICK_WALL = register("cracked_andesite_brick_wall", WallBlock::new,
+            AbstractBlock.Settings.copyShallow(CRACKED_ANDESITE_BRICKS));
+        MOSSY_ANDESITE_BRICKS = register("mossy_andesite_bricks", AbstractBlock.Settings.copyShallow(ANDESITE));
+        MOSSY_ANDESITE_BRICK_STAIRS = registerStairsBlock("mossy_andesite_brick_stairs", MOSSY_ANDESITE_BRICKS);
+        MOSSY_ANDESITE_BRICK_SLAB = register("mossy_andesite_brick_slab", SlabBlock::new,
+            AbstractBlock.Settings.copyShallow(MOSSY_ANDESITE_BRICKS));
+        MOSSY_ANDESITE_BRICK_WALL = register("mossy_andesite_brick_wall", WallBlock::new,
+            AbstractBlock.Settings.copyShallow(MOSSY_ANDESITE_BRICKS));
+        CHISELED_ANDESITE = register("chiseled_andesite", AbstractBlock.Settings.copyShallow(ANDESITE));
+        CHISELED_ANDESITE_STAIRS = registerStairsBlock("chiseled_andesite_stairs", CHISELED_ANDESITE);
+        CHISELED_ANDESITE_SLAB = register("chiseled_andesite_slab", SlabBlock::new,
+            AbstractBlock.Settings.copyShallow(CHISELED_ANDESITE));
+        CHISELED_ANDESITE_WALL = register("chiseled_andesite_wall", WallBlock::new,
+            AbstractBlock.Settings.copyShallow(CHISELED_ANDESITE));
+        CHISELED_POLISHED_ANDESITE = register("chiseled_polished_andesite", AbstractBlock.Settings.copyShallow(ANDESITE));
+        CHISELED_POLISHED_ANDESITE_STAIRS = registerStairsBlock("chiseled_polished_andesite_stairs", CHISELED_POLISHED_ANDESITE);
+        CHISELED_POLISHED_ANDESITE_SLAB = register("chiseled_polished_andesite_slab", SlabBlock::new,
+            AbstractBlock.Settings.copyShallow(CHISELED_POLISHED_ANDESITE));
+        CHISELED_POLISHED_ANDESITE_WALL = register("chiseled_polished_andesite_wall", WallBlock::new,
+            AbstractBlock.Settings.copyShallow(CHISELED_POLISHED_ANDESITE));
+
+        COBBLED_DIORITE = register("cobbled_diorite", AbstractBlock.Settings.copyShallow(DIORITE));
+        DIORITE_BRICKS = register("diorite_bricks", AbstractBlock.Settings.copyShallow(DIORITE));
+        CRACKED_DIORITE_BRICKS = register("cracked_diorite_bricks", AbstractBlock.Settings.copyShallow(DIORITE));
+        MOSSY_DIORITE_BRICKS = register("mossy_diorite_bricks", AbstractBlock.Settings.copyShallow(DIORITE));
+        CHISELED_POLISHED_DIORITE = register("chiseled_polished_diorite", AbstractBlock.Settings.copyShallow(DIORITE));
+
+        COBBLED_GRANITE = register("cobbled_granite", AbstractBlock.Settings.copyShallow(GRANITE));
+        GRANITE_BRICKS = register("granite_bricks", AbstractBlock.Settings.copyShallow(GRANITE));
+        CRACKED_GRANITE_BRICKS = register("cracked_granite_bricks", AbstractBlock.Settings.copyShallow(GRANITE));
+        MOSSY_GRANITE_BRICKS = register("mossy_granite_bricks", AbstractBlock.Settings.copyShallow(GRANITE));
+        CHISELED_GRANITE = register("chiseled_granite", AbstractBlock.Settings.copyShallow(GRANITE));
+        CHISELED_POLISHED_GRANITE = register("chiseled_polished_granite", AbstractBlock.Settings.copyShallow(GRANITE));
+
+        POLISHED_CALCITE = register("polished_calcite", AbstractBlock.Settings.copyShallow(CALCITE));
+        CALCITE_BRICKS = register("calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
+        CHISELED_CALCITE_BRICKS = register("chiseled_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
+        CRACKED_CALCITE_BRICKS = register("cracked_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
+        POLISHED_CALCITE_BRICKS = register("polished_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
+        CRACKED_POLISHED_CALCITE_BRICKS = register("cracked_polished_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
+
+        SLICED_TUFF = register("sliced_tuff", AbstractBlock.Settings.copyShallow(TUFF));
+
+        CUT_RESIN = register("cut_resin", AbstractBlock.Settings.copyShallow(RESIN_BLOCK));
+        SMOOTH_RESIN = register("smooth_resin", AbstractBlock.Settings.copyShallow(RESIN_BLOCK));
+        RESIN_LAMP = register("resin_lamp", LampBlock::new,
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.TERRACOTTA_ORANGE)
+                .luminance(createLightLevelFromLitBlockState(15))
+                .strength(0.3F)
+                .sounds(BlockSoundGroup.GLASS)
+                .allowsSpawning(net.minecraft.block.Blocks::always));
     }
 
     private static Block registerStairsBlock(String id, Block base) {

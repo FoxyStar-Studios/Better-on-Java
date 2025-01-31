@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "better_on_bedrock:block/deco/tuff/sliced_tuff" }
+  }
+}

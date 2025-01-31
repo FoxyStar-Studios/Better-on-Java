@@ -1,7 +1,5 @@
 {
-    "variants": {
-      "": {
-        "model": "better_on_bedrock:block/stardust_ore"
-      }
-    }
+  "variants": {
+    "": { "model": "better_on_bedrock:block/ores/stardust_ore" }
   }
+}
