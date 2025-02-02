@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "better_on_bedrock:block/deco/andesite/andesite_bricks",
+    "side": "better_on_bedrock:block/deco/andesite/andesite_bricks",
+    "top": "better_on_bedrock:block/deco/andesite/andesite_bricks"
+  }
+}

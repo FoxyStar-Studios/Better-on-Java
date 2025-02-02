@@ -1,6 +1,6 @@
 {
     "model": {
       "type": "minecraft:model",
-      "model": "better_on_bedrock:block/stardust_ore"
+      "model": "better_on_bedrock:block/ores/stardust_ore"
     }
   }

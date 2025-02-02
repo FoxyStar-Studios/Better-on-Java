@@ -15,6 +15,7 @@ public class Main implements ModInitializer {
     public static final String MOD_ID = "better_on_bedrock";
     public static final Logger LOGGER = LoggerFactory.getLogger("Better on Bedrock");
 
+
     @Override
     public void onInitialize() {
         LOGGER.info("Hello, world!");
