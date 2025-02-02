@@ -1,0 +1,14 @@
+{
+    "structures": [
+        {
+            "structure": "better_on_bedrock:wizard_house",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 1955117233,
+        "separation": 28,
+        "spacing": 48
+    }
+}

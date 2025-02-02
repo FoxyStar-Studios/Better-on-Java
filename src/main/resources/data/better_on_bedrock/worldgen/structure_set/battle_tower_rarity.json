@@ -1,0 +1,14 @@
+{
+    "structures": [
+        {
+            "structure": "better_on_bedrock:battle_tower",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 1421546456,
+        "separation": 28,
+        "spacing": 68
+    }
+}

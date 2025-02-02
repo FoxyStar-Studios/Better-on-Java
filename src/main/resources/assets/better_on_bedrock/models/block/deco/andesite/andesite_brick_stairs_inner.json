@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "better_on_bedrock:block/deco/andesite/andesite_brick",
-    "side": "better_on_bedrock:block/deco/andesite/andesite_brick",
-    "top": "better_on_bedrock:block/deco/andesite/andesite_brick"
+    "bottom": "better_on_bedrock:block/deco/andesite/andesite_bricks",
+    "side": "better_on_bedrock:block/deco/andesite/andesite_bricks",
+    "top": "better_on_bedrock:block/deco/andesite/andesite_bricks"
   }
 }
