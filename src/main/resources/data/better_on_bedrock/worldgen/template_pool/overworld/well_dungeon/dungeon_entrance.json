@@ -1,0 +1,15 @@
+{
+  "name": "better_on_bedrock:overworld/well_dungeon/dungeon_entrance",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 70,
+      "element": {
+        "location": "better_on_bedrock:overworld/well_dungeon/start",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "feature": {
+      "type": "minecraft:simple_random_selector",
+      "config": {
+          "features": [
+              {
+                  "feature": "better_on_bedrock:swamp_tree_001",
+                  "placement": []
+              }
+          ]
+      }
+  },
+  "placement": [
+      {
+          "type": "minecraft:count",
+          "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 5,
+              "max_inclusive": 6
+          }
+      },
+      {
+          "type": "minecraft:in_square"
+      },
+      {
+        "type": "minecraft:surface_water_depth_filter",
+        "max_water_depth": 2
+      },
+      {
+          "type": "minecraft:heightmap",
+          "heightmap": "WORLD_SURFACE"
+      },
+      {
+          "type": "minecraft:noise_threshold_count",
+          "noise_level": 0.2,
+          "below_noise": 1,
+          "above_noise": 0
+      },
+      {
+          "type": "minecraft:biome"
+      }
+  ]
+}
