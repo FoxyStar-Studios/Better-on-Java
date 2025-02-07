@@ -3,10 +3,19 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 100,
+      "weight": 50,
       "element": {
         "location": "better_on_bedrock:overworld/adventurer_house",
-        "processors": "minecraft:empty",
+        "processors": "better_on_bedrock:adventure_house_barrel",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 50,
+      "element": {
+        "location": "better_on_bedrock:overworld/ruined_adventurer_house",
+        "processors": "better_on_bedrock:adventure_house_barrel",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
