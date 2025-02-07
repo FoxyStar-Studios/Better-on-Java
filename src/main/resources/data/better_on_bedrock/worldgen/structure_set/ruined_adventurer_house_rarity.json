@@ -1,0 +1,14 @@
+{
+    "structures": [
+        {
+            "structure": "better_on_bedrock:ruined_adventurer_house",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 1994397495,
+        "separation": 28,
+        "spacing": 58
+    }
+}

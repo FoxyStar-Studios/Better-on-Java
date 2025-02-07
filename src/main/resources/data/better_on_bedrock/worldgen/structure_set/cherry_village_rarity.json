@@ -1,14 +1,15 @@
 {
     "structures": [
-        {
-            "structure": "better_on_bedrock:cherry_village",
-            "weight": 1
-        }
+      {
+        "structure": "better_on_bedrock:cherry_village",
+        "weight": 1
+      }
     ],
     "placement": {
-        "type": "minecraft:random_spread",
-        "salt": 2132768863,
-        "separation": 64,
-        "spacing": 80
+      "type": "minecraft:random_spread",
+      "salt": 2132768863,
+      "separation": 15,
+      "spacing": 23,
+      "frequency": 1
     }
-}
+  }

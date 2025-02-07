@@ -1,0 +1,14 @@
+{
+    "structures": [
+        {
+            "structure": "better_on_bedrock:adventurer_house",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 1976785439,
+        "separation": 28,
+        "spacing": 58
+    }
+}

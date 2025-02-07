@@ -1,0 +1,127 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "bounty_board_default"
+	},
+	"elements": [
+		{
+			"name": "bb_main",
+			"from": [-2, 10, 7],
+			"to": [18, 28, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 5, 4.5], "texture": "#0"},
+				"east": {"uv": [9, 0.5, 9.5, 5], "texture": "#0"},
+				"south": {"uv": [0, 4.5, 5, 9], "texture": "#0"},
+				"west": {"uv": [9, 5, 9.5, 9.5], "texture": "#0"},
+				"up": {"uv": [5, 9.5, 0, 9], "texture": "#0"},
+				"down": {"uv": [14, 0, 9, 0.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "legs",
+			"from": [0, 0, 7],
+			"to": [2, 9, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [8, 9, 8.5, 11.25], "texture": "#0"},
+				"east": {"uv": [8.5, 9, 9, 11.25], "texture": "#0"},
+				"south": {"uv": [0, 9.5, 0.5, 11.75], "texture": "#0"},
+				"west": {"uv": [0.5, 9.5, 1, 11.75], "texture": "#0"},
+				"up": {"uv": [4.25, 10, 3.75, 9.5], "texture": "#0"},
+				"down": {"uv": [4.75, 9.5, 4.25, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "legs",
+			"from": [14, 0, 7],
+			"to": [16, 9, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [1.75, 9.5, 2.25, 11.75], "texture": "#0"},
+				"east": {"uv": [2.25, 9.5, 2.75, 11.75], "texture": "#0"},
+				"south": {"uv": [2.75, 9.5, 3.25, 11.75], "texture": "#0"},
+				"west": {"uv": [3.25, 9.5, 3.75, 11.75], "texture": "#0"},
+				"up": {"uv": [10.25, 1, 9.75, 0.5], "texture": "#0"},
+				"down": {"uv": [10.25, 1, 9.75, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "frame",
+			"from": [-3, 10, 6],
+			"to": [-2, 28, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [9.5, 0.5, 9.75, 5], "texture": "#0"},
+				"east": {"uv": [7, 0, 8, 4.5], "texture": "#0"},
+				"south": {"uv": [1, 9.5, 1.25, 14], "texture": "#0"},
+				"west": {"uv": [7, 4.5, 8, 9], "texture": "#0"},
+				"up": {"uv": [5, 10.5, 4.75, 9.5], "texture": "#0"},
+				"down": {"uv": [9.75, 5, 9.5, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "frame",
+			"from": [-3, 28, 6],
+			"to": [19, 29, 10],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 5, 8]},
+			"faces": {
+				"north": {"uv": [7, 9, 7.25, 14.5], "rotation": 270, "texture": "#0"},
+				"east": {"uv": [9.75, 9, 9.5, 8], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [7.25, 9, 7.5, 14.5], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [9.25, 9.5, 9, 10.5], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [5, 5.5, 6, 11], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [5, 0, 6, 5.5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "frame",
+			"from": [18, 10, 6],
+			"to": [19, 28, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [1.25, 9.5, 1.5, 14], "texture": "#0"},
+				"east": {"uv": [8, 0, 9, 4.5], "texture": "#0"},
+				"south": {"uv": [1.5, 9.5, 1.75, 14], "texture": "#0"},
+				"west": {"uv": [8, 4.5, 9, 9], "texture": "#0"},
+				"up": {"uv": [9.75, 7, 9.5, 6], "texture": "#0"},
+				"down": {"uv": [9.75, 7, 9.5, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "frame",
+			"from": [-3, 9, 6],
+			"to": [19, 10, 10],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.5, 9, 7.75, 14.5], "rotation": 270, "texture": "#0"},
+				"east": {"uv": [9.75, 10, 9.5, 9], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [7.75, 9, 8, 14.5], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [9.5, 9.5, 9.25, 10.5], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [6, 5.5, 7, 11], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [6, 0, 7, 5.5], "rotation": 90, "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "bb_main",
+			"origin": [8, 0, 8],
+			"color": 0,
+			"children": [0]
+		},
+		{
+			"name": "legs",
+			"origin": [8, 0, 8],
+			"color": 1,
+			"children": [1, 2]
+		},
+		{
+			"name": "frame",
+			"origin": [8, 0, 8],
+			"color": 2,
+			"children": [3, 4, 5, 6]
+		}
+	]
+}
