@@ -129,6 +129,7 @@ public class ItemGroups {
                 entries.add(Items.ORANGE_LEAVES);
                 entries.add(Items.LUSH_GRASS);
                 entries.add(Items.TALLER_GRASS);
+                entries.add(Items.TINY_SPROUT);
 
                 entries.add(Items.TALL_LAVENDER);
                 entries.add(Items.BLUEGROD);
@@ -143,7 +144,6 @@ public class ItemGroups {
                 entries.add(Items.BIG_SPROUT);
                 entries.add(Items.BELLFLOWER);
                 entries.add(Items.ANEMONE);
-                entries.add(Items.TINY_SPROUT);
                 entries.add(Items.WILDFLOWER);
                 entries.add(Items.PURPLE_HYDRANGEA);
 
