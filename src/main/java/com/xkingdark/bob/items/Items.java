@@ -146,7 +146,8 @@ public class Items {
     public static final Item TALL_LAVENDER;
     public static final Item BLUEGROD;
     public static final Item LUSH_GRASS;
-    public static final Item TALL_EYEBLOSSOM;
+    public static final Item OPEN_TALL_EYEBLOSSOM;
+    public static final Item CLOSED_TALL_EYEBLOSSOM;
 
     //Flowers
     public static final Item PINK_LAVENDER;
@@ -237,13 +238,7 @@ public class Items {
     public static final Item MOSSY_ANDESITE_BRICK_SLAB;
     public static final Item MOSSY_ANDESITE_BRICK_WALL;
     public static final Item CHISELED_ANDESITE;
-    public static final Item CHISELED_ANDESITE_STAIRS;
-    public static final Item CHISELED_ANDESITE_SLAB;
-    public static final Item CHISELED_ANDESITE_WALL;
     public static final Item CHISELED_POLISHED_ANDESITE;
-    public static final Item CHISELED_POLISHED_ANDESITE_STAIRS;
-    public static final Item CHISELED_POLISHED_ANDESITE_SLAB;
-    public static final Item CHISELED_POLISHED_ANDESITE_WALL;
 
     public static final Item COBBLED_DIORITE;
     public static final Item DIORITE_BRICKS;
@@ -492,7 +487,8 @@ public class Items {
         TALL_LAVENDER = register(Blocks.TALL_LAVENDER);
         BLUEGROD = register(Blocks.BLUEGROD);
         LUSH_GRASS = register(Blocks.LUSH_GRASS);
-        TALL_EYEBLOSSOM = register(Blocks.TALL_EYEBLOSSOM);
+        OPEN_TALL_EYEBLOSSOM = register(Blocks.OPEN_TALL_EYEBLOSSOM);
+        CLOSED_TALL_EYEBLOSSOM = register(Blocks.CLOSED_TALL_EYEBLOSSOM);
         PINK_LAVENDER = register(Blocks.PINK_LAVENDER);
         TALLER_GRASS = register(Blocks.TALLER_GRASS);
         LILAC_HEADS = register(Blocks.LILAC_HEADS);
@@ -593,13 +589,7 @@ public class Items {
         MOSSY_ANDESITE_BRICK_SLAB = register(Blocks.MOSSY_ANDESITE_BRICK_SLAB);
         MOSSY_ANDESITE_BRICK_WALL = register(Blocks.MOSSY_ANDESITE_BRICK_WALL);
         CHISELED_ANDESITE = register(Blocks.CHISELED_ANDESITE);
-        CHISELED_ANDESITE_STAIRS = register(Blocks.CHISELED_ANDESITE_STAIRS);
-        CHISELED_ANDESITE_SLAB = register(Blocks.CHISELED_ANDESITE_SLAB);
-        CHISELED_ANDESITE_WALL = register(Blocks.CHISELED_ANDESITE_WALL);
         CHISELED_POLISHED_ANDESITE = register(Blocks.CHISELED_POLISHED_ANDESITE);
-        CHISELED_POLISHED_ANDESITE_STAIRS = register(Blocks.CHISELED_POLISHED_ANDESITE_STAIRS);
-        CHISELED_POLISHED_ANDESITE_SLAB = register(Blocks.CHISELED_POLISHED_ANDESITE_SLAB);
-        CHISELED_POLISHED_ANDESITE_WALL = register(Blocks.CHISELED_POLISHED_ANDESITE_WALL);
 
         COBBLED_DIORITE = register(Blocks.COBBLED_DIORITE);
         DIORITE_BRICKS = register(Blocks.DIORITE_BRICKS);

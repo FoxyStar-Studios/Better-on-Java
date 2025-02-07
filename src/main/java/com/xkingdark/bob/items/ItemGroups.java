@@ -98,18 +98,12 @@ public class ItemGroups {
                 entries.add(Items.CRACKED_ANDESITE_BRICK_STAIRS);
                 entries.add(Items.CRACKED_ANDESITE_BRICK_SLAB);
                 entries.add(Items.CRACKED_ANDESITE_BRICK_WALL);
-                entries.add(Items.CHISELED_ANDESITE);
-                entries.add(Items.CHISELED_ANDESITE_STAIRS);
-                entries.add(Items.CHISELED_ANDESITE_SLAB);
-                entries.add(Items.CHISELED_ANDESITE_WALL);
                 entries.add(Items.MOSSY_ANDESITE_BRICKS);
                 entries.add(Items.MOSSY_ANDESITE_BRICK_STAIRS);
                 entries.add(Items.MOSSY_ANDESITE_BRICK_SLAB);
                 entries.add(Items.MOSSY_ANDESITE_BRICK_WALL);
+                entries.add(Items.CHISELED_ANDESITE);
                 entries.add(Items.CHISELED_POLISHED_ANDESITE);
-                entries.add(Items.CHISELED_POLISHED_ANDESITE_STAIRS);
-                entries.add(Items.CHISELED_POLISHED_ANDESITE_SLAB);
-                entries.add(Items.CHISELED_POLISHED_ANDESITE_WALL);
 
                 entries.add(Items.POLISHED_CALCITE);
                 entries.add(Items.CALCITE_BRICKS);
@@ -133,14 +127,15 @@ public class ItemGroups {
 
                 entries.add(Items.PEACH_LEAVES);
                 entries.add(Items.ORANGE_LEAVES);
+                entries.add(Items.LUSH_GRASS);
+                entries.add(Items.TALLER_GRASS);
 
                 entries.add(Items.TALL_LAVENDER);
                 entries.add(Items.BLUEGROD);
-                entries.add(Items.LUSH_GRASS);
-                entries.add(Items.TALL_EYEBLOSSOM);
+                entries.add(Items.CLOSED_TALL_EYEBLOSSOM);
+                entries.add(Items.OPEN_TALL_EYEBLOSSOM);
 
                 entries.add(Items.PINK_LAVENDER);
-                entries.add(Items.TALLER_GRASS);
                 entries.add(Items.LILAC_HEADS);
                 entries.add(Items.IRIS);
                 entries.add(Items.HYDRANGEA);

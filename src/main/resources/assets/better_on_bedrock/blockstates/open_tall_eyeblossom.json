@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "better_on_bedrock:block/nature/flowers/eyepale_blossom/lower_eyeblossom"
+    },
+    "half=upper": {
+      "model": "better_on_bedrock:block/nature/flowers/eyepale_blossom/upper_eyeblossom"
+    }
+  }
+}

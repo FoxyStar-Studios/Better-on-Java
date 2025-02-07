@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "better_on_bedrock:blocks/closed_tall_eyeblossom",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "conditions": [
+        { "condition": "minecraft:survives_explosion" }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "better_on_bedrock:closed_tall_eyeblossom",
+          "conditions": [
+            {
+              "block": "better_on_bedrock:closed_tall_eyeblossom",
+              "condition": "minecraft:block_state_property",
+              "properties": { "half": "lower" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

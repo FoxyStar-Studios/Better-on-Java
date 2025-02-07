@@ -38,7 +38,8 @@ public final class Blocks {
     public static final Block TINY_SPROUT;
     public static final Block WILDFLOWER;
     public static final Block PURPLE_HYDRANGEA;
-    public static final Block TALL_EYEBLOSSOM;
+    public static final Block OPEN_TALL_EYEBLOSSOM;
+    public static final Block CLOSED_TALL_EYEBLOSSOM;
 
     //Crops
     public static final Block BARLEY_CROP;
@@ -131,13 +132,7 @@ public final class Blocks {
     public static final Block MOSSY_ANDESITE_BRICK_SLAB;
     public static final Block MOSSY_ANDESITE_BRICK_WALL;
     public static final Block CHISELED_ANDESITE;
-    public static final Block CHISELED_ANDESITE_STAIRS;
-    public static final Block CHISELED_ANDESITE_SLAB;
-    public static final Block CHISELED_ANDESITE_WALL;
     public static final Block CHISELED_POLISHED_ANDESITE;
-    public static final Block CHISELED_POLISHED_ANDESITE_STAIRS;
-    public static final Block CHISELED_POLISHED_ANDESITE_SLAB;
-    public static final Block CHISELED_POLISHED_ANDESITE_WALL;
 
     public static final Block COBBLED_DIORITE;
     public static final Block DIORITE_BRICKS;
@@ -191,98 +186,106 @@ public final class Blocks {
                 .offset(AbstractBlock.OffsetType.XZ)
                 .noCollision().burnable()
                 .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
-        TALL_EYEBLOSSOM = Blocks.register("tall_eyeblossom", TallEyeblossomBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DEEPSLATE_GRAY).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XZ)
-                        .noCollision().burnable().ticksRandomly()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        OPEN_TALL_EYEBLOSSOM = Blocks.register("open_tall_eyeblossom", (settings) ->
+                new TallEyeblossomBlock(TallEyeblossomBlock.EyeblossomState.OPEN, settings),
+            AbstractBlock.Settings.create()
+                .mapColor(CREAKING_HEART.getDefaultMapColor()).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XZ)
+                .noCollision().ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+        CLOSED_TALL_EYEBLOSSOM = Blocks.register("closed_tall_eyeblossom", (settings) ->
+                new TallEyeblossomBlock(TallEyeblossomBlock.EyeblossomState.CLOSED, settings),
+            AbstractBlock.Settings.create()
+                .mapColor(CREAKING_HEART.getDefaultMapColor()).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XZ)
+                .noCollision().ticksRandomly()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
 
         //Flowers
         PINK_LAVENDER = Blocks.register("pink_lavender", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         TALLER_GRASS = Blocks.register("taller_grass", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         LILAC_HEADS = Blocks.register("lilac_heads", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         IRIS = Blocks.register("iris", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         HYDRANGEA = Blocks.register("hydrangea", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         CLEMATIS = Blocks.register("clematis", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         BIG_SPROUT = Blocks.register("big_sprout", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         BELLFLOWER = Blocks.register("bellflower", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         ANEMONE = Blocks.register("anemone", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         TINY_SPROUT = Blocks.register("tiny_sprout", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         WILDFLOWER = Blocks.register("wildflower", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
         PURPLE_HYDRANGEA = Blocks.register("purple_hydrangea", ShortPlantBlock::new,
-                AbstractBlock.Settings.create()
-                        .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
-                        .offset(AbstractBlock.OffsetType.XYZ)
-                        .replaceable()
-                        .noCollision().burnable()
-                        .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
+            AbstractBlock.Settings.create()
+                .mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.GRASS)
+                .offset(AbstractBlock.OffsetType.XYZ)
+                .replaceable()
+                .noCollision().burnable()
+                .breakInstantly().pistonBehavior(PistonBehavior.DESTROY));
 
         // Crops
         BARLEY_CROP = Blocks.register("barley", BarleyBlock::new,
@@ -520,17 +523,7 @@ public final class Blocks {
         MOSSY_ANDESITE_BRICK_WALL = register("mossy_andesite_brick_wall", WallBlock::new,
             AbstractBlock.Settings.copyShallow(MOSSY_ANDESITE_BRICKS));
         CHISELED_ANDESITE = register("chiseled_andesite", AbstractBlock.Settings.copyShallow(ANDESITE));
-        CHISELED_ANDESITE_STAIRS = registerStairsBlock("chiseled_andesite_stairs", CHISELED_ANDESITE);
-        CHISELED_ANDESITE_SLAB = register("chiseled_andesite_slab", SlabBlock::new,
-            AbstractBlock.Settings.copyShallow(CHISELED_ANDESITE));
-        CHISELED_ANDESITE_WALL = register("chiseled_andesite_wall", WallBlock::new,
-            AbstractBlock.Settings.copyShallow(CHISELED_ANDESITE));
         CHISELED_POLISHED_ANDESITE = register("chiseled_polished_andesite", AbstractBlock.Settings.copyShallow(ANDESITE));
-        CHISELED_POLISHED_ANDESITE_STAIRS = registerStairsBlock("chiseled_polished_andesite_stairs", CHISELED_POLISHED_ANDESITE);
-        CHISELED_POLISHED_ANDESITE_SLAB = register("chiseled_polished_andesite_slab", SlabBlock::new,
-            AbstractBlock.Settings.copyShallow(CHISELED_POLISHED_ANDESITE));
-        CHISELED_POLISHED_ANDESITE_WALL = register("chiseled_polished_andesite_wall", WallBlock::new,
-            AbstractBlock.Settings.copyShallow(CHISELED_POLISHED_ANDESITE));
 
         COBBLED_DIORITE = register("cobbled_diorite", AbstractBlock.Settings.copyShallow(DIORITE));
         DIORITE_BRICKS = register("diorite_bricks", AbstractBlock.Settings.copyShallow(DIORITE));

@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "better_on_bedrock:block/deco/andesite/andesite_brick_slab"
+      "model": "better_on_bedrock:block/deco/andesite/cobbled_andesite_slab"
     },
     "type=double": {
-      "model": "better_on_bedrock:block/deco/andesite/andesite_brick"
+      "model": "better_on_bedrock:block/deco/andesite/cobbled_andesite"
     },
     "type=top": {
-      "model": "better_on_bedrock:block/deco/andesite/andesite_brick_slab_top"
+      "model": "better_on_bedrock:block/deco/andesite/cobbled_andesite_slab_top"
     }
   }
 }

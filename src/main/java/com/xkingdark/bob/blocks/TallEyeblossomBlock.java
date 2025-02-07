@@ -1,70 +1,156 @@
 package com.xkingdark.bob.blocks;
+
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoubleBlockHalf;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.particle.TrailParticleEffect;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.event.GameEvent;
 
-public class TallEyeblossomBlock extends TallPlantBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.of("open");
+public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable {
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
+    private final EyeblossomState state;
 
-    public TallEyeblossomBlock(Settings settings) {
+    public TallEyeblossomBlock(EyeblossomState state, Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(OPEN, false).with(HALF, DoubleBlockHalf.LOWER));
+        this.state = state;
+        this.setDefaultState(this.stateManager.getDefaultState().with(HALF, DoubleBlockHalf.LOWER));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(OPEN, HALF);
+        builder.add(HALF);
     }
-
 
     @Override
-    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        DoubleBlockHalf half = state.get(HALF);
-        BlockPos otherPos = half == DoubleBlockHalf.LOWER ? pos.up() : pos.down();
-        BlockState otherState = world.getBlockState(otherPos);
-        if (otherState.isOf(this) && otherState.get(HALF) != half) {
-            world.setBlockState(otherPos, net.minecraft.block.Blocks.AIR.getDefaultState(), 35);
+    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (this.updateStateAndNotifyOthers(state, world, pos, random)) {
+            world.playSound(null, pos, this.state.getOpposite().longSound, SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
-        super.onBreak(world, pos, state, player);
-        return otherState;
-    }
 
-
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextFloat() < 1 && world.getTimeOfDay() % 24000 >= 13000) { // Only change state at night
-            setOpen(world, pos, true); // Set open to true during night
-        } else {
-            setOpen(world, pos, false); // Set open to true during night
-        }
         super.randomTick(state, world, pos, random);
     }
 
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        randomTick(state, world, pos, random);
+    @Override
+    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (this.updateStateAndNotifyOthers(state, world, pos, random)) {
+            world.playSound(null, pos, this.state.getOpposite().sound, SoundCategory.BLOCKS, 1.0F, 1.0F);
+        }
 
         super.scheduledTick(state, world, pos, random);
     }
 
-    public void setOpen(World world, BlockPos pos, boolean open) {
-        BlockState state = world.getBlockState(pos);
-        if (state.isOf(this)) {
-            world.setBlockState(pos, state.with(OPEN, open));
-            BlockPos otherPos = state.get(HALF) == DoubleBlockHalf.LOWER ? pos.up() : pos.down();
-            BlockState otherState = world.getBlockState(otherPos);
-            if (otherState.isOf(this)) {
-                world.setBlockState(otherPos, otherState.with(OPEN, open));
+    private boolean updateStateAndNotifyOthers(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (!world.getDimension().natural() || world.isDay() != this.state.open)
+            return false;
+
+        EyeblossomState eyeblossomState = this.state.getOpposite();
+
+        world.setBlockState(pos, eyeblossomState.getBlockState(), Block.NOTIFY_ALL);
+        world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(state));
+        eyeblossomState.spawnTrailParticle(world, pos, random);
+
+        BlockPos.iterate(
+            pos.add(-3, -2, -3),
+            pos.add(3, 2, 3)
+        ).forEach((otherPos) -> {
+            BlockState blockState = world.getBlockState(otherPos);
+            if (blockState == state) {
+                double d = Math.sqrt(pos.getSquaredDistance(otherPos));
+                int i = random.nextBetween((int)(d * 5.0), (int)(d * 10.0));
+
+                world.scheduleBlockTick(otherPos, state.getBlock(), i);
             }
+        });
+        return true;
+    }
+
+    /*@Override
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        DoubleBlockHalf half = state.get(HALF);
+        BlockPos blockPos = half == DoubleBlockHalf.LOWER ? pos.up() : pos.down();
+        BlockState blockState = world.getBlockState(blockPos);
+
+        if (blockState.isOf(this) && blockState.get(HALF) != half) {
+            world.setBlockState(blockPos, net.minecraft.block.Blocks.AIR.getDefaultState(), 35);
+            return super.onBreak(world, blockPos, blockState, player);
+        }
+
+        return super.onBreak(world, pos, state, player);
+    }*/
+
+    public enum EyeblossomState {
+        OPEN(true, StatusEffects.BLINDNESS, 11.0F, SoundEvents.BLOCK_EYEBLOSSOM_OPEN_LONG, SoundEvents.BLOCK_EYEBLOSSOM_OPEN, 16545810),
+        CLOSED(false, StatusEffects.NAUSEA, 7.0F, SoundEvents.BLOCK_EYEBLOSSOM_CLOSE_LONG, SoundEvents.BLOCK_EYEBLOSSOM_CLOSE, 6250335);
+
+        final boolean open;
+        final RegistryEntry<StatusEffect> stewEffect;
+        final float effectLengthInSeconds;
+        final SoundEvent longSound;
+        final SoundEvent sound;
+        private final int particleColor;
+
+        EyeblossomState(
+            final boolean open,
+            final RegistryEntry<StatusEffect> stewEffect,
+            final float effectLengthInSeconds,
+            final SoundEvent longSound,
+            final SoundEvent sound,
+            final int particleColor
+        ) {
+            this.open = open;
+            this.stewEffect = stewEffect;
+            this.effectLengthInSeconds = effectLengthInSeconds;
+            this.longSound = longSound;
+            this.sound = sound;
+            this.particleColor = particleColor;
+        }
+
+        public Block getBlock() {
+            return this.open ? Blocks.OPEN_TALL_EYEBLOSSOM : Blocks.CLOSED_TALL_EYEBLOSSOM;
+        }
+
+        public BlockState getBlockState() {
+            return this.getBlock().getDefaultState();
+        }
+
+        public EyeblossomState getOpposite() {
+            return of(!this.open);
+        }
+
+        public boolean isOpen() {
+            return this.open;
+        }
+
+        public static EyeblossomState of(boolean open) {
+            return open ? OPEN : CLOSED;
+        }
+
+        public void spawnTrailParticle(ServerWorld world, BlockPos pos, Random random) {
+            Vec3d vec3d = pos.toCenterPos();
+            double d = 0.5 + random.nextDouble();
+            Vec3d vec3d2 = new Vec3d(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
+            Vec3d vec3d3 = vec3d.add(vec3d2.multiply(d));
+            TrailParticleEffect trailParticleEffect = new TrailParticleEffect(vec3d3, this.particleColor, (int)(20.0 * d));
+            world.spawnParticles(trailParticleEffect, vec3d.x, vec3d.y, vec3d.z, 1, 0.0, 0.0, 0.0, 0.0);
+        }
+
+        public SoundEvent getLongSound() {
+            return this.longSound;
         }
     }
 }
