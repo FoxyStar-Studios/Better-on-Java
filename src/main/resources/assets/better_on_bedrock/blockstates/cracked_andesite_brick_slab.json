@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "better_on_bedrock:block/deco/andesite/cracked_andesite_brick_slab"
+    },
+    "type=double": {
+      "model": "better_on_bedrock:block/deco/andesite/andesite_bricks"
+    },
+    "type=top": {
+      "model": "better_on_bedrock:block/deco/andesite/cracked_andesite_brick_slab_top"
+    }
+  }
+}

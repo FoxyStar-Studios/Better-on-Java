@@ -24,6 +24,7 @@ import java.util.function.UnaryOperator;
 
 public class Items {
     public static final Item WAYSTONE;
+    public static final Item BOUNTY_BOARD;
     public static final Item PEDESTAL;
 
     public static final Item BANE_SPIKE;
@@ -268,6 +269,7 @@ public class Items {
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
+        BOUNTY_BOARD = register(Blocks.BOUNTY_BOARD);
         PEDESTAL = register(Blocks.PEDESTAL);
 
         BANE_SPIKE = register("bane_spike", BaneSpikeItem::new);

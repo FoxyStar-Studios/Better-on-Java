@@ -20,6 +20,7 @@ import static net.minecraft.block.Blocks.*;
 
 public final class Blocks {
     public static final Block WAYSTONE;
+    public static final Block BOUNTY_BOARD;
     public static final Block STARDUST_ORE;
 
     //Flowers
@@ -163,6 +164,8 @@ public final class Blocks {
     static {
         WAYSTONE = Blocks.register("waystone", WaystoneBlock::new,
             AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
+        BOUNTY_BOARD = Blocks.register("bounty_board",
+                AbstractBlock.Settings.create().hardness(2.52f).nonOpaque().dynamicBounds());
         PEDESTAL = Blocks.register("pedestal", Pedestal::new,
             AbstractBlock.Settings.create().hardness(2.52f).requiresTool().nonOpaque());
 
