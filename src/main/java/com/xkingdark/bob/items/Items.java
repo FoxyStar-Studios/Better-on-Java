@@ -157,10 +157,10 @@ public class Items {
     public static final Item IRIS;
     public static final Item HYDRANGEA;
     public static final Item CLEMATIS;
+    public static final Item TINY_SPROUT;
     public static final Item BIG_SPROUT;
     public static final Item BELLFLOWER;
     public static final Item ANEMONE;
-    public static final Item TINY_SPROUT;
     public static final Item WILDFLOWER;
     public static final Item PURPLE_HYDRANGEA;
 
@@ -537,10 +537,10 @@ public class Items {
         IRIS = register(Blocks.IRIS);
         HYDRANGEA = register(Blocks.HYDRANGEA);
         CLEMATIS = register(Blocks.CLEMATIS);
+        TINY_SPROUT = register(Blocks.TINY_SPROUT);
         BIG_SPROUT = register(Blocks.BIG_SPROUT);
         BELLFLOWER = register(Blocks.BELLFLOWER);
         ANEMONE = register(Blocks.ANEMONE);
-        TINY_SPROUT = register(Blocks.TINY_SPROUT);
         WILDFLOWER = register(Blocks.WILDFLOWER);
         PURPLE_HYDRANGEA = register(Blocks.PURPLE_HYDRANGEA);
 

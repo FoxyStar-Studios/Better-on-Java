@@ -4,7 +4,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.TrailParticleEffect;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
@@ -12,13 +11,11 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
 public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable {
@@ -60,7 +57,13 @@ public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable
 
         EyeblossomState eyeblossomState = this.state.getOpposite();
 
-        world.setBlockState(pos, eyeblossomState.getBlockState(), Block.NOTIFY_ALL);
+        BlockState blossomState = eyeblossomState.getBlockState();
+        world.setBlockState(pos, blossomState, Block.NOTIFY_ALL);
+
+        DoubleBlockHalf half = state.get(HALF);
+        BlockPos blockPos = half == DoubleBlockHalf.UPPER ? pos.down() : pos.up();
+        world.setBlockState(blockPos, blossomState.with(HALF, half.getOtherHalf()));
+
         world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(state));
         eyeblossomState.spawnTrailParticle(world, pos, random);
 
