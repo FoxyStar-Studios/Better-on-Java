@@ -253,6 +253,19 @@ public class Items {
     public static final Item MOSSY_GRANITE_BRICKS;
     public static final Item CHISELED_GRANITE;
     public static final Item CHISELED_POLISHED_GRANITE;
+    public static final Item COBBLED_GRANITE_SLAB;
+    public static final Item COBBLED_GRANITE_STAIRS;
+    public static final Item COBBLED_GRANITE_WALL;
+    public static final Item GRANITE_BRICK_SLAB;
+    public static final Item GRANITE_BRICK_STAIRS;
+    public static final Item GRANITE_BRICK_WALL;
+    public static final Item CRACKED_GRANITE_BRICK_SLAB;
+    public static final Item CRACKED_GRANITE_BRICK_STAIRS;
+    public static final Item CRACKED_GRANITE_BRICK_WALL;
+    public static final Item MOSSY_GRANITE_BRICK_SLAB;
+    public static final Item MOSSY_GRANITE_BRICK_STAIRS;
+    public static final Item MOSSY_GRANITE_BRICK_WALL;
+
 
     public static final Item POLISHED_CALCITE;
     public static final Item CALCITE_BRICKS;
@@ -605,6 +618,18 @@ public class Items {
         MOSSY_GRANITE_BRICKS = register(Blocks.MOSSY_GRANITE_BRICKS);
         CHISELED_GRANITE = register(Blocks.CHISELED_GRANITE);
         CHISELED_POLISHED_GRANITE = register(Blocks.CHISELED_POLISHED_GRANITE);
+        COBBLED_GRANITE_SLAB = register(Blocks.COBBLED_GRANITE_SLAB);
+        COBBLED_GRANITE_STAIRS = register(Blocks.COBBLED_GRANITE_STAIRS);
+        COBBLED_GRANITE_WALL = register(Blocks.COBBLED_GRANITE_WALL);
+        GRANITE_BRICK_SLAB = register(Blocks.GRANITE_BRICK_SLAB);
+        GRANITE_BRICK_STAIRS = register(Blocks.GRANITE_BRICK_STAIRS);
+        GRANITE_BRICK_WALL = register(Blocks.GRANITE_BRICK_WALL);
+        CRACKED_GRANITE_BRICK_SLAB = register(Blocks.CRACKED_GRANITE_BRICK_SLAB);
+        CRACKED_GRANITE_BRICK_STAIRS = register(Blocks.CRACKED_GRANITE_BRICK_STAIRS);
+        CRACKED_GRANITE_BRICK_WALL = register(Blocks.CRACKED_GRANITE_BRICK_WALL);
+        MOSSY_GRANITE_BRICK_SLAB = register(Blocks.MOSSY_GRANITE_BRICK_SLAB);
+        MOSSY_GRANITE_BRICK_STAIRS = register(Blocks.MOSSY_GRANITE_BRICK_STAIRS);
+        MOSSY_GRANITE_BRICK_WALL = register(Blocks.MOSSY_GRANITE_BRICK_WALL);
 
         POLISHED_CALCITE = register(Blocks.POLISHED_CALCITE);
         CALCITE_BRICKS = register(Blocks.CALCITE_BRICKS);

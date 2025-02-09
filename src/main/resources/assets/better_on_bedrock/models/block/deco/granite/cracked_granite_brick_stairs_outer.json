@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "better_on_bedrock:block/deco/granite/cracked_granite_bricks",
+    "side": "better_on_bedrock:block/deco/granite/cracked_granite_bricks",
+    "top": "better_on_bedrock:block/deco/granite/cracked_granite_bricks"
+  }
+}

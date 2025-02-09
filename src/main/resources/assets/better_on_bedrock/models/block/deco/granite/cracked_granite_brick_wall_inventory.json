@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "better_on_bedrock:block/deco/granite/cracked_granite_bricks"
+  }
+}

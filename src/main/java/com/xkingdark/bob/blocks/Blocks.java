@@ -147,6 +147,19 @@ public final class Blocks {
     public static final Block MOSSY_GRANITE_BRICKS;
     public static final Block CHISELED_GRANITE;
     public static final Block CHISELED_POLISHED_GRANITE;
+    public static final Block COBBLED_GRANITE_SLAB;
+    public static final Block COBBLED_GRANITE_STAIRS;
+    public static final Block COBBLED_GRANITE_WALL;
+    public static final Block GRANITE_BRICK_SLAB;
+    public static final Block GRANITE_BRICK_STAIRS;
+    public static final Block GRANITE_BRICK_WALL;
+    public static final Block CRACKED_GRANITE_BRICK_SLAB;
+    public static final Block CRACKED_GRANITE_BRICK_STAIRS;
+    public static final Block CRACKED_GRANITE_BRICK_WALL;
+    public static final Block MOSSY_GRANITE_BRICK_SLAB;
+    public static final Block MOSSY_GRANITE_BRICK_STAIRS;
+    public static final Block MOSSY_GRANITE_BRICK_WALL;
+
 
     public static final Block POLISHED_CALCITE;
     public static final Block CALCITE_BRICKS;
@@ -540,6 +553,22 @@ public final class Blocks {
         MOSSY_GRANITE_BRICKS = register("mossy_granite_bricks", AbstractBlock.Settings.copyShallow(GRANITE));
         CHISELED_GRANITE = register("chiseled_granite", AbstractBlock.Settings.copyShallow(GRANITE));
         CHISELED_POLISHED_GRANITE = register("chiseled_polished_granite", AbstractBlock.Settings.copyShallow(GRANITE));
+        COBBLED_GRANITE_SLAB = register("cobbled_granite_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_GRANITE));
+        COBBLED_GRANITE_STAIRS = registerStairsBlock("cobbled_granite_stairs", COBBLED_GRANITE);
+        COBBLED_GRANITE_WALL = register("cobbled_granite_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_GRANITE));
+        GRANITE_BRICK_SLAB = register("granite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(GRANITE_BRICKS));
+        GRANITE_BRICK_STAIRS = registerStairsBlock("granite_brick_stairs", GRANITE_BRICKS);
+        GRANITE_BRICK_WALL = register("granite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(GRANITE_BRICKS));
+        CRACKED_GRANITE_BRICK_SLAB = register("cracked_granite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(GRANITE_BRICKS));
+        CRACKED_GRANITE_BRICK_STAIRS = registerStairsBlock("cracked_granite_brick_stairs", GRANITE_BRICKS);
+        CRACKED_GRANITE_BRICK_WALL = register("cracked_granite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(GRANITE_BRICKS));
+        MOSSY_GRANITE_BRICK_SLAB = register("mossy_granite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(GRANITE_BRICKS));
+        MOSSY_GRANITE_BRICK_STAIRS = registerStairsBlock("mossy_granite_brick_stairs", GRANITE_BRICKS);
+        MOSSY_GRANITE_BRICK_WALL = register("mossy_granite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(GRANITE_BRICKS));
 
         POLISHED_CALCITE = register("polished_calcite", AbstractBlock.Settings.copyShallow(CALCITE));
         CALCITE_BRICKS = register("calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));

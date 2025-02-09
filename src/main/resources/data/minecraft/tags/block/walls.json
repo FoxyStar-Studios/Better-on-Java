@@ -4,6 +4,10 @@
     "better_on_bedrock:cobbled_andesite_wall",
     "better_on_bedrock:andesite_brick_wall",
     "better_on_bedrock:cracked_andesite_brick_wall",
-    "better_on_bedrock:mossy_andesite_brick_wall"
+    "better_on_bedrock:mossy_andesite_brick_wall",
+    "better_on_bedrock:cobbled_granite_wall",
+    "better_on_bedrock:granite_brick_wall",
+    "better_on_bedrock:cracked_granite_brick_wall",
+    "better_on_bedrock:mossy_granite_brick_wall"
   ]
 }
