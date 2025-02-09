@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "better_on_bedrock:block/deco/calcite/polished_calcite",
+    "side": "better_on_bedrock:block/deco/calcite/polished_calcite",
+    "top": "better_on_bedrock:block/deco/calcite/polished_calcite"
+  }
+}

@@ -246,6 +246,18 @@ public class Items {
     public static final Item CRACKED_DIORITE_BRICKS;
     public static final Item MOSSY_DIORITE_BRICKS;
     public static final Item CHISELED_POLISHED_DIORITE;
+    public static final Item COBBLED_DIORITE_SLAB;
+    public static final Item COBBLED_DIORITE_STAIRS;
+    public static final Item COBBLED_DIORITE_WALL;
+    public static final Item DIORITE_BRICK_SLAB;
+    public static final Item DIORITE_BRICK_STAIRS;
+    public static final Item DIORITE_BRICK_WALL;
+    public static final Item CRACKED_DIORITE_BRICK_SLAB;
+    public static final Item CRACKED_DIORITE_BRICK_STAIRS;
+    public static final Item CRACKED_DIORITE_BRICK_WALL;
+    public static final Item MOSSY_DIORITE_BRICK_SLAB;
+    public static final Item MOSSY_DIORITE_BRICK_STAIRS;
+    public static final Item MOSSY_DIORITE_BRICK_WALL;
 
     public static final Item COBBLED_GRANITE;
     public static final Item GRANITE_BRICKS;
@@ -273,6 +285,21 @@ public class Items {
     public static final Item CRACKED_CALCITE_BRICKS;
     public static final Item POLISHED_CALCITE_BRICKS;
     public static final Item CRACKED_POLISHED_CALCITE_BRICKS;
+    public static final Item POLISHED_CALCITE_SLAB;
+    public static final Item POLISHED_CALCITE_STAIRS;
+    public static final Item POLISHED_CALCITE_WALL;
+    public static final Item CALCITE_BRICK_SLAB;
+    public static final Item CALCITE_BRICK_STAIRS;
+    public static final Item CALCITE_BRICK_WALL;
+    public static final Item CRACKED_CALCITE_BRICK_SLAB;
+    public static final Item CRACKED_CALCITE_BRICK_STAIRS;
+    public static final Item CRACKED_CALCITE_BRICK_WALL;
+    public static final Item CRACKED_POLISHED_CALCITE_BRICK_SLAB;
+    public static final Item CRACKED_POLISHED_CALCITE_BRICK_STAIRS;
+    public static final Item CRACKED_POLISHED_CALCITE_BRICK_WALL;
+    public static final Item POLISHED_CALCITE_BRICK_SLAB;
+    public static final Item POLISHED_CALCITE_BRICK_STAIRS;
+    public static final Item POLISHED_CALCITE_BRICK_WALL;
 
     public static final Item SLICED_TUFF;
 
@@ -611,6 +638,19 @@ public class Items {
         CRACKED_DIORITE_BRICKS = register(Blocks.CRACKED_DIORITE_BRICKS);
         MOSSY_DIORITE_BRICKS = register(Blocks.MOSSY_DIORITE_BRICKS);
         CHISELED_POLISHED_DIORITE = register(Blocks.CHISELED_POLISHED_DIORITE);
+        COBBLED_DIORITE_SLAB = register(Blocks.COBBLED_DIORITE_SLAB);
+        COBBLED_DIORITE_STAIRS = register(Blocks.COBBLED_DIORITE_STAIRS);
+        COBBLED_DIORITE_WALL = register(Blocks.COBBLED_DIORITE_WALL);
+        DIORITE_BRICK_SLAB = register(Blocks.DIORITE_BRICK_SLAB);
+        DIORITE_BRICK_STAIRS = register(Blocks.DIORITE_BRICK_STAIRS);
+        DIORITE_BRICK_WALL = register(Blocks.DIORITE_BRICK_WALL);
+        CRACKED_DIORITE_BRICK_SLAB = register(Blocks.CRACKED_DIORITE_BRICK_SLAB);
+        CRACKED_DIORITE_BRICK_STAIRS = register(Blocks.CRACKED_DIORITE_BRICK_STAIRS);
+        CRACKED_DIORITE_BRICK_WALL = register(Blocks.CRACKED_DIORITE_BRICK_WALL);
+        MOSSY_DIORITE_BRICK_SLAB = register(Blocks.MOSSY_DIORITE_BRICK_SLAB);
+        MOSSY_DIORITE_BRICK_STAIRS = register(Blocks.MOSSY_DIORITE_BRICK_STAIRS);
+        MOSSY_DIORITE_BRICK_WALL = register(Blocks.MOSSY_DIORITE_BRICK_WALL);
+
 
         COBBLED_GRANITE = register(Blocks.COBBLED_GRANITE);
         GRANITE_BRICKS = register(Blocks.GRANITE_BRICKS);
@@ -637,6 +677,22 @@ public class Items {
         CRACKED_CALCITE_BRICKS = register(Blocks.CRACKED_CALCITE_BRICKS);
         POLISHED_CALCITE_BRICKS = register(Blocks.POLISHED_CALCITE_BRICKS);
         CRACKED_POLISHED_CALCITE_BRICKS = register(Blocks.CRACKED_POLISHED_CALCITE_BRICKS);
+        POLISHED_CALCITE_SLAB = register(Blocks.POLISHED_CALCITE_SLAB);
+        POLISHED_CALCITE_STAIRS = register(Blocks.POLISHED_CALCITE_STAIRS);
+        POLISHED_CALCITE_WALL = register(Blocks.POLISHED_CALCITE_WALL);
+        CALCITE_BRICK_SLAB = register(Blocks.CALCITE_BRICK_SLAB);
+        CALCITE_BRICK_STAIRS = register(Blocks.CALCITE_BRICK_STAIRS);
+        CALCITE_BRICK_WALL = register(Blocks.CALCITE_BRICK_WALL);
+        CRACKED_CALCITE_BRICK_SLAB = register(Blocks.CRACKED_CALCITE_BRICK_SLAB);
+        CRACKED_CALCITE_BRICK_STAIRS = register(Blocks.CRACKED_CALCITE_BRICK_STAIRS);
+        CRACKED_CALCITE_BRICK_WALL = register(Blocks.CRACKED_CALCITE_BRICK_WALL);
+        CRACKED_POLISHED_CALCITE_BRICK_SLAB = register(Blocks.CRACKED_POLISHED_CALCITE_BRICK_SLAB);
+        CRACKED_POLISHED_CALCITE_BRICK_STAIRS = register(Blocks.CRACKED_POLISHED_CALCITE_BRICK_STAIRS);
+        CRACKED_POLISHED_CALCITE_BRICK_WALL = register(Blocks.CRACKED_POLISHED_CALCITE_BRICK_WALL);
+        POLISHED_CALCITE_BRICK_SLAB = register(Blocks.POLISHED_CALCITE_BRICK_SLAB);
+        POLISHED_CALCITE_BRICK_STAIRS = register(Blocks.POLISHED_CALCITE_BRICK_STAIRS);
+        POLISHED_CALCITE_BRICK_WALL = register(Blocks.POLISHED_CALCITE_BRICK_WALL);
+
 
         SLICED_TUFF = register(Blocks.SLICED_TUFF);
 

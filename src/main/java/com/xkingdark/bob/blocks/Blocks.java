@@ -8,6 +8,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -140,6 +141,18 @@ public final class Blocks {
     public static final Block CRACKED_DIORITE_BRICKS;
     public static final Block MOSSY_DIORITE_BRICKS;
     public static final Block CHISELED_POLISHED_DIORITE;
+    public static final Block COBBLED_DIORITE_SLAB;
+    public static final Block COBBLED_DIORITE_STAIRS;
+    public static final Block COBBLED_DIORITE_WALL;
+    public static final Block DIORITE_BRICK_SLAB;
+    public static final Block DIORITE_BRICK_STAIRS;
+    public static final Block DIORITE_BRICK_WALL;
+    public static final Block CRACKED_DIORITE_BRICK_SLAB;
+    public static final Block CRACKED_DIORITE_BRICK_STAIRS;
+    public static final Block CRACKED_DIORITE_BRICK_WALL;
+    public static final Block MOSSY_DIORITE_BRICK_SLAB;
+    public static final Block MOSSY_DIORITE_BRICK_STAIRS;
+    public static final Block MOSSY_DIORITE_BRICK_WALL;
 
     public static final Block COBBLED_GRANITE;
     public static final Block GRANITE_BRICKS;
@@ -167,6 +180,21 @@ public final class Blocks {
     public static final Block CRACKED_CALCITE_BRICKS;
     public static final Block POLISHED_CALCITE_BRICKS;
     public static final Block CRACKED_POLISHED_CALCITE_BRICKS;
+    public static final Block POLISHED_CALCITE_SLAB;
+    public static final Block POLISHED_CALCITE_STAIRS;
+    public static final Block POLISHED_CALCITE_WALL;
+    public static final Block CALCITE_BRICK_SLAB;
+    public static final Block CALCITE_BRICK_STAIRS;
+    public static final Block CALCITE_BRICK_WALL;
+    public static final Block CRACKED_CALCITE_BRICK_SLAB;
+    public static final Block CRACKED_CALCITE_BRICK_STAIRS;
+    public static final Block CRACKED_CALCITE_BRICK_WALL;
+    public static final Block CRACKED_POLISHED_CALCITE_BRICK_SLAB;
+    public static final Block CRACKED_POLISHED_CALCITE_BRICK_STAIRS;
+    public static final Block CRACKED_POLISHED_CALCITE_BRICK_WALL;
+    public static final Block POLISHED_CALCITE_BRICK_SLAB;
+    public static final Block POLISHED_CALCITE_BRICK_STAIRS;
+    public static final Block POLISHED_CALCITE_BRICK_WALL;
 
     public static final Block SLICED_TUFF;
 
@@ -546,6 +574,23 @@ public final class Blocks {
         CRACKED_DIORITE_BRICKS = register("cracked_diorite_bricks", AbstractBlock.Settings.copyShallow(DIORITE));
         MOSSY_DIORITE_BRICKS = register("mossy_diorite_bricks", AbstractBlock.Settings.copyShallow(DIORITE));
         CHISELED_POLISHED_DIORITE = register("chiseled_polished_diorite", AbstractBlock.Settings.copyShallow(DIORITE));
+        COBBLED_DIORITE_SLAB = register("cobbled_diorite_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        COBBLED_DIORITE_STAIRS = registerStairsBlock("cobbled_diorite_stairs", COBBLED_DIORITE);
+        COBBLED_DIORITE_WALL = register("cobbled_diorite_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        DIORITE_BRICK_SLAB = register("diorite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        DIORITE_BRICK_STAIRS = registerStairsBlock("diorite_brick_stairs", COBBLED_DIORITE);
+        DIORITE_BRICK_WALL = register("diorite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CRACKED_DIORITE_BRICK_SLAB = register("cracked_diorite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CRACKED_DIORITE_BRICK_STAIRS = registerStairsBlock("cracked_diorite_brick_stairs", COBBLED_DIORITE);
+        CRACKED_DIORITE_BRICK_WALL = register("cracked_diorite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        MOSSY_DIORITE_BRICK_SLAB = register("mossy_diorite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        MOSSY_DIORITE_BRICK_STAIRS = registerStairsBlock("mossy_diorite_brick_stairs", COBBLED_DIORITE);
+        MOSSY_DIORITE_BRICK_WALL = register("mossy_diorite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+
 
         COBBLED_GRANITE = register("cobbled_granite", AbstractBlock.Settings.copyShallow(GRANITE));
         GRANITE_BRICKS = register("granite_bricks", AbstractBlock.Settings.copyShallow(GRANITE));
@@ -576,6 +621,27 @@ public final class Blocks {
         CRACKED_CALCITE_BRICKS = register("cracked_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
         POLISHED_CALCITE_BRICKS = register("polished_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
         CRACKED_POLISHED_CALCITE_BRICKS = register("cracked_polished_calcite_bricks", AbstractBlock.Settings.copyShallow(CALCITE));
+
+        POLISHED_CALCITE_SLAB = register("polished_calcite_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        POLISHED_CALCITE_STAIRS = registerStairsBlock("polished_calcite_stairs", COBBLED_DIORITE);
+        POLISHED_CALCITE_WALL = register("polished_calcite_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CALCITE_BRICK_SLAB = register("calcite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CALCITE_BRICK_STAIRS = registerStairsBlock("calcite_brick_stairs", COBBLED_DIORITE);
+        CALCITE_BRICK_WALL = register("calcite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CRACKED_CALCITE_BRICK_SLAB = register("cracked_calcite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CRACKED_CALCITE_BRICK_STAIRS = registerStairsBlock("cracked_calcite_brick_stairs", COBBLED_DIORITE);
+        CRACKED_CALCITE_BRICK_WALL = register("cracked_calcite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CRACKED_POLISHED_CALCITE_BRICK_SLAB = register("cracked_polished_calcite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        CRACKED_POLISHED_CALCITE_BRICK_STAIRS = registerStairsBlock("cracked_polished_calcite_brick_stairs", COBBLED_DIORITE);
+        CRACKED_POLISHED_CALCITE_BRICK_WALL = register("cracked_polished_calcite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        POLISHED_CALCITE_BRICK_SLAB = register("polished_calcite_brick_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
+        POLISHED_CALCITE_BRICK_STAIRS = registerStairsBlock("polished_calcite_brick_stairs", COBBLED_DIORITE);
+        POLISHED_CALCITE_BRICK_WALL = register("polished_calcite_brick_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
 
         SLICED_TUFF = register("sliced_tuff", AbstractBlock.Settings.copyShallow(TUFF));
 

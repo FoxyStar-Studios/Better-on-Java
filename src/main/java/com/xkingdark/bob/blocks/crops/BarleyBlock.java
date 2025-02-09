@@ -36,7 +36,7 @@ public class BarleyBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return Items.CABBAGE_SEEDS;
+        return Items.BARLEY_SEEDS;
     }
 
     @Override

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "better_on_bedrock:block/deco/calcite/cracked_polished_calcite_bricks"
+  }
+}

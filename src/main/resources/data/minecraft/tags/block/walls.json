@@ -8,6 +8,15 @@
     "better_on_bedrock:cobbled_granite_wall",
     "better_on_bedrock:granite_brick_wall",
     "better_on_bedrock:cracked_granite_brick_wall",
-    "better_on_bedrock:mossy_granite_brick_wall"
+    "better_on_bedrock:mossy_granite_brick_wall",
+    "better_on_bedrock:cobbled_diorite_wall",
+    "better_on_bedrock:diorite_brick_wall",
+    "better_on_bedrock:cracked_diorite_brick_wall",
+    "better_on_bedrock:polished_calcite_wall",
+    "better_on_bedrock:calcite_brick_wall",
+    "better_on_bedrock:cracked_calcite_brick_wall",
+    "better_on_bedrock:cracked_polished_calcite_brick_wall",
+    "better_on_bedrock:polished_calcite_brick_wall",
+    "better_on_bedrock:mossy_diorite_brick_wall"
   ]
 }
