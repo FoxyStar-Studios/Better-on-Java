@@ -109,8 +109,7 @@ public class WaystoneBlock extends Block implements Waterloggable {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        BlockPos blockPos = pos.down();
-        BlockState floor = world.getBlockState(blockPos);
+        BlockState floor = world.getBlockState(pos.down());
         //return !world.isAir(pos.down())
         return floor.isOpaqueFullCube();
     }

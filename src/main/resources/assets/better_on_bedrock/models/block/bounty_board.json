@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "better_on_bedrock:block/bounty_board/bounty_board_default",
-		"particle": "resources:blocks/bounty_system/bounty_board_default"
+		"particle": "better_on_bedrock:block/bounty_board/bounty_board_default"
 	},
 	"elements": [
 		{

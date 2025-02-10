@@ -16,7 +16,11 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.block.WireOrientation;
 import net.minecraft.world.event.GameEvent;
+import org.jetbrains.annotations.Nullable;
 
 public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable {
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
@@ -51,18 +55,30 @@ public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable
         super.scheduledTick(state, world, pos, random);
     }
 
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        DoubleBlockHalf half = state.get(HALF);
+        if (half != DoubleBlockHalf.UPPER) {
+            return super.canPlaceAt(state, world, pos);
+        }
+
+        BlockState blockState = world.getBlockState(pos.down());
+        return (blockState.isOf(Blocks.CLOSED_TALL_EYEBLOSSOM) || blockState.isOf(Blocks.OPEN_TALL_EYEBLOSSOM))
+            && blockState.get(HALF) == DoubleBlockHalf.LOWER;
+    }
+
     private boolean updateStateAndNotifyOthers(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!world.getDimension().natural() || world.isDay() != this.state.open)
             return false;
 
         EyeblossomState eyeblossomState = this.state.getOpposite();
-
         BlockState blossomState = eyeblossomState.getBlockState();
-        world.setBlockState(pos, blossomState, Block.NOTIFY_ALL);
+        world.setBlockState(pos, blossomState, Block.NOTIFY_LISTENERS);
 
         DoubleBlockHalf half = state.get(HALF);
-        BlockPos blockPos = half == DoubleBlockHalf.UPPER ? pos.down() : pos.up();
-        world.setBlockState(blockPos, blossomState.with(HALF, half.getOtherHalf()));
+        BlockPos blockPos = half == DoubleBlockHalf.LOWER ? pos.up() : pos.down();
+        world.setBlockState(blockPos, blossomState.with(HALF, half.getOtherHalf()), Block.NOTIFY_ALL);
 
         world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(state));
         eyeblossomState.spawnTrailParticle(world, pos, random);
@@ -79,6 +95,7 @@ public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable
                 world.scheduleBlockTick(otherPos, state.getBlock(), i);
             }
         });
+
         return true;
     }
 
