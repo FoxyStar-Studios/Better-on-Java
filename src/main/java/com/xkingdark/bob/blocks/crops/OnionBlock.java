@@ -37,7 +37,7 @@ public class OnionBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return Items.CABBAGE_SEEDS;
+        return Items.ONION;
     }
 
     @Override

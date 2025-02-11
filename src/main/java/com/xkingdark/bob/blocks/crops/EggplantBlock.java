@@ -35,7 +35,7 @@ public class EggplantBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return Items.CABBAGE_SEEDS;
+        return Items.EGGPLANT_SEEDS;
     }
 
     @Override

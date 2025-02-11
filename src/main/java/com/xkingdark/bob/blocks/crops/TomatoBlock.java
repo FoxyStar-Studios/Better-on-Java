@@ -35,7 +35,7 @@ public class TomatoBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return Items.CABBAGE_SEEDS;
+        return Items.TOMATO;
     }
 
     @Override
