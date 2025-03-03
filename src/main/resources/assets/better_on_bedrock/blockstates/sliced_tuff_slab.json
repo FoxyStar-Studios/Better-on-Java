@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "better_on_bedrock:block/deco/tuff/sliced_tuff_slab"
+    },
+    "type=double": {
+      "model": "better_on_bedrock:block/deco/tuff/sliced_tuff"
+    },
+    "type=top": {
+      "model": "better_on_bedrock:block/deco/tuff/sliced_tuff_slab_top"
+    }
+  }
+}

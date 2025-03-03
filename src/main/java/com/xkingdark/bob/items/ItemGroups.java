@@ -152,6 +152,9 @@ public class ItemGroups {
                     entries.add(Items.CRACKED_POLISHED_CALCITE_BRICK_WALL);
 
                 entries.add(Items.SLICED_TUFF);
+                    entries.add(Items.SLICED_TUFF_STAIRS);
+                    entries.add(Items.SLICED_TUFF_SLAB);
+                    entries.add(Items.SLICED_TUFF_WALL);
 
                 entries.add(Items.CUT_RESIN);
                 entries.add(Items.SMOOTH_RESIN);

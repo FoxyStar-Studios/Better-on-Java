@@ -302,6 +302,9 @@ public class Items {
     public static final Item POLISHED_CALCITE_BRICK_WALL;
 
     public static final Item SLICED_TUFF;
+    public static final Item SLICED_TUFF_SLAB;
+    public static final Item SLICED_TUFF_STAIRS;
+    public static final Item SLICED_TUFF_WALL;
 
     public static final Item CUT_RESIN;
     public static final Item SMOOTH_RESIN;
@@ -695,6 +698,9 @@ public class Items {
 
 
         SLICED_TUFF = register(Blocks.SLICED_TUFF);
+        SLICED_TUFF_SLAB = register(Blocks.SLICED_TUFF_SLAB);
+        SLICED_TUFF_STAIRS = register(Blocks.SLICED_TUFF_STAIRS);
+        SLICED_TUFF_WALL = register(Blocks.SLICED_TUFF_WALL);
 
         CUT_RESIN = register(Blocks.CUT_RESIN);
         SMOOTH_RESIN = register(Blocks.SMOOTH_RESIN);

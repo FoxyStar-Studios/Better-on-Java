@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "better_on_bedrock:item/wood/voiding/voiding_door"
+    "layer0": "better_on_bedrock:item/wood/chorus/chorus_door"
   }
 }

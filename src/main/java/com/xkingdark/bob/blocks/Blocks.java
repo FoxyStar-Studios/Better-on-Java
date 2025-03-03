@@ -197,6 +197,9 @@ public final class Blocks {
     public static final Block POLISHED_CALCITE_BRICK_WALL;
 
     public static final Block SLICED_TUFF;
+    public static final Block SLICED_TUFF_SLAB;
+    public static final Block SLICED_TUFF_STAIRS;
+    public static final Block SLICED_TUFF_WALL;
 
     public static final Block CUT_RESIN;
     public static final Block SMOOTH_RESIN;
@@ -655,6 +658,10 @@ public final class Blocks {
                 AbstractBlock.Settings.copyShallow(COBBLED_DIORITE));
 
         SLICED_TUFF = register("sliced_tuff", AbstractBlock.Settings.copyShallow(TUFF));
+        SLICED_TUFF_SLAB = register("sliced_tuff_slab", SlabBlock::new, AbstractBlock.Settings.copyShallow(SLICED_TUFF));
+        SLICED_TUFF_STAIRS = registerStairsBlock("sliced_tuff_stairs", SLICED_TUFF);
+        SLICED_TUFF_WALL = register("sliced_tuff_wall", WallBlock::new,
+                AbstractBlock.Settings.copyShallow(SLICED_TUFF));
 
         CUT_RESIN = register("cut_resin", AbstractBlock.Settings.copyShallow(RESIN_BLOCK));
         SMOOTH_RESIN = register("smooth_resin", AbstractBlock.Settings.copyShallow(RESIN_BLOCK));
