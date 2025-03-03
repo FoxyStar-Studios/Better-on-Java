@@ -13,7 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
 
-public class PedestalBlockEntity extends BlockEntity implements pedestalInventory {
+public class PedestalBlockEntity extends BlockEntity implements PedestalInventory {
     private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
 
     public PedestalBlockEntity(BlockPos pos, BlockState state) {
