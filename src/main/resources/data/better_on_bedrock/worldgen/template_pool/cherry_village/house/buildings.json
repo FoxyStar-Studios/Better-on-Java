@@ -3,7 +3,7 @@
     "fallback": "minecraft:empty",
     "elements": [
         {
-            "weight": 90,
+            "weight": 8,
             "element": {
                 "location": "better_on_bedrock:cherry_village/buildings/cherry_house_small",
                 "processors": "minecraft:empty",
@@ -12,7 +12,7 @@
             }
         },
         {
-            "weight": 20,
+            "weight": 2,
             "element": {
                 "location": "better_on_bedrock:cherry_village/buildings/cherry_medium_house",
                 "processors": "minecraft:empty",
@@ -21,13 +21,159 @@
             }
         },
         {
-            "weight": 20,
+            "weight": 2,
             "element": {
                 "location": "better_on_bedrock:cherry_village/buildings/cherry_large_house",
                 "processors": "minecraft:empty",
                 "projection": "rigid",
                 "element_type": "minecraft:single_pool_element"
             }
-        }
+        },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_butcher",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_blacksmith",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_loom_house",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/plains_shepherds_house_1",
+              "processors": {
+                "processors": []
+              },
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_fish_house",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_farmer_house",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 1
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_librarian",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 5
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_stone_mason",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/buildings/cherry_church",
+              "processors": "minecraft:mossify_10_percent",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+        {
+            "weight": 2,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/wheat_farm",
+                "processors": "better_on_bedrock:carrot_farm",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 2,
+            "element": {
+                "location": "better_on_bedrock:cherry_village/wheat_farm",
+                "processors": "better_on_bedrock:potato_farm",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/pumpkin_farm",
+              "processors": "minecraft:empty",
+              "projection": "rigid"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/cherry_animal_pen",
+              "processors": "minecraft:empty",
+              "projection": "rigid"
+            },
+            "weight": 1
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/cherry_shop",
+              "processors": "minecraft:empty",
+              "projection": "rigid"
+            },
+            "weight": 1
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/cherry_bench",
+              "processors": "minecraft:empty",
+              "projection": "rigid"
+            },
+            "weight": 1
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/campfire",
+              "processors": "minecraft:empty",
+              "projection": "rigid"
+            },
+            "weight": 1
+          }
     ]
 }

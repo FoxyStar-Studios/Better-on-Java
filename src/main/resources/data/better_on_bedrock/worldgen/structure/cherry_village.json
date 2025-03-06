@@ -6,7 +6,7 @@
     "step": "surface_structures",
     "spawn_overrides": {},
     "start_pool": "better_on_bedrock:cherry_village/roads/cherry_road_center",
-    "size": 8,
+    "size": 5,
     "start_height": {
         "absolute": 1
     },

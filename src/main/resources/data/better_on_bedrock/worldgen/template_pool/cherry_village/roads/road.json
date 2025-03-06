@@ -3,49 +3,131 @@
     "fallback": "better_on_bedrock:cherry_village/roads/cherry_road_fallback",
     "elements": [
         {
-            "weight": 50,
             "element": {
-                "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road",
-                "processors": "minecraft:empty",
-                "projection": "terrain_matching",
-                "element_type": "minecraft:single_pool_element"
-            }
-        },
-        {
-            "weight": 70,
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_corner_01",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 2
+          },
+          {
             "element": {
-                "location": "better_on_bedrock:cherry_village/roads/cherry_cross_road",
-                "processors": "minecraft:empty",
-                "projection": "terrain_matching",
-                "element_type": "minecraft:single_pool_element"
-            }
-        },
-        {
-            "weight": 42,
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road_01",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 4
+          },
+          {
             "element": {
-                "location": "better_on_bedrock:cherry_village/roads/cherry_turn_road",
-                "processors": "minecraft:empty",
-                "projection": "terrain_matching",
-                "element_type": "minecraft:single_pool_element"
-            }
-        },
-        {
-            "weight": 42,
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road_02",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 4
+          },
+          {
             "element": {
-                "location": "better_on_bedrock:cherry_village/roads/cherry_turn_l_road",
-                "processors": "minecraft:empty",
-                "projection": "terrain_matching",
-                "element_type": "minecraft:single_pool_element"
-            }
-        },
-        {
-            "weight": 76,
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road_03",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 7
+          },
+          {
             "element": {
-                "location": "better_on_bedrock:cherry_village/roads/cherry_t_road",
-                "processors": "minecraft:empty",
-                "projection": "terrain_matching",
-                "element_type": "minecraft:single_pool_element"
-            }
-        }
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road_04",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 7
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road_05",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 3
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_straight_road_06",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 4
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_crossroad_01",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_crossroad_02",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 1
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_crossroad_03",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_crossroad_04",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_crossroad_05",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_crossroad_06",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 2
+          },
+          {
+            "element": {
+              "element_type": "minecraft:single_pool_element",
+              "location": "better_on_bedrock:cherry_village/roads/cherry_corner_01",
+              "processors": "minecraft:street_plains",
+              "projection": "terrain_matching"
+            },
+            "weight": 3
+          }
+      
     ]
 }
