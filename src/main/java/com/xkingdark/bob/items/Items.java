@@ -360,95 +360,80 @@ public class Items {
                 .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                 .enchantable(1));
 
-        COPPER_HELMET = register("copper_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.HELMET, settings));
-        COPPER_CHESTPLATE = register("copper_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.CHESTPLATE, settings));
-        COPPER_LEGGINGS = register("copper_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.LEGGINGS, settings));
-        COPPER_BOOTS = register("copper_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.COPPER, EquipmentType.BOOTS, settings));
-        COPPER_SWORD = register("copper_sword", (settings) ->
-                new SwordItem(ToolMaterials.COPPER, 2.0F, -2.4F, settings),
-            (new Item.Settings()).fireproof());
-        COPPER_AXE = register("copper_axe", (settings) ->
-                new AxeItem(ToolMaterials.COPPER, 6.0F, -3.1F, settings),
-            (new Item.Settings()).fireproof());
-        COPPER_PICKAXE = register("copper_pickaxe", (settings) ->
-                new PickaxeItem(ToolMaterials.COPPER, 0.5F, -2.8F, settings),
-            (new Item.Settings()));
-        COPPER_SHOVEL = register("copper_shovel", (settings) ->
-                new ShovelItem(ToolMaterials.COPPER, 1.0F, -3.0F, settings),
-            (new Item.Settings()).fireproof());
-        COPPER_HOE = register("copper_hoe", (settings) ->
-                new HoeItem(ToolMaterials.COPPER, -2.0F, -2.0F, settings),
-            (new Item.Settings()).fireproof());
+        COPPER_HELMET = register("copper_helmet", (new Item.Settings())
+            .armor(ArmorMaterials.COPPER, EquipmentType.HELMET));
+        COPPER_CHESTPLATE = register("copper_chestplate", (new Item.Settings())
+            .armor(ArmorMaterials.COPPER, EquipmentType.CHESTPLATE));
+        COPPER_LEGGINGS = register("copper_leggings", (new Item.Settings())
+            .armor(ArmorMaterials.COPPER, EquipmentType.LEGGINGS));
+        COPPER_BOOTS = register("copper_boots", (new Item.Settings())
+            .armor(ArmorMaterials.COPPER, EquipmentType.BOOTS));
+        COPPER_SWORD = register("copper_sword", (new Item.Settings())
+            .sword(ToolMaterials.COPPER, 2.0F, -2.4F));
+        COPPER_AXE = register("copper_axe", (new Item.Settings())
+            .axe(ToolMaterials.COPPER, 6.0F, -3.1F));
+        COPPER_PICKAXE = register("copper_pickaxe", (new Item.Settings())
+            .pickaxe(ToolMaterials.COPPER, 0.5F, -2.8F));
+        COPPER_SHOVEL = register("copper_shovel", (new Item.Settings())
+            .shovel(ToolMaterials.COPPER, 1.0F, -3.0F));
+        COPPER_HOE = register("copper_hoe", (new Item.Settings())
+            .hoe(ToolMaterials.COPPER, -2.0F, -2.0F));
 
-        AMETHYST_HELMET = register("amethyst_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.HELMET, settings));
-        AMETHYST_CHESTPLATE = register("amethyst_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.CHESTPLATE, settings));
-        AMETHYST_LEGGINGS = register("amethyst_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.LEGGINGS, settings));
-        AMETHYST_BOOTS = register("amethyst_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.AMETHYST, EquipmentType.BOOTS, settings));
-        AMETHYST_SWORD = register("amethyst_sword", (settings) ->
-                new SwordItem(ToolMaterials.AMETHYST, 3.0F, -2.4F, settings),
-            (new Item.Settings()).fireproof());
-        AMETHYST_AXE = register("amethyst_axe", (settings) ->
-                new AxeItem(ToolMaterials.AMETHYST, 6.0F, -3.1F, settings),
-            (new Item.Settings()).fireproof());
-        AMETHYST_PICKAXE = register("amethyst_pickaxe", (settings) ->
-                new PickaxeItem(ToolMaterials.AMETHYST, 1.0F, -2.8F, settings),
-            (new Item.Settings()));
-        AMETHYST_SHOVEL = register("amethyst_shovel", (settings) ->
-                new ShovelItem(ToolMaterials.AMETHYST, 1.5F, -3.0F, settings),
-            (new Item.Settings()).fireproof());
-        AMETHYST_HOE = register("amethyst_hoe", (settings) ->
-                new HoeItem(ToolMaterials.AMETHYST, -2.0F, -1.0F, settings),
-            (new Item.Settings()).fireproof());
+        AMETHYST_HELMET = register("amethyst_helmet", (new Item.Settings())
+            .armor(ArmorMaterials.AMETHYST, EquipmentType.HELMET));
+        AMETHYST_CHESTPLATE = register("amethyst_chestplate", (new Item.Settings())
+            .armor(ArmorMaterials.AMETHYST, EquipmentType.CHESTPLATE));
+        AMETHYST_LEGGINGS = register("amethyst_leggings", (new Item.Settings())
+            .armor(ArmorMaterials.AMETHYST, EquipmentType.LEGGINGS));
+        AMETHYST_BOOTS = register("amethyst_boots", (new Item.Settings())
+            .armor(ArmorMaterials.AMETHYST, EquipmentType.BOOTS));
+        AMETHYST_SWORD = register("amethyst_sword", (new Item.Settings())
+            .sword(ToolMaterials.AMETHYST, 3.0F, -2.4F));
+        AMETHYST_AXE = register("amethyst_axe", (new Item.Settings())
+            .axe(ToolMaterials.AMETHYST, 6.0F, -3.1F));
+        AMETHYST_PICKAXE = register("amethyst_pickaxe", (new Item.Settings())
+            .pickaxe(ToolMaterials.AMETHYST, 1.0F, -2.8F));
+        AMETHYST_SHOVEL = register("amethyst_shovel", (new Item.Settings())
+            .shovel(ToolMaterials.AMETHYST, 1.5F, -3.0F));
+        AMETHYST_HOE = register("amethyst_hoe", (new Item.Settings())
+            .hoe(ToolMaterials.AMETHYST, -2.0F, -1.0F));
 
-        SHULKER_HELMET = register("shulker_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.HELMET, settings));
-        SHULKER_CHESTPLATE = register("shulker_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.CHESTPLATE, settings));
-        SHULKER_LEGGINGS = register("shulker_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.LEGGINGS, settings));
-        SHULKER_BOOTS = register("shulker_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.SHULKER, EquipmentType.BOOTS, settings));
+        SHULKER_HELMET = register("shulker_helmet", (new Item.Settings())
+            .armor(ArmorMaterials.SHULKER, EquipmentType.HELMET));
+        SHULKER_CHESTPLATE = register("shulker_chestplate", (new Item.Settings())
+            .armor(ArmorMaterials.SHULKER, EquipmentType.CHESTPLATE));
+        SHULKER_LEGGINGS = register("shulker_leggings", (new Item.Settings())
+            .armor(ArmorMaterials.SHULKER, EquipmentType.LEGGINGS));
+        SHULKER_BOOTS = register("shulker_boots", (new Item.Settings())
+            .armor(ArmorMaterials.SHULKER, EquipmentType.BOOTS));
 
-        CORSTINITE_HELMET = register("corstinite_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.HELMET, settings));
-        CORSTINITE_CHESTPLATE = register("corstinite_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.CHESTPLATE, settings));
-        CORSTINITE_LEGGINGS = register("corstinite_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.LEGGINGS, settings));
-        CORSTINITE_BOOTS = register("corstinite_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS, settings));
+        CORSTINITE_HELMET = register("corstinite_helmet", (new Item.Settings())
+            .armor(ArmorMaterials.CORSTINITE, EquipmentType.HELMET).fireproof());
+        CORSTINITE_CHESTPLATE = register("corstinite_chestplate", (new Item.Settings())
+            .armor(ArmorMaterials.CORSTINITE, EquipmentType.CHESTPLATE).fireproof());
+        CORSTINITE_LEGGINGS = register("corstinite_leggings", (new Item.Settings())
+            .armor(ArmorMaterials.CORSTINITE, EquipmentType.LEGGINGS).fireproof());
+        CORSTINITE_BOOTS = register("corstinite_boots", (new Item.Settings())
+            .armor(ArmorMaterials.CORSTINITE, EquipmentType.BOOTS).fireproof());
 
-        STARDUST_HELMET = register("stardust_helmet", (settings) ->
-            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.HELMET, settings));
-        STARDUST_CHESTPLATE = register("stardust_chestplate", (settings) ->
-            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.CHESTPLATE, settings));
-        STARDUST_LEGGINGS = register("stardust_leggings", (settings) ->
-            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.LEGGINGS, settings));
-        STARDUST_BOOTS = register("stardust_boots", (settings) ->
-            new ArmorItem(ArmorMaterials.STARDUST, EquipmentType.BOOTS, settings));
-        STARDUST_SWORD = register("stardust_sword", (settings) ->
-                new SwordItem(ToolMaterials.STARDUST, 3.0F, -2.4F, settings),
-            (new Item.Settings()).fireproof());
-        STARDUST_AXE = register("stardust_axe", (settings) ->
-                new AxeItem(ToolMaterials.STARDUST, 5.0F, -3.0F, settings),
-            (new Item.Settings()).fireproof());
-        STARDUST_PICKAXE = register("stardust_pickaxe", (settings) ->
-                new PickaxeItem(ToolMaterials.STARDUST, 1.0F, -2.8F, settings),
-            (new Item.Settings()));
-        STARDUST_SHOVEL = register("stardust_shovel", (settings) ->
-                new ShovelItem(ToolMaterials.STARDUST, 1.5F, -3.0F, settings),
-            (new Item.Settings()).fireproof());
-        STARDUST_HOE = register("stardust_hoe", (settings) ->
-                new HoeItem(ToolMaterials.STARDUST, -4.0F, 0.0F, settings),
-            (new Item.Settings()).fireproof());
+        STARDUST_HELMET = register("stardust_helmet", (new Item.Settings())
+            .armor(ArmorMaterials.STARDUST, EquipmentType.HELMET).fireproof());
+        STARDUST_CHESTPLATE = register("stardust_chestplate", (new Item.Settings())
+            .armor(ArmorMaterials.STARDUST, EquipmentType.CHESTPLATE).fireproof());
+        STARDUST_LEGGINGS = register("stardust_leggings", (new Item.Settings())
+            .armor(ArmorMaterials.STARDUST, EquipmentType.LEGGINGS).fireproof());
+        STARDUST_BOOTS = register("stardust_boots", (new Item.Settings())
+            .armor(ArmorMaterials.STARDUST, EquipmentType.BOOTS).fireproof());
+        STARDUST_SWORD = register("stardust_sword", (new Item.Settings())
+            .sword(ToolMaterials.STARDUST, 3.0F, -2.4F));
+        STARDUST_AXE = register("stardust_axe", (new Item.Settings())
+            .axe(ToolMaterials.STARDUST, 5.0F, -3.0F).fireproof());
+        STARDUST_PICKAXE = register("stardust_pickaxe", (new Item.Settings())
+            .pickaxe(ToolMaterials.STARDUST, 1.0F, -2.8F).fireproof());
+        STARDUST_SHOVEL = register("stardust_shovel", (new Item.Settings())
+            .shovel(ToolMaterials.STARDUST, 1.5F, -3.0F).fireproof());
+        STARDUST_HOE = register("stardust_hoe", (new Item.Settings())
+            .hoe(ToolMaterials.STARDUST, -4.0F, 0.0F).fireproof());
 
         STARDUST_UPGRADE = register("stardust_upgrade_smithing_template", (settings) ->
             SmithingTemplates.createUpgrade("stardust", settings), new Item.Settings().rarity(Rarity.RARE));

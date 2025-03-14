@@ -7,9 +7,10 @@ import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.ItemDisplayContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ModelTransformationMode;
 import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class PedestalBlockEntityDisplay implements BlockEntityRenderer<PedestalBlockEntity> {
@@ -18,7 +19,13 @@ public class PedestalBlockEntityDisplay implements BlockEntityRenderer<PedestalB
     }
 
     @Override
-    public void render(PedestalBlockEntity blockEntity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
+    public void render(
+        PedestalBlockEntity blockEntity,
+        float tickDelta, MatrixStack matrices,
+        VertexConsumerProvider vertexConsumers,
+        int light, int overlay,
+        Vec3d cameraPos
+    ) {
         World world = blockEntity.getWorld();
         if (world == null)
             return;
@@ -42,7 +49,7 @@ public class PedestalBlockEntityDisplay implements BlockEntityRenderer<PedestalB
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         itemRenderer.renderItem(
             itemStack,
-            ModelTransformationMode.GROUND,
+            ItemDisplayContext.GROUND,
             light, overlay, matrices, vertexConsumers, blockEntity.getWorld(), 0
         );
 

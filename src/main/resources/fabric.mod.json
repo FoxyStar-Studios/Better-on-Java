@@ -6,7 +6,8 @@
   "version": "${version}",
   "authors": [
     "xKingDark",
-    "XxPoggyisLitxX"
+    "Poggy",
+    "FoxyStar Studios"
   ],
   "license": "MIT",
   "icon": "assets/better_on_bedrock/icon.png",
@@ -19,6 +20,6 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "1.21.5-beta.2"
   }
 }

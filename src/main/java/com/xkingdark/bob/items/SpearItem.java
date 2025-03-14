@@ -16,7 +16,6 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ProjectileItem;
@@ -55,12 +54,15 @@ public class SpearItem extends Item implements ProjectileItem {
     }
 
     public static ToolComponent createToolComponent() {
-        return new ToolComponent(List.of(), 1.0F, 2);
+        return new ToolComponent(List.of(), 1.0F, 2, false);
     }
 
     @Override
-    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
-        return !miner.isCreative();
+    public boolean canMine(ItemStack stack, BlockState state, World world, BlockPos pos, LivingEntity miner) {
+        if (!(miner instanceof PlayerEntity))
+            return false;
+
+        return !((PlayerEntity) miner).isCreative();
     }
 
     @Override
@@ -142,9 +144,7 @@ public class SpearItem extends Item implements ProjectileItem {
     }
 
     @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        return true;
-    }
+    public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {}
 
     @Override
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {

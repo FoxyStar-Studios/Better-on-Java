@@ -114,7 +114,7 @@ public class SpearEntity extends PersistentProjectileEntity {
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        this.dealtDamage = nbt.getBoolean("DealtDamage");
+        this.dealtDamage = nbt.getBoolean("DealtDamage", false);
         this.dataTracker.set(LOYALTY, this.getLoyalty(this.getItemStack()));
     }
 
@@ -151,7 +151,6 @@ public class SpearEntity extends PersistentProjectileEntity {
         return super.tryPickup(player) || this.isNoClip() && this.isOwner(player) && player.getInventory().insertStack(this.asItemStack());
     }
 
-    @Override
     public double getDamage() {
         double damage = 4;
         if (this.getType() == EntityTypes.STONE_SPEAR) {
