@@ -10,7 +10,7 @@
     "FoxyStar Studios"
   ],
   "license": "MIT",
-  "icon": "assets/better_on_bedrock/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [ "com.xkingdark.bob.client.Client" ],
