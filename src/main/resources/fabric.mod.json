@@ -2,13 +2,17 @@
   "schemaVersion": 1,
   "id": "better-on-bedrock",
   "name": "Better on Bedrock",
-  "description": "",
+  "description": "Updating Minecraft by adding tons of new stuff along with reworks to the base game!",
   "version": "${version}",
   "authors": [
     "xKingDark",
     "Poggy",
     "FoxyStar Studios"
   ],
+  "contact": {
+    "sources": "https://github.com/FoxyStar-Studios/Better-on-Java",
+    "issues": "https://github.com/FoxyStar-Studios/Better-on-Java/issues"
+  },
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
