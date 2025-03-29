@@ -6,7 +6,6 @@ import net.fabricmc.api.ClientModInitializer;
 
 import static com.xkingdark.bob.Main.LOGGER;
 
-
 public class Client implements ClientModInitializer {
     @Override
     public void onInitializeClient() {

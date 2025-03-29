@@ -4,6 +4,7 @@
   "package": "com.xkingdark.bob.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "DecoratedPotPattersMixin"
   ],
   "injectors": {
     "defaultRequire": 1

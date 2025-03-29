@@ -3,8 +3,7 @@
   "minVersion": "0.8",
   "package": "com.xkingdark.bob.mixin.client",
   "compatibilityLevel": "JAVA_21",
-  "client": [
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

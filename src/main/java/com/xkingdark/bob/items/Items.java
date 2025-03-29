@@ -3,6 +3,7 @@ package com.xkingdark.bob.items;
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
 import com.xkingdark.bob.blocks.jukebox.JukeboxSongs;
+import com.xkingdark.bob.blocks.DecoratedPotPatterns;
 import com.xkingdark.bob.entities.EntityTypes;
 import com.xkingdark.bob.items.components.FoodComponents;
 import com.xkingdark.bob.items.equipment.ArmorMaterials;
@@ -690,6 +691,8 @@ public class Items {
         CUT_RESIN = register(Blocks.CUT_RESIN);
         SMOOTH_RESIN = register(Blocks.SMOOTH_RESIN);
         RESIN_LAMP = register(Blocks.RESIN_LAMP);
+
+        new DecoratedPotPatterns();
     }
 
 

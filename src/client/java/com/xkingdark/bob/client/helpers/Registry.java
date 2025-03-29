@@ -1,7 +1,6 @@
 package com.xkingdark.bob.client.helpers;
 import com.xkingdark.bob.Main;
 import com.xkingdark.bob.blocks.Blocks;
-import com.xkingdark.bob.client.Client;
 
 import com.xkingdark.bob.client.blocks.PedestalBlockEntityDisplay;
 import com.xkingdark.bob.client.entities.EntityModelLayers;
@@ -14,18 +13,15 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.network.ClientAdvancementManager;
+import net.minecraft.block.DecoratedPotPattern;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import net.minecraft.client.render.entity.BlazeEntityRenderer;
 import net.minecraft.client.render.entity.BoatEntityRenderer;
-import net.minecraft.client.render.entity.TridentEntityRenderer;
 import net.minecraft.client.render.entity.model.BoatEntityModel;
-import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import org.lwjgl.glfw.GLFW;
@@ -49,6 +45,19 @@ public class Registry {
                 );
             }
         });
+
+        // Pottery Patters
+        com.xkingdark.bob.blocks.DecoratedPotPatterns.SHERD_TO_PATTERN.forEach(
+            (item, key) -> {
+                DecoratedPotPattern registry = Registries.DECORATED_POT_PATTERN.get(key);
+                if (registry == null)
+                    return;
+
+                TexturedRenderLayers.DECORATED_POT_PATTERN_TEXTURES.put(key,
+                    TexturedRenderLayers.DECORATED_POT_SPRITE_MAPPER.map(registry.assetId()));
+            }
+        );
+
 
         // Entities
         BlockEntityRendererFactories.register(EntityTypes.PEDESTAL, PedestalBlockEntityDisplay::new);

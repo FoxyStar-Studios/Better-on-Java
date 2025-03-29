@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "better_on_bedrock:blank_pottery_sherd",
+    "better_on_bedrock:party_pottery_sherd",
+    "better_on_bedrock:forger_pottery_sherd",
+    "better_on_bedrock:piglin_pottery_sherd"
+  ]
+}
