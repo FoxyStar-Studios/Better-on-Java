@@ -81,16 +81,19 @@
       "minecraft:spring_lava"
     ],
     [
+      "better_on_bedrock:trees_forest",
+      "better_on_bedrock:patch_grass_birch",
       "minecraft:glow_lichen",
       "minecraft:forest_flowers",
-      "better_on_bedrock:trees_forest",
+      "minecraft:trees_birch_and_oak_leaf_litter",
+      "minecraft:patch_bush",
       "minecraft:flower_default",
-      "better_on_bedrock:patch_grass_birch",
+      "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "better_on_bedrock:desert_well"
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_firefly_bush_near_water"
     ],
     [
       "minecraft:freeze_top_layer"
