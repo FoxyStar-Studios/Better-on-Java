@@ -20,7 +20,10 @@
     "client": [ "com.xkingdark.bob.client.Client" ],
     "main": [ "com.xkingdark.bob.Main" ]
   },
-  "mixins": [ "bob.mixins.json" ],
+  "mixins": [
+    "bob.mixins.json",
+    "bob.client.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",

@@ -1,10 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.xkingdark.bob.mixin",
+  "package": "com.xkingdark.bob.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "DecoratedPotPattersMixin"
+    "entities.DecoratedPotPatternsMixin",
+    "entities.CowEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

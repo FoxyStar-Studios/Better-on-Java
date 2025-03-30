@@ -1,4 +1,4 @@
-package com.xkingdark.bob.mixin;
+package com.xkingdark.bob.core.mixin.entities;
 
 import net.minecraft.block.DecoratedPotPattern;
 import net.minecraft.block.DecoratedPotPatterns;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import static com.xkingdark.bob.blocks.DecoratedPotPatterns.fromSherd;
 
 @Mixin(DecoratedPotPatterns.class)
-public class DecoratedPotPattersMixin {
+public class DecoratedPotPatternsMixin {
     @Inject(method = "fromSherd", at = @At("HEAD"), cancellable = true)
     private static void bob$fromSherd(Item item, CallbackInfoReturnable<RegistryKey<DecoratedPotPattern>> returnable) {
         RegistryKey<DecoratedPotPattern> pattern = fromSherd(item);
