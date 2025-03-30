@@ -55,7 +55,7 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
     )
     public void updateRenderState(T livingEntity, S livingEntityRenderState, float f, CallbackInfo ci) {
         if (livingEntity instanceof EnchantedEntityAccessor accessor) {
-            isEnchanted = accessor.bob$isEnchanted();
+            isEnchanted = accessor.BoB$isEnchanted();
         }
     }
 

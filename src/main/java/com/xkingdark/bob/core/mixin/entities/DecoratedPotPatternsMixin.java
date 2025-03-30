@@ -14,7 +14,7 @@ import static com.xkingdark.bob.blocks.DecoratedPotPatterns.fromSherd;
 @Mixin(DecoratedPotPatterns.class)
 public class DecoratedPotPatternsMixin {
     @Inject(method = "fromSherd", at = @At("HEAD"), cancellable = true)
-    private static void bob$fromSherd(Item item, CallbackInfoReturnable<RegistryKey<DecoratedPotPattern>> returnable) {
+    private static void BoB$fromSherd(Item item, CallbackInfoReturnable<RegistryKey<DecoratedPotPattern>> returnable) {
         RegistryKey<DecoratedPotPattern> pattern = fromSherd(item);
         if (pattern == null)
             return;

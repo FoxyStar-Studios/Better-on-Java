@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "entities.DecoratedPotPatternsMixin",
+    "entities.LivingEntityMixin",
     "entities.ChickenEntityMixin",
     "entities.CowEntityMixin"
   ],
