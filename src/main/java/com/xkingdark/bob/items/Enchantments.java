@@ -157,4 +157,15 @@ public class Enchantments {
 
         return EnchantmentHelper.getLevel(enchantment, itemStack) > 0;
     }
+
+    public static boolean checkMinerEnchantment(World world, ItemStack itemStack, BlockState state) {
+        if (Enchantments.hasEnchantment(world, itemStack, Enchantments.VEIN_MINER)) {
+            return Enchantments.ORES.contains(state.getBlock());
+        }
+        else if (Enchantments.hasEnchantment(world, itemStack, Enchantments.TREE_CAPITATOR)) {
+            return Enchantments.LOGS.contains(state.getBlock());
+        };
+
+        return false;
+    }
 }

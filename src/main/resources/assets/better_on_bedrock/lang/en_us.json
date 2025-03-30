@@ -1,6 +1,7 @@
 {
   "category.better_on_bedrock.keybinds": "Better on Bedrock",
-  "key.better_on_bedrock.test": "Test",
+  "key.better_on_bedrock.waystone": "Waystone Test",
+  "key.better_on_bedrock.toast_1": "Toast Test 1",
 
   "advancements.better_on_bedrock.root.title": "First Day?",
   "advancements.better_on_bedrock.root.description": "Play Better on Bedrock!",

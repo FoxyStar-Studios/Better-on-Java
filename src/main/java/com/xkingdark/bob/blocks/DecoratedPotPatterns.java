@@ -25,7 +25,7 @@ public class DecoratedPotPatterns {
         Items.PIGLIN_POTTERY_SHERD, PIGLIN
     );
 
-    static {
+    public static void register() {
         register(BLANK, "blank_pottery_pattern");
         register(PARTY, "party_pottery_pattern");
         register(FORGER, "forger_pottery_pattern");

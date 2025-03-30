@@ -25,7 +25,7 @@ public class ItemGroups {
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(Main.MOD_ID, id));
     }
 
-    static {
+    public static void register() {
         // Top
         Registry.register(Registries.ITEM_GROUP, BUILDING, new ItemGroup.Builder(ItemGroup.Row.TOP, 0)
             .displayName(Text.translatable("itemGroup.betterOnBedrock.building"))

@@ -692,7 +692,7 @@ public class Items {
         SMOOTH_RESIN = register(Blocks.SMOOTH_RESIN);
         RESIN_LAMP = register(Blocks.RESIN_LAMP);
 
-        new DecoratedPotPatterns();
+        DecoratedPotPatterns.register();
     }
 
 
