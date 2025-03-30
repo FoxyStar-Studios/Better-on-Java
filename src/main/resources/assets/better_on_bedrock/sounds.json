@@ -1,14 +1,22 @@
 {
   "music_disc.fox": {
-    "sounds": [{ "name": "better_on_bedrock:music/records/fox", "stream": true }]
+    "sounds": [
+      { "name": "better_on_bedrock:music/records/fox", "stream": true }
+    ]
   },
   "music_disc.stardust": {
-    "sounds": [{ "name": "better_on_bedrock:music/records/stardust", "stream": true }]
+    "sounds": [
+      { "name": "better_on_bedrock:music/records/stardust", "stream": true }
+    ]
   },
   "music_disc.stellar_crystals": {
-    "sounds": [{ "name": "better_on_bedrock:music/records/stellar_crystals", "stream": true }]
+    "sounds": [
+      { "name": "better_on_bedrock:music/records/stellar_crystals", "stream": true }
+    ]
   },
   "music_disc.travelers": {
-    "sounds": [{ "name": "better_on_bedrock:music/records/travelers", "stream": true }]
+    "sounds": [
+      { "name": "better_on_bedrock:music/records/travelers", "stream": true }
+    ]
   }
 }

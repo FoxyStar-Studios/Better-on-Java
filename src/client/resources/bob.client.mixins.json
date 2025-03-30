@@ -4,7 +4,7 @@
   "package": "com.xkingdark.bob.client.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "entities.CowEntityRendererMixin"
+    "entities.LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

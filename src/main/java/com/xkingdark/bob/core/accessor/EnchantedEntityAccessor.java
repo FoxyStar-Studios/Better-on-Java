@@ -1,5 +1,5 @@
 package com.xkingdark.bob.core.accessor;
 
-public interface CowEntityAccessor {
+public interface EnchantedEntityAccessor {
     Boolean bob$isEnchanted();
 }
