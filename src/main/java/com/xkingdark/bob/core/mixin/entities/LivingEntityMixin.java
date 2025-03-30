@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin extends Entity implements EnchantedEntityAccessor {
     @Unique @Final
-    private static TrackedData<Boolean> ENCHANTED = DataTracker.registerData(LivingEntityMixin.class, TrackedDataHandlerRegistry.BOOLEAN);
+    private static final TrackedData<Boolean> ENCHANTED = DataTracker.registerData(LivingEntityMixin.class, TrackedDataHandlerRegistry.BOOLEAN);
     @Unique
     boolean isEnchanted;
 
@@ -29,18 +29,18 @@ public class LivingEntityMixin extends Entity implements EnchantedEntityAccessor
     }
 
     @Inject(method = "initDataTracker", at = @At("TAIL"))
-    public void initDataTracker(DataTracker.Builder builder, CallbackInfo ci) {
+    public void BoB$initDataTracker(DataTracker.Builder builder, CallbackInfo ci) {
         builder.add(ENCHANTED, false);
     }
 
     @Inject(method = "readCustomDataFromNbt", at = @At("TAIL"))
-    public void bob$readCustomDataFromNbt(NbtCompound nbt, CallbackInfo ci) {
+    public void BoB$readCustomDataFromNbt(NbtCompound nbt, CallbackInfo ci) {
         this.isEnchanted = nbt.getBoolean("isEnchanted", false);
         this.dataTracker.set(ENCHANTED, this.isEnchanted);
     }
 
     @Inject(method = "writeCustomDataToNbt", at = @At("TAIL"))
-    public void bob$writeCustomDataToNbt(NbtCompound nbt, CallbackInfo ci) {
+    public void BoB$writeCustomDataToNbt(NbtCompound nbt, CallbackInfo ci) {
         this.dataTracker.set(ENCHANTED, this.isEnchanted);
         nbt.putBoolean("isEnchanted", this.isEnchanted);
     }

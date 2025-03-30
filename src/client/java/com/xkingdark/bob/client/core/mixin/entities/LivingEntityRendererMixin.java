@@ -53,7 +53,7 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
         method = "updateRenderState(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/client/render/entity/state/LivingEntityRenderState;F)V",
         at = @At("TAIL")
     )
-    public void updateRenderState(T livingEntity, S livingEntityRenderState, float f, CallbackInfo ci) {
+    public void BoB$updateRenderState(T livingEntity, S livingEntityRenderState, float f, CallbackInfo ci) {
         if (livingEntity instanceof EnchantedEntityAccessor accessor) {
             isEnchanted = accessor.BoB$isEnchanted();
         }
@@ -64,7 +64,7 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
         at = @At("HEAD"),
         cancellable = true
     )
-    private void bob$render(S livingEntityRenderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, CallbackInfo ci) {
+    private void BoB$render(S livingEntityRenderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, CallbackInfo ci) {
         matrixStack.push();
 
         if (livingEntityRenderState.isInPose(EntityPose.SLEEPING)) {
