@@ -3,7 +3,8 @@ package com.xkingdark.bob.core.mixin.entities;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.passive.*;
+import net.minecraft.entity.passive.ChickenEntity;
+import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -14,9 +15,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-@Mixin(ChickenEntity.class)
-public abstract class ChickenEntityMixin extends LivingEntityMixin {
-    public ChickenEntityMixin(EntityType<?> type, World world) {
+@Mixin(PigEntity.class)
+public abstract class PigEntityMixin extends LivingEntityMixin {
+    public PigEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
 

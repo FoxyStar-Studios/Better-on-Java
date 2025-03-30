@@ -4,10 +4,18 @@
   "package": "com.xkingdark.bob.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "entities.DecoratedPotPatternsMixin",
-    "entities.LivingEntityMixin",
     "entities.ChickenEntityMixin",
-    "entities.CowEntityMixin"
+    "entities.CowEntityMixin",
+    "entities.DecoratedPotPatternsMixin",
+    "entities.DrownedEntityMixin",
+    "entities.IllagerEntityMixin",
+    "entities.LivingEntityMixin",
+    "entities.PhantomEntityMixin",
+    "entities.PigEntityMixin",
+    "entities.PillagerEntityMixin",
+    "entities.RabbitEntityMixin",
+    "entities.SkeletonEntityMixin",
+    "entities.ZombieEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
