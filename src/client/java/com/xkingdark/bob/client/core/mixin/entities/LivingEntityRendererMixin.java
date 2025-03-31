@@ -88,9 +88,15 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
         boolean bl2 = !bl && !livingEntityRenderState.invisibleToPlayer;
         RenderLayer renderLayer = this.getRenderLayer(livingEntityRenderState, bl, bl2, livingEntityRenderState.hasOutline);
         if (renderLayer != null) {
-            VertexConsumer vertexConsumer = ItemRenderer.getItemGlintConsumer(
-                vertexConsumerProvider, RenderLayer.getEntityCutout(getTexture(livingEntityRenderState)), false, isEnchanted
-            );
+            VertexConsumer vertexConsumer;
+            if (this.isEnchanted) {
+                vertexConsumer = ItemRenderer.getItemGlintConsumer(
+                    vertexConsumerProvider, RenderLayer.getEntityCutoutNoCull(getTexture(livingEntityRenderState)), false, isEnchanted
+                );
+            }
+            else {
+                vertexConsumer = vertexConsumerProvider.getBuffer(renderLayer);
+            };
 
             int j = getOverlay(livingEntityRenderState, this.getAnimationCounter(livingEntityRenderState));
             int k = bl2 ? 654311423 : -1;
@@ -108,6 +114,7 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
         }
 
         matrixStack.pop();
+        super.render(livingEntityRenderState, matrixStack, vertexConsumerProvider, i);
 
         ci.cancel();
     }
