@@ -1,8 +1,8 @@
 {
   "display": {
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "background": "better_on_bedrock:gui/advancements/backgrounds/malbite",
     "icon": {
-      "id": "minecraft:nether_star",
+      "id": "better_on_bedrock:guide_book",
       "count": 1
     },
     "title": { "translate": "advancements.better_on_bedrock.root.title" },

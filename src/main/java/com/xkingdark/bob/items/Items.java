@@ -25,6 +25,7 @@ import java.util.function.UnaryOperator;
 
 public class Items {
     public static final Item WAYSTONE;
+    public static final Item GUIDE_BOOK;
     public static final Item BOUNTY_BOARD;
     public static final Item PEDESTAL;
 
@@ -313,6 +314,7 @@ public class Items {
 
     static {
         WAYSTONE = register(Blocks.WAYSTONE);
+        GUIDE_BOOK = register("guide_book");
         BOUNTY_BOARD = register(Blocks.BOUNTY_BOARD);
         PEDESTAL = register(Blocks.PEDESTAL);
 

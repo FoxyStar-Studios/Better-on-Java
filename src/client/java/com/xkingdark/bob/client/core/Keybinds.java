@@ -11,10 +11,14 @@ import org.lwjgl.glfw.GLFW;
 public class Keybinds {
     public static final KeyBinding WAYSTONE;
     public static final KeyBinding TOAST_1;
+    public static final KeyBinding TOAST_2;
+    public static final KeyBinding TOAST_3;
 
     static {
-        WAYSTONE = register("waystone", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_1, "keybinds");
-        TOAST_1 = register("toast_1", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_2, "keybinds");
+        TOAST_3 = register("toast_3", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_3, "keybinds");
+        TOAST_2 = register("toast_2", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_2, "keybinds");
+        TOAST_1 = register("toast_1", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_1, "keybinds");
+        WAYSTONE = register("waystone", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_4, "keybinds");
     };
 
     private static String categoryKey(String name) {

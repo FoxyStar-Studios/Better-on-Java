@@ -2,15 +2,19 @@
   "category.better_on_bedrock.keybinds": "Better on Bedrock",
   "key.better_on_bedrock.waystone": "Waystone Test",
   "key.better_on_bedrock.toast_1": "Toast Test 1",
+  "key.better_on_bedrock.toast_2": "Toast Test 2",
+  "key.better_on_bedrock.toast_3": "Toast Test 3",
 
-  "advancements.better_on_bedrock.root.title": "First Day?",
-  "advancements.better_on_bedrock.root.description": "Play Better on Bedrock!",
+  "advancements.better_on_bedrock.root.title": "Better on Bedrock",
+  "advancements.better_on_bedrock.root.description": "A brand new world!",
   "advancements.better_on_bedrock.obtain_stardust.title": "Stardust!",
   "advancements.better_on_bedrock.obtain_stardust.description": "Obtain a full set of Stardust Armor",
+
   "advancements.story.copper_tools.title": "Oxidized Tools!",
   "advancements.story.copper_tools.description": "Obtain a Copper Pickaxe",
   "advancements.husbandry.wild_carrot.title": "Don't Wild Carrots!",
   "advancements.husbandry.wild_carrot.description": "Obtain a Wild Carrot",
+
 
   "itemGroup.betterOnBedrock.building": "Better on Bedrock: Building Blocks",
   "itemGroup.betterOnBedrock.natural": "Better on Bedrock: Natural Blocks",
@@ -193,6 +197,8 @@
   "block.better_on_bedrock.smooth_resin": "Smooth Resin",
   "block.better_on_bedrock.resin_lamp": "Resin Lamp",
 
+
+  "item.better_on_bedrock.guide_book": "Guide Book",
 
   "item.better_on_bedrock.blade_of_the_nether": "Blade of the Nether",
   "item.better_on_bedrock.bane_spike": "Bane Spike",
