@@ -48,8 +48,7 @@ public class PedestalBlockEntityDisplay implements BlockEntityRenderer<PedestalB
 
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         itemRenderer.renderItem(
-            itemStack,
-            ItemDisplayContext.GROUND,
+            itemStack, ItemDisplayContext.GROUND,
             light, overlay, matrices, vertexConsumers, blockEntity.getWorld(), 0
         );
 
