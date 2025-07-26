@@ -20,6 +20,8 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Position;
@@ -112,17 +114,17 @@ public class SpearEntity extends PersistentProjectileEntity {
     }
 
     @Override
-    public void readCustomDataFromNbt(NbtCompound nbt) {
-        super.readCustomDataFromNbt(nbt);
-        this.dealtDamage = nbt.getBoolean("DealtDamage", false);
+    public void readCustomData(ReadView view) {
+        super.readCustomData(view);
+        this.dealtDamage = view.getBoolean("DealtDamage", false);
         this.dataTracker.set(LOYALTY, this.getLoyalty(this.getItemStack()));
-    }
+    };
 
     @Override
-    public void writeCustomDataToNbt(NbtCompound nbt) {
-        super.writeCustomDataToNbt(nbt);
-        nbt.putBoolean("DealtDamage", this.dealtDamage);
-    }
+    public void writeCustomData(WriteView view) {
+        super.writeCustomData(view);
+        view.putBoolean("DealtDamage", this.dealtDamage);
+    };
 
     private byte getLoyalty(ItemStack stack) {
         return this.getWorld() instanceof ServerWorld serverWorld

@@ -8,10 +8,11 @@ import com.xkingdark.bob.client.entities.EntityModelLayers;
 import com.xkingdark.bob.client.entities.SpearEntityRenderer;
 import com.xkingdark.bob.client.entities.models.SpearEntityModel;
 import com.xkingdark.bob.entities.EntityTypes;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.block.DecoratedPotPattern;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -45,45 +46,46 @@ public class Registry {
 
     private static void registerBlockRender() {
         // Blocks
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TALL_LAVENDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BLUEGROD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.LUSH_GRASS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.OPEN_TALL_EYEBLOSSOM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.CLOSED_TALL_EYEBLOSSOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
+            Blocks.TALL_LAVENDER,
+            Blocks.BLUEGROD,
+            Blocks.LUSH_GRASS,
+            Blocks.OPEN_TALL_EYEBLOSSOM,
+            Blocks.CLOSED_TALL_EYEBLOSSOM,
 
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PINK_LAVENDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TALLER_GRASS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.LILAC_HEADS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.IRIS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.HYDRANGEA, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.CLEMATIS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BIG_SPROUT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BELLFLOWER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.ANEMONE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TINY_SPROUT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WILDFLOWER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PURPLE_HYDRANGEA, RenderLayer.getCutout());
+            Blocks.PINK_LAVENDER,
+            Blocks.TALLER_GRASS,
+            Blocks.LILAC_HEADS,
+            Blocks.IRIS,
+            Blocks.HYDRANGEA,
+            Blocks.CLEMATIS,
+            Blocks.BIG_SPROUT,
+            Blocks.BELLFLOWER,
+            Blocks.ANEMONE,
+            Blocks.TINY_SPROUT,
+            Blocks.WILDFLOWER,
+            Blocks.PURPLE_HYDRANGEA,
 
 
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PEACH_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.ORANGE_LEAVES, RenderLayer.getCutout());
+            Blocks.PEACH_LEAVES,
+            Blocks.ORANGE_LEAVES,
 
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BARLEY_CROP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BLUE_BERRY_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.GRAPE_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.CABBAGE_CROP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.EGGPLANT_CROP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.HEALTHY_CARROT_CROP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.ONION_CROP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.TOMATO_CROP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WILD_CARROT, RenderLayer.getCutout());
+            Blocks.BARLEY_CROP,
+            Blocks.BLUE_BERRY_BUSH,
+            Blocks.GRAPE_BUSH,
+            Blocks.CABBAGE_CROP,
+            Blocks.EGGPLANT_CROP,
+            Blocks.HEALTHY_CARROT_CROP,
+            Blocks.ONION_CROP,
+            Blocks.TOMATO_CROP,
+            Blocks.WILD_CARROT,
 
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.CHORUS_DOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.CHORUS_TRAPDOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.VACANT_DOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.VACANT_TRAPDOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.VOIDING_DOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.VOIDING_TRAPDOOR, RenderLayer.getCutout());
+            Blocks.CHORUS_DOOR,
+            Blocks.CHORUS_TRAPDOOR,
+            Blocks.VACANT_DOOR,
+            Blocks.VACANT_TRAPDOOR,
+            Blocks.VOIDING_DOOR,
+            Blocks.VOIDING_TRAPDOOR);
     };
 
     private static void registerEntityRender() {

@@ -13,6 +13,8 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.*;
@@ -44,17 +46,17 @@ public abstract class LivingEntityMixin extends Entity implements EnchantedEntit
         builder.add(ENCHANTED, false);
     }
 
-    @Inject(method = "readCustomDataFromNbt", at = @At("TAIL"))
-    public void BoB$readCustomDataFromNbt(NbtCompound nbt, CallbackInfo ci) {
-        this.isEnchanted = nbt.getBoolean("isEnchanted", false);
+    @Inject(method = "readCustomData", at = @At("TAIL"))
+    public void BoB$readCustomData(ReadView view, CallbackInfo ci) {
+        this.isEnchanted = view.getBoolean("isEnchanted", false);
         this.dataTracker.set(ENCHANTED, this.isEnchanted);
-    }
+    };
 
-    @Inject(method = "writeCustomDataToNbt", at = @At("TAIL"))
-    public void BoB$writeCustomDataToNbt(NbtCompound nbt, CallbackInfo ci) {
+    @Inject(method = "writeCustomData", at = @At("TAIL"))
+    public void BoB$writeCustomData(WriteView view, CallbackInfo ci) {
         this.dataTracker.set(ENCHANTED, this.isEnchanted);
-        nbt.putBoolean("isEnchanted", this.isEnchanted);
-    }
+        view.putBoolean("isEnchanted", this.isEnchanted);
+    };
 
     @Unique
     public Boolean BoB$isEnchanted() {
@@ -87,10 +89,4 @@ public abstract class LivingEntityMixin extends Entity implements EnchantedEntit
     public boolean damage(ServerWorld world, DamageSource source, float amount) {
         return false;
     }
-
-    @Shadow
-    public void readCustomDataFromNbt(NbtCompound nbt) {}
-
-    @Shadow
-    public void writeCustomDataToNbt(NbtCompound nbt) {}
-}
+};

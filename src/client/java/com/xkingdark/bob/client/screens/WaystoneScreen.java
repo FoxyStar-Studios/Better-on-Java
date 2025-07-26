@@ -73,6 +73,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.multiplayer.SocialInteractionsScreen;
@@ -128,8 +129,8 @@ public class WaystoneScreen extends Screen {
     public void renderBackground(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
         super.renderBackground(context, mouseX, mouseY, deltaTicks);
         int i = this.getSearchBoxX() + 3;
-        context.drawGuiTexture(RenderLayer::getGuiTextured, BACKGROUND_TEXTURE, i, 64, 236, this.getScreenHeight() + 16);
-        context.drawGuiTexture(RenderLayer::getGuiTextured, SEARCH_ICON_TEXTURE, i + 10, 76, 12, 12);
+        context.drawGuiTexture(RenderPipelines.GUI_TEXTURED, BACKGROUND_TEXTURE, i, 64, 236, this.getScreenHeight() + 16);
+        context.drawGuiTexture(RenderPipelines.GUI_TEXTURED, SEARCH_ICON_TEXTURE, i + 10, 76, 12, 12);
     };
 
     protected void addTitle() {
