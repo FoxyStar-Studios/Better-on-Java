@@ -9,7 +9,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.particle.EntityEffectParticleEffect;
+import net.minecraft.particle.TintedParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
@@ -404,11 +404,11 @@ public final class Blocks {
 
         PEACH_LEAVES = register("peach_leaves", (settings) ->
                 new UntintedParticleLeavesBlock(0.01F,
-                    EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings),
+                    TintedParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings),
             createLeavesSettings(BlockSoundGroup.GRASS));
         ORANGE_LEAVES = register("orange_leaves", (settings) ->
                 new UntintedParticleLeavesBlock(0.01F,
-                    EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings),
+                    TintedParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings),
             createLeavesSettings(BlockSoundGroup.GRASS));
 
         // Chorus Woodset
