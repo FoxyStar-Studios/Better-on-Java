@@ -678,41 +678,39 @@ public final class Blocks {
                 .strength(0.3F)
                 .sounds(BlockSoundGroup.GLASS)
                 .allowsSpawning(net.minecraft.block.Blocks::always));
-    }
+    };
 
     private static Block registerStairsBlock(String id, Block base) {
-        return register(id, settings ->
+        return register(id, (settings) ->
             new StairsBlock(base.getDefaultState(), settings), AbstractBlock.Settings.copy(base));
-    }
+    };
 
     private static AbstractBlock.Settings copyLootTable(Block block, boolean copyTranslationKey) {
-        AbstractBlock.Settings settings = block.getSettings();
-        AbstractBlock.Settings settings2 = AbstractBlock.Settings.create().lootTable(block.getLootTableKey());
-        if (copyTranslationKey) {
-            settings2 = settings2.overrideTranslationKey(block.getTranslationKey());
-        }
+        AbstractBlock.Settings settings = AbstractBlock.Settings.create().lootTable(block.getLootTableKey());
+        if (copyTranslationKey)
+            settings = settings.overrideTranslationKey(block.getTranslationKey());
 
-        return settings2;
-    }
+        return settings;
+    };
 
     public static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = factory.apply(settings.registryKey(key));
         return net.minecraft.registry.Registry.register(Registries.BLOCK, key, block);
-    }
+    };
 
     public static Block register(RegistryKey<Block> key, AbstractBlock.Settings settings) {
         return register(key, Block::new, settings);
-    }
+    };
 
     private static RegistryKey<Block> keyOf(String id) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Main.MOD_ID, id));
-    }
+    };
 
     private static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         return register(keyOf(id), factory, settings);
-    }
+    };
 
     private static Block register(String id, AbstractBlock.Settings settings) {
         return register(id, Block::new, settings);
-    }
-}
+    };
+};

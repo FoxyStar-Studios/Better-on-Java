@@ -23,7 +23,7 @@ public class ItemGroups {
 
     private static RegistryKey<ItemGroup> keyOf(String id) {
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(Main.MOD_ID, id));
-    }
+    };
 
     public static void register() {
         // Top
@@ -361,7 +361,7 @@ public class ItemGroups {
 				});
             }).build()
         );
-    }
+    };
 
     private static void addMaxLevelEnchantedBooks(
         ItemGroup.Entries entries,
@@ -376,13 +376,11 @@ public class ItemGroups {
 
                 return identifier.getNamespace().equals(Main.MOD_ID);
             })
-            .map(
-                enchantmentEntry -> EnchantmentHelper.getEnchantedBookWith(
-                    new EnchantmentLevelEntry(enchantmentEntry, ((Enchantment)enchantmentEntry.value()).getMaxLevel())
-                )
-            )
-            .forEach(stack -> entries.add(stack, stackVisibility));
-    }
+            .map((enchantmentEntry) -> EnchantmentHelper.getEnchantedBookWith(
+                new EnchantmentLevelEntry(enchantmentEntry, enchantmentEntry.value().getMaxLevel())
+            ))
+            .forEach((stack) -> entries.add(stack, stackVisibility));
+    };
 
     private static void addAllLevelEnchantedBooks(
         ItemGroup.Entries entries,
@@ -397,10 +395,11 @@ public class ItemGroups {
 
                 return identifier.getNamespace().equals(Main.MOD_ID);
             })
-            .flatMap(
-                enchantmentEntry -> IntStream.rangeClosed(((Enchantment)enchantmentEntry.value()).getMinLevel(), ((Enchantment)enchantmentEntry.value()).getMaxLevel())
-                    .mapToObj(level -> EnchantmentHelper.getEnchantedBookWith(new EnchantmentLevelEntry(enchantmentEntry, level)))
-            )
-            .forEach(stack -> entries.add(stack, stackVisibility));
-    }
-}
+            .flatMap((enchantmentEntry) -> IntStream.rangeClosed(
+                enchantmentEntry.value().getMinLevel(),
+                enchantmentEntry.value().getMaxLevel()
+            ).mapToObj((level) ->
+                EnchantmentHelper.getEnchantedBookWith(new EnchantmentLevelEntry(enchantmentEntry, level))))
+            .forEach((stack) -> entries.add(stack, stackVisibility));
+    };
+};

@@ -50,5 +50,5 @@ public class PedestalBlockEntity extends BlockEntity implements PedestalInventor
     @Override
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
         return createNbt(registryLookup);
-    }
+    };
 }

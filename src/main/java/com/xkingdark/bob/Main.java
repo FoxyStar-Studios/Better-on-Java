@@ -12,7 +12,7 @@ public class Main implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Hello, world!");
-    }
+    };
 
     static {
         Registry.initialize();

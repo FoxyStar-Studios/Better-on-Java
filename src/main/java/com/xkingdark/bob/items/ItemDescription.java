@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 public class ItemDescription extends Item {
     public ItemDescription(Item.Settings settings) {
         super(settings);
-    }
+    };
 
     @Override
     public void appendTooltip(
@@ -25,9 +25,9 @@ public class ItemDescription extends Item {
         textConsumer.accept(this.getDescription().formatted(Formatting.GRAY));
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
 
-    }
+    };
 
     public MutableText getDescription() {
         return Text.translatable(this.translationKey + ".desc");
-    }
-}
+    };
+};

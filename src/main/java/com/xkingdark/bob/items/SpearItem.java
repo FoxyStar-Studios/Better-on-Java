@@ -51,11 +51,11 @@ public class SpearItem extends Item implements ProjectileItem {
                 AttributeModifierSlot.MAINHAND
             )
             .build();
-    }
+    };
 
     public static ToolComponent createToolComponent() {
         return new ToolComponent(List.of(), 1.0F, 2, false);
-    }
+    };
 
     @Override
     public boolean canMine(ItemStack stack, BlockState state, World world, BlockPos pos, LivingEntity miner) {
@@ -63,17 +63,17 @@ public class SpearItem extends Item implements ProjectileItem {
             return false;
 
         return !((PlayerEntity) miner).isCreative();
-    }
+    };
 
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.SPEAR;
-    }
+    };
 
     @Override
     public int getMaxUseTime(ItemStack stack, LivingEntity user) {
         return 72000;
-    }
+    };
 
     @Override
     public boolean onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
@@ -101,11 +101,11 @@ public class SpearItem extends Item implements ProjectileItem {
 
                 world.playSoundFromEntity(null, spearEntity, registryEntry.value(), SoundCategory.PLAYERS, 1.0F, 1.0F);
                 return true;
-            }
-        }
+            };
+        };
 
         return false;
-    }
+    };
 
     private static EntityType<? extends SpearEntity> getEntityType(ItemStack stack) {
         EntityType<? extends SpearEntity> spearType;
@@ -128,10 +128,10 @@ public class SpearItem extends Item implements ProjectileItem {
             spearType = EntityTypes.STARDUST_SPEAR;
         } else {
             spearType = EntityTypes.WOODEN_SPEAR;
-        }
+        };
 
         return spearType;
-    }
+    };
 
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
@@ -141,20 +141,20 @@ public class SpearItem extends Item implements ProjectileItem {
 
         user.setCurrentHand(hand);
         return ActionResult.CONSUME;
-    }
+    };
 
     @Override
-    public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {}
+    public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {};
 
     @Override
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         stack.damage(1, attacker, EquipmentSlot.MAINHAND);
-    }
+    };
 
     @Override
     public ProjectileEntity createEntity(World world, Position pos, ItemStack stack, Direction direction) {
         SpearEntity spearEntity = new SpearEntity(getEntityType(stack), world, pos, stack.copyWithCount(1));
         spearEntity.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
         return spearEntity;
-    }
-}
+    };
+};

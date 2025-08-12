@@ -16,5 +16,5 @@ public interface EquipmentAssetKeys {
 
     static RegistryKey<EquipmentAsset> of(String name) {
         return RegistryKey.of(REGISTRY_KEY, Identifier.of(Main.MOD_ID, name));
-    }
-}
+    };
+};

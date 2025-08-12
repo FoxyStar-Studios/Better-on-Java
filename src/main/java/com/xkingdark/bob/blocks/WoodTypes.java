@@ -20,18 +20,18 @@ public class WoodTypes {
         CHORUS = new WoodTypeBuilder().register(Identifier.of(Main.MOD_ID, "chorus"), BlockSetTypes.CHORUS);
         VACANT = new WoodTypeBuilder().register(Identifier.of(Main.MOD_ID, "vacant"), BlockSetTypes.VACANT);
         VOIDING = new WoodTypeBuilder().register(Identifier.of(Main.MOD_ID, "voiding"), BlockSetTypes.VOIDING);
-    }
+    };
 
     public static AbstractBlock.Settings createWoodSettings() {
         return AbstractBlock.Settings.create()
             .mapColor(MapColor.OAK_TAN)
             .instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.WOOD)
             .strength(2.0F).burnable();
-    }
+    };
 
     public static AbstractBlock.Settings createPlanksSettings() {
         return createWoodSettings().strength(2.0F, 3.0F);
-    }
+    };
 
     public static AbstractBlock.Settings createDoorSettings(Block planks) {
         return AbstractBlock.Settings.create()
@@ -39,7 +39,7 @@ public class WoodTypes {
             .instrument(NoteBlockInstrument.BASS)
             .strength(3.0F).burnable()
             .pistonBehavior(PistonBehavior.DESTROY);
-    }
+    };
 
     public static AbstractBlock.Settings createPressurePlateSettings(Block planks) {
         return AbstractBlock.Settings.create()
@@ -47,7 +47,7 @@ public class WoodTypes {
             .solid().noCollision().pistonBehavior(PistonBehavior.DESTROY)
             .instrument(NoteBlockInstrument.BASS)
             .strength(0.5F).burnable();
-    }
+    };
 
     public static AbstractBlock.Settings createTrapdoorSettings() {
         return AbstractBlock.Settings.create()
@@ -55,7 +55,7 @@ public class WoodTypes {
             .instrument(NoteBlockInstrument.BASS)
             .strength(3.0F).burnable()
             .allowsSpawning(net.minecraft.block.Blocks::never);
-    }
+    };
 
     public static AbstractBlock.Settings createSignSettings() {
         return AbstractBlock.Settings.create()
@@ -63,7 +63,7 @@ public class WoodTypes {
             .solid().noCollision()
             .instrument(NoteBlockInstrument.BASS)
             .strength(1.0F).burnable();
-    }
+    };
 
     public static AbstractBlock.Settings createFenceSettings(Block planks) {
         return AbstractBlock.Settings.create()
@@ -71,5 +71,5 @@ public class WoodTypes {
             .solid()
             .instrument(NoteBlockInstrument.BASS)
             .strength(2.0F, 3.0F).burnable();
-    }
-}
+    };
+};

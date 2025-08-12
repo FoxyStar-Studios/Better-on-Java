@@ -19,14 +19,15 @@ import java.util.concurrent.ThreadLocalRandom;
 public abstract class PigEntityMixin extends LivingEntityMixin {
     public PigEntityMixin(EntityType<?> type, World world) {
         super(type, world);
-    }
+    };
 
     @Inject(method = "initialize", at = @At("TAIL"))
     private void initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CallbackInfoReturnable<EntityData> cir) {
         boolean isEnchanted = ThreadLocalRandom.current().nextInt(210) < 55;
-        if (isEnchanted) {
-            this.setEnchanted(true);
-            this.setMaxHealth(30);
-        }
-    }
-}
+        if (isEnchanted)
+            return;
+
+        this.setEnchanted(true);
+        this.setMaxHealth(30);
+    };
+};

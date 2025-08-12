@@ -112,6 +112,7 @@ public class WaystoneScreen extends Screen {
     public void close() {
         if (this.client == null)
             return;
+        
         this.client.setScreen(this.parent);
     };
 

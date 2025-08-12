@@ -23,11 +23,11 @@ public class SmithingTemplates {
 			Identifier.ofVanilla("container/slot/hoe"),
 			Identifier.ofVanilla("container/slot/shovel")
 		);
-	}
+	};
 
 	private static List<Identifier> getUpgradeEmptyAdditionsSlotTextures() {
 		return List.of(Identifier.ofVanilla("container/slot/ingot"));
-	}
+	};
 
 	public static SmithingTemplateItem createUpgrade(String upgrade, Item.Settings settings) {
 		return new SmithingTemplateItem(
@@ -39,5 +39,5 @@ public class SmithingTemplates {
 			getUpgradeEmptyAdditionsSlotTextures(),
 			settings
 		);
-	}
-}
+	};
+};

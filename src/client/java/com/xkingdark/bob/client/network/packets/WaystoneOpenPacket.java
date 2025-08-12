@@ -16,5 +16,5 @@ public class WaystoneOpenPacket {
         client.setScreen(
             new WaystoneScreen(isFromBlock, blockPos)
         );
-    }
-}
+    };
+};

@@ -54,5 +54,5 @@ public class PedestalBlockEntityDisplay implements BlockEntityRenderer<PedestalB
 
         // Mandatory call after GL calls
         matrices.pop();
-    }
-}
+    };
+};

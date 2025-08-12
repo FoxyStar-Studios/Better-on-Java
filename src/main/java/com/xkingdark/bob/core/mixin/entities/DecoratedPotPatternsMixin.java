@@ -20,5 +20,5 @@ public class DecoratedPotPatternsMixin {
             return;
 
         returnable.setReturnValue(pattern);
-    }
-}
+    };
+};

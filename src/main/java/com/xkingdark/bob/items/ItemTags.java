@@ -18,5 +18,5 @@ public class ItemTags {
 
     private static TagKey<Item> of(String identifier) {
         return TagKey.of(RegistryKeys.ITEM, Identifier.of(Main.MOD_ID, identifier));
-    }
-}
+    };
+};

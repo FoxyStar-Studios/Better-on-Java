@@ -9,10 +9,17 @@ import com.xkingdark.bob.sound.SoundEvents;
 
 public class Registry {
     public static void initialize() {
-        new Items();
-        new Blocks();
+        try {
+            Class.forName(Items.class.getName());
+        } catch (ClassNotFoundException _) {};
+        try {
+            Class.forName(Blocks.class.getName());
+        } catch (ClassNotFoundException _) {};
+        try {
+            Class.forName(SoundEvents.class.getName());
+        } catch (ClassNotFoundException _) {};
+
         ItemGroups.register();
-        new SoundEvents();
         Events.register();
 
         NetworkHandler.registerServerPackets();

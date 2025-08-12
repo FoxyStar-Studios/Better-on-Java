@@ -16,9 +16,9 @@ public class DamageTypes {
     public static DamageSource getSource(World world, RegistryKey<DamageType> key) {
         Registry<DamageType> registry = world.getRegistryManager().getOrThrow(RegistryKeys.DAMAGE_TYPE);
         return new DamageSource(registry.getOrThrow(key));
-    }
+    };
 
     public static RegistryKey<DamageType> of(String id) {
         return RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Main.MOD_ID, id));
-    }
-}
+    };
+};

@@ -10,10 +10,10 @@ public class StardustSpearEntity extends SpearEntity {
     public StardustSpearEntity(EntityType<? extends SpearEntity> entityType, World world) {
         super(entityType, world);
         this.setDamage(9);
-    }
+    };
 
     @Override
     protected ItemStack getDefaultItemStack() {
         return new ItemStack(Items.STARDUST_SPEAR);
-    }
-}
+    };
+};

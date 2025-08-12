@@ -19,4 +19,4 @@ public class EntityModelLayers {
     public static EntityModelLayer VACANT_CHEST_BOAT = new EntityModelLayer(Identifier.of(Main.MOD_ID, "chest_boat/vacant"), "main");
     public static EntityModelLayer VOIDING_BOAT = new EntityModelLayer(Identifier.of(Main.MOD_ID, "boat/voiding"), "main");
     public static EntityModelLayer VOIDING_CHEST_BOAT = new EntityModelLayer(Identifier.of(Main.MOD_ID, "chest_boat/voiding"), "main");
-}
+};

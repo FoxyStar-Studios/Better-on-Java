@@ -19,7 +19,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public abstract class IllagerEntityMixin extends LivingEntityMixin {
     public IllagerEntityMixin(EntityType<?> type, World world) {
         super(type, world);
-    }
+    };
 
     @Inject(method = "initialize", at = @At("TAIL"))
     private void initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CallbackInfoReturnable<EntityData> cir) {
@@ -27,9 +27,10 @@ public abstract class IllagerEntityMixin extends LivingEntityMixin {
             return;
 
         boolean isEnchanted = ThreadLocalRandom.current().nextInt(210) < 55;
-        if (isEnchanted) {
-            this.setEnchanted(true);
-            this.setMaxHealth(30);
-        }
-    }
-}
+        if (isEnchanted)
+            return;
+
+        this.setEnchanted(true);
+        this.setMaxHealth(30);
+    };
+};

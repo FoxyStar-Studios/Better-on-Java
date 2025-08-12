@@ -131,7 +131,7 @@ public class EntityTypes {
                 .dimensions(1.375F, 0.5625F)
                 .eyeHeight(0.5625F)
                 .maxTrackingRange(10));
-    }
+    };
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
         RegistryKey<BlockEntityType<?>> key,
@@ -140,11 +140,11 @@ public class EntityTypes {
     ) {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, key,
             FabricBlockEntityTypeBuilder.create(type, blocks).build());
-    }
+    };
 
     private static RegistryKey<BlockEntityType<?>> keyOfBlock(String id) {
         return RegistryKey.of(RegistryKeys.BLOCK_ENTITY_TYPE, Identifier.of(Main.MOD_ID, id));
-    }
+    };
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
         String id,
@@ -152,27 +152,27 @@ public class EntityTypes {
         Block... blocks
     ) {
         return register(keyOfBlock(id), type, blocks);
-    }
+    };
 
 
     private static <T extends Entity> EntityType<T> register(RegistryKey<EntityType<?>> key, EntityType.Builder<T> type) {
         return Registry.register(Registries.ENTITY_TYPE, key, type.build(key));
-    }
+    };
 
     private static RegistryKey<EntityType<?>> keyOf(String id) {
         return RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(Main.MOD_ID, id));
-    }
+    };
 
     private static <T extends Entity> EntityType<T> register(String id, EntityType.Builder<T> type) {
         return register(keyOf(id), type);
-    }
+    };
 
 
     private static EntityType.EntityFactory<BoatEntity> getBoatFactory(Supplier<Item> itemSupplier) {
         return (type, world) -> new BoatEntity(type, world, itemSupplier);
-    }
+    };
 
     private static EntityType.EntityFactory<ChestBoatEntity> getChestBoatFactory(Supplier<Item> itemSupplier) {
         return (type, world) -> new ChestBoatEntity(type, world, itemSupplier);
-    }
-}
+    };
+};

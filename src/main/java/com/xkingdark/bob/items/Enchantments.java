@@ -110,7 +110,7 @@ public class Enchantments {
 
     private static RegistryKey<Enchantment> keyOf(String id) {
         return RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(Main.MOD_ID, id));
-    }
+    };
 
     private static List<BlockPos> getVeinShape(BlockPos pos) {
         return List.of(
@@ -119,7 +119,7 @@ public class Enchantments {
             pos.east(), pos.west()
 
         );
-    }
+    };
 
     public static void applyVeinMiner(
         List<BlockPos> visitedBlocks,
@@ -148,15 +148,15 @@ public class Enchantments {
             world.breakBlock(blockPos, true, player);
 
             applyVeinMiner(visitedBlocks, world, player, itemStack, mainState, blockPos);
-        }
-    }
+        };
+    };
 
     public static boolean hasEnchantment(World world, ItemStack itemStack, RegistryKey<Enchantment> key) {
         Registry<Enchantment> registry = world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
         RegistryEntry<Enchantment> enchantment = registry.getOrThrow(key);
 
         return EnchantmentHelper.getLevel(enchantment, itemStack) > 0;
-    }
+    };
 
     public static boolean checkMinerEnchantment(World world, ItemStack itemStack, BlockState state) {
         if (Enchantments.hasEnchantment(world, itemStack, Enchantments.VEIN_MINER)) {
@@ -167,5 +167,5 @@ public class Enchantments {
         };
 
         return false;
-    }
-}
+    };
+};

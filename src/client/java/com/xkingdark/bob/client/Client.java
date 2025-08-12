@@ -16,5 +16,5 @@ public class Client implements ClientModInitializer {
         Registry.initialize();
         NetworkHandler.registerServerPackets();
         NetworkHandler.registerReceivers();
-    }
-}
+    };
+};

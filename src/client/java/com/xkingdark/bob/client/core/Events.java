@@ -15,7 +15,7 @@ import net.minecraft.util.Colors;
 public class Events {
     public static void register() {
         ClientTickEvents.END_CLIENT_TICK.register(Events::onClientTick);
-    }
+    };
 
     private static void onClientTick(MinecraftClient client) {
         if (client == null || client.player == null)

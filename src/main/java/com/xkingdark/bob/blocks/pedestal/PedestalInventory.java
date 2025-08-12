@@ -17,13 +17,13 @@ public interface PedestalInventory extends Inventory {
     @Override
     default boolean canPlayerUse(PlayerEntity player) {
         return true;
-    }
+    };
 
     /** Returns the inventory size. */
     @Override
     default int size() {
         return getItems().size();
-    }
+    };
 
     /**
      * Checks if the inventory is empty.
@@ -33,19 +33,18 @@ public interface PedestalInventory extends Inventory {
     default boolean isEmpty() {
         for (int i = 0; i < size(); i++) {
             ItemStack stack = getStack(i);
-            if (!stack.isEmpty()) {
+            if (!stack.isEmpty())
                 return false;
-            }
-        }
+        };
 
         return true;
-    }
+    };
 
     /** Retrieves the item in the slot. */
     @Override
     default ItemStack getStack(int slot) {
         return getItems().get(slot);
-    }
+    };
 
     /**
      * Removes items from an inventory slot.
@@ -56,12 +55,11 @@ public interface PedestalInventory extends Inventory {
     @Override
     default ItemStack removeStack(int slot, int count) {
         ItemStack result = Inventories.splitStack(getItems(), slot, count);
-        if (!result.isEmpty()) {
+        if (!result.isEmpty())
             markDirty();
-        }
 
         return result;
-    }
+    };
 
     /**
      * Removes all items from an inventory slot.
@@ -70,7 +68,7 @@ public interface PedestalInventory extends Inventory {
     @Override
     default ItemStack removeStack(int slot) {
         return Inventories.removeStack(getItems(), slot);
-    }
+    };
 
     /**
      * Replaces the current stack in an inventory slot with the provided stack.
@@ -84,12 +82,12 @@ public interface PedestalInventory extends Inventory {
         getItems().set(slot, stack);
         if (stack.getCount() > stack.getMaxCount()) {
             stack.setCount(stack.getMaxCount());
-        }
-    }
+        };
+    };
 
     /** Clears the inventory. */
     @Override
     default void clear() {
         getItems().clear();
-    }
-}
+    };
+};

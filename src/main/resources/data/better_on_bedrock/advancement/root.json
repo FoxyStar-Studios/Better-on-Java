@@ -15,10 +15,8 @@
     [ "move" ]
   ],
   "rewards": {
-    "loot": [
-      "minecraft:blocks/suspicious_gravel"
-    ],
-    "experience": 10
+    "loot": [],
+    "experience": 0
   },
   "criteria": {
     "move": {

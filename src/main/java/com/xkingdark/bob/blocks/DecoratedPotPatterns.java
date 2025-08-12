@@ -30,19 +30,19 @@ public class DecoratedPotPatterns {
         register(PARTY, "party_pottery_pattern");
         register(FORGER, "forger_pottery_pattern");
         register(PIGLIN, "piglin_pottery_pattern");
-    }
+    };
 
     @Nullable
     public static RegistryKey<DecoratedPotPattern> fromSherd(Item sherd) {
         return SHERD_TO_PATTERN.get(sherd);
-    }
+    };
 
     private static RegistryKey<DecoratedPotPattern> of(String path) {
         return RegistryKey.of(RegistryKeys.DECORATED_POT_PATTERN, Identifier.of(Main.MOD_ID, path));
-    }
+    };
 
     private static DecoratedPotPattern register(RegistryKey<DecoratedPotPattern> key, String assetId) {
         Identifier identifier = Identifier.of(Main.MOD_ID, assetId);
         return Registry.register(Registries.DECORATED_POT_PATTERN, key, new DecoratedPotPattern(identifier));
-    }
-}
+    };
+};

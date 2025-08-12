@@ -15,7 +15,7 @@ public class BladeOfTheNetherItem extends Item {
             1569, 5.0F, 2.0F, 8,
             null
         ), 12.0F, -2.4F));
-    }
+    };
 
     @Override
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -24,5 +24,5 @@ public class BladeOfTheNetherItem extends Item {
         World world = attacker.getWorld();
         int TicksPerSecond = MathHelper.floor(world.getTickManager().getTickRate());
         target.setOnFireForTicks(6 * TicksPerSecond);
-    }
-}
+    };
+};

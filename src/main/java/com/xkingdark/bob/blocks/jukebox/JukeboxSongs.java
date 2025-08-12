@@ -14,5 +14,5 @@ public interface JukeboxSongs {
 
     private static RegistryKey<JukeboxSong> of(String id) {
         return RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(Main.MOD_ID, id));
-    }
-}
+    };
+};

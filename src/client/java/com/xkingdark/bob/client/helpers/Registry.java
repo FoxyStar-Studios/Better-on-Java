@@ -8,6 +8,7 @@ import com.xkingdark.bob.client.entities.EntityModelLayers;
 import com.xkingdark.bob.client.entities.SpearEntityRenderer;
 import com.xkingdark.bob.client.entities.models.SpearEntityModel;
 import com.xkingdark.bob.entities.EntityTypes;
+import com.xkingdark.bob.items.Items;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -26,7 +27,9 @@ public class Registry {
         Registry.registerBlockRender();
         Registry.registerEntityRender();
 
-        new Keybinds();
+        try {
+            Class.forName(Keybinds.class.getName());
+        } catch (ClassNotFoundException _) {};
         Events.register();
     };
 

@@ -27,7 +27,7 @@ public class BaneSpikeItem extends Item {
             1704, 5.0F, 2.0F, 8,
             null
         ), 7.0F, -2.4F));
-    }
+    };
 
     @Override
     public Text getName(ItemStack stack) {
@@ -35,7 +35,7 @@ public class BaneSpikeItem extends Item {
             .setStyle(Style.EMPTY.withColor(
                 Integer.parseInt("DEB12D", 16)
             ));
-    }
+    };
 
     @Override
     public void appendTooltip(
@@ -47,11 +47,11 @@ public class BaneSpikeItem extends Item {
     ) {
         textConsumer.accept(this.getDescription().formatted(Formatting.GRAY));
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
-    }
+    };
 
     public MutableText getDescription() {
         return Text.translatable(this.translationKey + ".desc");
-    }
+    };
 
     @Override
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -62,5 +62,5 @@ public class BaneSpikeItem extends Item {
         target.addStatusEffect(
             new StatusEffectInstance(StatusEffects.POISON, 5 * TicksPerSecond, 1)
         );
-    }
-}
+    };
+};

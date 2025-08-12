@@ -10,10 +10,10 @@ public class GoldenSpearEntity extends SpearEntity {
     public GoldenSpearEntity(EntityType<? extends SpearEntity> entityType, World world) {
         super(entityType, world);
         this.setDamage(7);
-    }
+    };
 
     @Override
     protected ItemStack getDefaultItemStack() {
         return new ItemStack(Items.GOLDEN_SPEAR);
-    }
-}
+    };
+};

@@ -78,5 +78,5 @@ public class FoodComponents {
         VOIDBERRY_PIE = (new FoodComponent.Builder()).nutrition(7).saturationModifier(0.8F).build();
         END_COOKIE = (new FoodComponent.Builder()).nutrition(5).saturationModifier(0.8F).build();
         ENDER_STEW = (new FoodComponent.Builder()).nutrition(8).saturationModifier(0.8F).build();
-    }
-}
+    };
+};

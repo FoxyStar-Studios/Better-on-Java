@@ -24,7 +24,7 @@ public class SpearEntityRenderer extends EntityRenderer<SpearEntity, TridentEnti
         super(context);
         this.texture = layer.id().withPath(path -> "textures/item/spears/entity/" + path + ".png");
         this.model = new SpearEntityModel(context.getPart(layer));
-    }
+    };
 
     public void render(TridentEntityRenderState renderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light) {
         matrixStack.push();
@@ -38,16 +38,16 @@ public class SpearEntityRenderer extends EntityRenderer<SpearEntity, TridentEnti
 
         matrixStack.pop();
         super.render(renderState, matrixStack, vertexConsumerProvider, light);
-    }
+    };
 
     public TridentEntityRenderState createRenderState() {
         return new TridentEntityRenderState();
-    }
+    };
 
     public void updateRenderState(SpearEntity entity, TridentEntityRenderState renderState, float f) {
         super.updateRenderState(entity, renderState, f);
         renderState.yaw = entity.getLerpedYaw(f);
         renderState.pitch = entity.getLerpedPitch(f);
         renderState.enchanted = entity.isEnchanted();
-    }
-}
+    };
+};

@@ -10,10 +10,10 @@ public class StoneSpearEntity extends SpearEntity {
     public StoneSpearEntity(EntityType<? extends SpearEntity> entityType, World world) {
         super(entityType, world);
         this.setDamage(5);
-    }
+    };
 
     @Override
     protected ItemStack getDefaultItemStack() {
         return new ItemStack(Items.STONE_SPEAR);
-    }
-}
+    };
+};

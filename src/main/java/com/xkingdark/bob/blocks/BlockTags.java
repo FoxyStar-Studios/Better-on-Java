@@ -12,5 +12,5 @@ public class BlockTags {
 
     private static TagKey<Block> of(String identifier) {
         return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Main.MOD_ID, identifier));
-    }
-}
+    };
+};

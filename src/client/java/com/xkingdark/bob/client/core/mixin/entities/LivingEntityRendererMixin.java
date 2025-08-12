@@ -37,17 +37,17 @@ import static net.minecraft.client.render.entity.LivingEntityRenderer.getOverlay
 @Mixin(LivingEntityRenderer.class)
 public class LivingEntityRendererMixin <T extends LivingEntity, S extends LivingEntityRenderState, M extends EntityModel<? super S>> extends EntityRenderer<T, S> implements FeatureRendererContext<S, M> {
     @Shadow protected M model;
-    @Shadow @Final protected final List<FeatureRenderer<S, M>> features = Lists.newArrayList();
+    @Shadow protected final List<FeatureRenderer<S, M>> features = Lists.newArrayList();
     @Unique boolean isEnchanted = false;
 
     protected LivingEntityRendererMixin(EntityRendererFactory.Context context) {
         super(context);
-    }
+    };
 
     @Shadow
     public M getModel() {
         return null;
-    }
+    };
 
     @Inject(
         method = "updateRenderState(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/client/render/entity/state/LivingEntityRenderState;F)V",
@@ -56,8 +56,8 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
     public void BoB$updateRenderState(T livingEntity, S livingEntityRenderState, float f, CallbackInfo ci) {
         if (livingEntity instanceof EnchantedEntityAccessor accessor) {
             isEnchanted = accessor.BoB$isEnchanted();
-        }
-    }
+        };
+    };
 
     @Inject(
         method = "render(Lnet/minecraft/client/render/entity/state/LivingEntityRenderState;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V",
@@ -72,8 +72,8 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
             if (direction != null) {
                 float f = livingEntityRenderState.standingEyeHeight - 0.1F;
                 matrixStack.translate((float)(-direction.getOffsetX()) * f, 0.0F, (float)(-direction.getOffsetZ()) * f);
-            }
-        }
+            };
+        };
 
         float g = livingEntityRenderState.baseScale;
         matrixStack.scale(g, g, g);
@@ -102,7 +102,7 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
             int k = bl2 ? 654311423 : -1;
             int l = ColorHelper.mix(k, this.getMixColor(livingEntityRenderState));
             this.model.render(matrixStack, vertexConsumer, i, j, l);
-        }
+        };
 
         if (this.shouldRenderFeatures(livingEntityRenderState)) {
             for(FeatureRenderer<S, M> featureRenderer : this.features) {
@@ -110,53 +110,53 @@ public class LivingEntityRendererMixin <T extends LivingEntity, S extends Living
                     matrixStack, vertexConsumerProvider, i, livingEntityRenderState,
                     livingEntityRenderState.relativeHeadYaw, livingEntityRenderState.pitch
                 );
-            }
-        }
+            };
+        };
 
         matrixStack.pop();
         super.render(livingEntityRenderState, matrixStack, vertexConsumerProvider, i);
 
         ci.cancel();
-    }
+    };
 
     @Shadow
     protected boolean isVisible(S state) {
         return !state.invisible;
-    }
+    };
 
     @Shadow
     protected int getMixColor(S state) {
         return -1;
-    }
+    };
 
     @Shadow
     public Identifier getTexture(S state) {
         return null;
-    }
+    };
 
     @Shadow
     protected RenderLayer getRenderLayer(S state, boolean showBody, boolean translucent, boolean showOutline) {
         return null;
-    }
+    };
 
     @Shadow
     protected float getAnimationCounter(S state) {
         return 0.0F;
-    }
+    };
 
     @Shadow
-    protected void scale(S state, MatrixStack matrices) {}
+    protected void scale(S state, MatrixStack matrices) {};
 
     @Shadow
     protected boolean shouldRenderFeatures(S state) {
         return true;
-    }
+    };
 
     @Override
     public S createRenderState() {
         return null;
-    }
+    };
 
     @Shadow
-    protected void setupTransforms(S state, MatrixStack matrices, float bodyYaw, float baseHeight) {}
-}
+    protected void setupTransforms(S state, MatrixStack matrices, float bodyYaw, float baseHeight) {};
+};

@@ -40,9 +40,10 @@ public class Events {
         ItemStack mainHand = player.getMainHandStack();
 
         List<BlockPos> visitedBlocks = new ArrayList<>();
-        if (Enchantments.checkMinerEnchantment(world, mainHand, state)) {
-            Enchantments.applyVeinMiner(visitedBlocks, world, player, mainHand, state, pos);
-            mainHand.damage(visitedBlocks.size(), player);
-        };
+        if (!Enchantments.checkMinerEnchantment(world, mainHand, state))
+            return;
+
+        Enchantments.applyVeinMiner(visitedBlocks, world, player, mainHand, state, pos);
+        mainHand.damage(visitedBlocks.size(), player);
     };
 };

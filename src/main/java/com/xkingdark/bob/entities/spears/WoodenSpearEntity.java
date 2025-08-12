@@ -10,5 +10,5 @@ public class WoodenSpearEntity extends SpearEntity {
     public WoodenSpearEntity(EntityType<? extends SpearEntity> entityType, World world) {
         super(entityType, world);
         this.setDamage(4);
-    }
-}
+    };
+};
