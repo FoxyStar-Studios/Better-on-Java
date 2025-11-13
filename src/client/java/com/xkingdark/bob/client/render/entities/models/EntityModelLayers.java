@@ -1,4 +1,4 @@
-package com.xkingdark.bob.client.entities;
+package com.xkingdark.bob.client.render.entities.models;
 
 import com.xkingdark.bob.Main;
 import net.minecraft.client.render.entity.model.EntityModelLayer;

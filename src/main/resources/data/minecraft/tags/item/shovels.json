@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "better_on_bedrock:copper_shovel",
     "better_on_bedrock:amethyst_shovel",
     "better_on_bedrock:stardust_shovel"
   ]

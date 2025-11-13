@@ -1,20 +1,18 @@
 package com.xkingdark.bob.client.helpers;
 
 import com.xkingdark.bob.blocks.Blocks;
-import com.xkingdark.bob.client.blocks.PedestalBlockEntityDisplay;
 import com.xkingdark.bob.client.core.Events;
 import com.xkingdark.bob.client.core.Keybinds;
-import com.xkingdark.bob.client.entities.EntityModelLayers;
-import com.xkingdark.bob.client.entities.SpearEntityRenderer;
-import com.xkingdark.bob.client.entities.models.SpearEntityModel;
+import com.xkingdark.bob.client.render.entities.models.EntityModelLayers;
+import com.xkingdark.bob.client.render.entities.SpearEntityRenderer;
+import com.xkingdark.bob.client.render.entities.models.SpearEntityModel;
+import com.xkingdark.bob.client.render.blocks.PedestalBlockEntityRenderer;
 import com.xkingdark.bob.entities.EntityTypes;
-import com.xkingdark.bob.items.Items;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.block.DecoratedPotPattern;
 import net.minecraft.client.render.BlockRenderLayer;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.BoatEntityRenderer;
@@ -93,7 +91,7 @@ public class Registry {
 
     private static void registerEntityRender() {
         // Entities
-        BlockEntityRendererFactories.register(EntityTypes.PEDESTAL, PedestalBlockEntityDisplay::new);
+        BlockEntityRendererFactories.register(EntityTypes.PEDESTAL, PedestalBlockEntityRenderer::new);
 
         EntityRendererRegistry.register(EntityTypes.WOODEN_SPEAR, (context) ->
             new SpearEntityRenderer(context, EntityModelLayers.WOODEN_SPEAR));

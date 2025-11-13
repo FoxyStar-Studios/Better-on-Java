@@ -1,9 +1,10 @@
-package com.xkingdark.bob.client.entities.models;
+package com.xkingdark.bob.client.render.entities.models;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.util.Unit;
 
-public class SpearEntityModel extends Model {
+public class SpearEntityModel extends Model<Unit> {
     public SpearEntityModel(ModelPart root) {
         super(root, RenderLayer::getEntitySolid);
     };

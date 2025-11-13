@@ -1,20 +1,22 @@
-package com.xkingdark.bob.client.entities;
+package com.xkingdark.bob.client.render.entities;
 
-import com.xkingdark.bob.client.entities.models.SpearEntityModel;
+import com.xkingdark.bob.client.render.entities.models.SpearEntityModel;
 import com.xkingdark.bob.entities.SpearEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
-import net.minecraft.client.render.entity.model.TridentEntityModel;
 import net.minecraft.client.render.entity.state.TridentEntityRenderState;
 import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Unit;
 import net.minecraft.util.math.RotationAxis;
+
+import java.util.List;
 
 public class SpearEntityRenderer extends EntityRenderer<SpearEntity, TridentEntityRenderState> {
     public final Identifier texture;
@@ -26,18 +28,18 @@ public class SpearEntityRenderer extends EntityRenderer<SpearEntity, TridentEnti
         this.model = new SpearEntityModel(context.getPart(layer));
     };
 
-    public void render(TridentEntityRenderState renderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light) {
+    public void render(TridentEntityRenderState renderState, MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, CameraRenderState cameraRenderState) {
         matrixStack.push();
-
         matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(renderState.yaw - 90.0F));
         matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(renderState.pitch + 90.0F));
-        VertexConsumer vertexConsumer = ItemRenderer.getItemGlintConsumer(
-            vertexConsumerProvider, RenderLayer.getEntityCutout(this.texture), false, renderState.enchanted
-        );
-        this.model.render(matrixStack, vertexConsumer, light, OverlayTexture.DEFAULT_UV);
+        List<RenderLayer> list = ItemRenderer.getGlintRenderLayers(RenderLayer.getEntityCutout(this.texture), false, renderState.enchanted);
+
+        for (int i = 0; i < list.size(); ++i) {
+            orderedRenderCommandQueue.getBatchingQueue(i).submitModel(this.model, Unit.INSTANCE, matrixStack, list.get(i), renderState.light, OverlayTexture.DEFAULT_UV, -1, null, renderState.outlineColor, null);
+        };
 
         matrixStack.pop();
-        super.render(renderState, matrixStack, vertexConsumerProvider, light);
+        super.render(renderState, matrixStack, orderedRenderCommandQueue, cameraRenderState);
     };
 
     public TridentEntityRenderState createRenderState() {

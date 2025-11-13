@@ -39,16 +39,6 @@ public class Items {
     public static final Item DIAMOND_SPEAR;
     public static final Item STARDUST_SPEAR;
 
-    public static final Item COPPER_HELMET;
-    public static final Item COPPER_CHESTPLATE;
-    public static final Item COPPER_LEGGINGS;
-    public static final Item COPPER_BOOTS;
-    public static final Item COPPER_SWORD;
-    public static final Item COPPER_AXE;
-    public static final Item COPPER_PICKAXE;
-    public static final Item COPPER_SHOVEL;
-    public static final Item COPPER_HOE;
-
     public static final Item AMETHYST_HELMET;
     public static final Item AMETHYST_CHESTPLATE;
     public static final Item AMETHYST_LEGGINGS;
@@ -362,25 +352,6 @@ public class Items {
                 .attributeModifiers(SpearItem.createAttributeModifiers(9))
                 .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                 .enchantable(1));
-
-        COPPER_HELMET = register("copper_helmet", (new Item.Settings())
-            .armor(ArmorMaterials.COPPER, EquipmentType.HELMET));
-        COPPER_CHESTPLATE = register("copper_chestplate", (new Item.Settings())
-            .armor(ArmorMaterials.COPPER, EquipmentType.CHESTPLATE));
-        COPPER_LEGGINGS = register("copper_leggings", (new Item.Settings())
-            .armor(ArmorMaterials.COPPER, EquipmentType.LEGGINGS));
-        COPPER_BOOTS = register("copper_boots", (new Item.Settings())
-            .armor(ArmorMaterials.COPPER, EquipmentType.BOOTS));
-        COPPER_SWORD = register("copper_sword", (new Item.Settings())
-            .sword(ToolMaterials.COPPER, 2.0F, -2.4F));
-        COPPER_AXE = register("copper_axe", (new Item.Settings())
-            .axe(ToolMaterials.COPPER, 6.0F, -3.1F));
-        COPPER_PICKAXE = register("copper_pickaxe", (new Item.Settings())
-            .pickaxe(ToolMaterials.COPPER, 0.5F, -2.8F));
-        COPPER_SHOVEL = register("copper_shovel", (new Item.Settings())
-            .shovel(ToolMaterials.COPPER, 1.0F, -3.0F));
-        COPPER_HOE = register("copper_hoe", (new Item.Settings())
-            .hoe(ToolMaterials.COPPER, -2.0F, -2.0F));
 
         AMETHYST_HELMET = register("amethyst_helmet", (new Item.Settings())
             .armor(ArmorMaterials.AMETHYST, EquipmentType.HELMET));

@@ -265,11 +265,6 @@ public class ItemGroups {
             .displayName(Text.translatable("itemGroup.betterOnBedrock.tools"))
             .icon(() -> new ItemStack(Items.AMETHYST_PICKAXE))
             .entries((displayContext, entries) -> {
-                entries.add(Items.COPPER_AXE);
-                entries.add(Items.COPPER_PICKAXE);
-                entries.add(Items.COPPER_SHOVEL);
-                entries.add(Items.COPPER_HOE);
-
                 entries.add(Items.AMETHYST_AXE);
                 entries.add(Items.AMETHYST_PICKAXE);
                 entries.add(Items.AMETHYST_SHOVEL);
@@ -297,13 +292,6 @@ public class ItemGroups {
             .displayName(Text.translatable("itemGroup.betterOnBedrock.combat"))
             .icon(() -> new ItemStack(Items.AMETHYST_SWORD))
             .entries((displayContext, entries) -> {
-                entries.add(Items.COPPER_SWORD);
-                entries.add(Items.COPPER_AXE);
-                entries.add(Items.COPPER_HELMET);
-                entries.add(Items.COPPER_CHESTPLATE);
-                entries.add(Items.COPPER_LEGGINGS);
-                entries.add(Items.COPPER_BOOTS);
-
                 entries.add(Items.AMETHYST_SWORD);
                 entries.add(Items.AMETHYST_AXE);
                 entries.add(Items.AMETHYST_HELMET);

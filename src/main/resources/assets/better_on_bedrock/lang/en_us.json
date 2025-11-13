@@ -1,5 +1,5 @@
 {
-  "category.better_on_bedrock.keybinds": "Better on Bedrock",
+  "key.category.better_on_bedrock.keybinds": "Better on Bedrock",
   "key.better_on_bedrock.waystone": "Waystone Test",
   "key.better_on_bedrock.toast_1": "Toast Test 1",
   "key.better_on_bedrock.toast_2": "Toast Test 2",
@@ -23,6 +23,13 @@
   "itemGroup.betterOnBedrock.combat": "Better on Bedrock: Combat",
   "itemGroup.betterOnBedrock.upgrades": "Better on Bedrock: Upgrades",
   "itemGroup.betterOnBedrock.food": "Better on Bedrock: Food",
+
+  "tag.item.better_on_bedrock.amethyst": "Amethyst",
+  "tag.item.better_on_bedrock.shulker": "Shulker",
+  "tag.item.better_on_bedrock.corstinite": "Corstinite",
+  "tag.item.better_on_bedrock.stardust": "Stardust",
+  "tag.item.better_on_bedrock.amethyst_tool_materials": "Amethyst Tool Materials",
+  "tag.item.better_on_bedrock.stardust_tool_materials": "Stardust Tool Materials",
 
 
   "block.better_on_bedrock.waystone": "Waystone",
@@ -211,16 +218,6 @@
   "item.better_on_bedrock.amethyst_spear": "Amethyst Spear",
   "item.better_on_bedrock.stardust_spear": "Stardust Spear",
 
-  "item.better_on_bedrock.copper_helmet": "Copper Helmet",
-  "item.better_on_bedrock.copper_chestplate": "Copper Chestplate",
-  "item.better_on_bedrock.copper_leggings": "Copper Leggings",
-  "item.better_on_bedrock.copper_boots": "Copper Boots",
-  "item.better_on_bedrock.copper_sword": "Copper Sword",
-  "item.better_on_bedrock.copper_axe": "Copper Axe",
-  "item.better_on_bedrock.copper_pickaxe": "Copper Pickaxe",
-  "item.better_on_bedrock.copper_shovel": "Copper Shovel",
-  "item.better_on_bedrock.copper_hoe": "Copper Hoe",
-
   "item.better_on_bedrock.amethyst_helmet": "Amethyst Helmet",
   "item.better_on_bedrock.amethyst_chestplate": "Amethyst Chestplate",
   "item.better_on_bedrock.amethyst_leggings": "Amethyst Leggings",
@@ -320,8 +317,6 @@
   "item.better_on_bedrock.broken_stellar_crystals.desc": "Elektrika - Stellar Crystals",
   "item.better_on_bedrock.music_disc_travelers": "Music Disc",
   "item.better_on_bedrock.music_disc_travelers.desc": "J. Rivers - Travelers",
-
-  "tag.item.better_on_bedrock.copper_tool_materials": "Copper Tool Materials",
 
   "jukebox_song.better_on_bedrock.fox": "PatchyTheFox - Fox",
   "jukebox_song.better_on_bedrock.stardust": "PatchyTheFox - Stardust",
