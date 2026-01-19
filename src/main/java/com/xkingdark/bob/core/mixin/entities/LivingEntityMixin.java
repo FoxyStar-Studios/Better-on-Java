@@ -24,12 +24,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class LivingEntityMixin extends Entity implements EnchantedEntityAccessor {
     @Unique @Final
     private static final TrackedData<Boolean> ENCHANTED = DataTracker.registerData(LivingEntityMixin.class, TrackedDataHandlerRegistry.BOOLEAN);
-    @Unique
-    boolean isEnchanted;
-
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
-    }
+    };
 
     @Inject(method = "initDataTracker", at = @At("TAIL"))
     public void BoB$initDataTracker(DataTracker.Builder builder, CallbackInfo ci) {
@@ -38,14 +35,12 @@ public abstract class LivingEntityMixin extends Entity implements EnchantedEntit
 
     @Inject(method = "readCustomData", at = @At("TAIL"))
     public void BoB$readCustomData(ReadView view, CallbackInfo ci) {
-        this.isEnchanted = view.getBoolean("isEnchanted", false);
-        this.dataTracker.set(ENCHANTED, this.isEnchanted);
+        this.setEnchanted(view.getBoolean("isEnchanted", false));
     };
 
     @Inject(method = "writeCustomData", at = @At("TAIL"))
     public void BoB$writeCustomData(WriteView view, CallbackInfo ci) {
-        this.dataTracker.set(ENCHANTED, this.isEnchanted);
-        view.putBoolean("isEnchanted", this.isEnchanted);
+        view.putBoolean("isEnchanted", this.dataTracker.get(ENCHANTED));
     };
 
     @Unique
@@ -55,8 +50,7 @@ public abstract class LivingEntityMixin extends Entity implements EnchantedEntit
 
     @Unique
     public void setEnchanted(boolean enchanted) {
-        this.isEnchanted = enchanted;
-        this.dataTracker.set(ENCHANTED, this.isEnchanted);
+        this.dataTracker.set(ENCHANTED, enchanted);
     };
 
     @Unique
