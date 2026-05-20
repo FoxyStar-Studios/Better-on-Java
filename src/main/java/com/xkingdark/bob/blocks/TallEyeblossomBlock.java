@@ -13,11 +13,13 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.TriState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.block.WireOrientation;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
@@ -69,7 +71,8 @@ public class TallEyeblossomBlock extends TallFlowerBlock implements Fertilizable
     }
 
     private boolean updateStateAndNotifyOthers(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!world.getDimension().natural() || world.isDay() != this.state.open)
+        boolean bl = world.getEnvironmentAttributes().getAttributeValue(EnvironmentAttributes.EYEBLOSSOM_OPEN_GAMEPLAY, pos).asBoolean(this.state.open);
+        if (bl == this.state.open)
             return false;
 
         EyeblossomState eyeblossomState = this.state.getOpposite();

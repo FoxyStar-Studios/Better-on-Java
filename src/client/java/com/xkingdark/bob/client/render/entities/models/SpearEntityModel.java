@@ -1,12 +1,12 @@
 package com.xkingdark.bob.client.render.entities.models;
 
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.util.Unit;
 
 public class SpearEntityModel extends Model<Unit> {
     public SpearEntityModel(ModelPart root) {
-        super(root, RenderLayer::getEntitySolid);
+        super(root, RenderLayers::entitySolid);
     };
 
     public static TexturedModelData getTexturedModelData() {

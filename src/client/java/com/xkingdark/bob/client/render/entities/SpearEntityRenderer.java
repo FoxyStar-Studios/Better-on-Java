@@ -4,6 +4,7 @@ import com.xkingdark.bob.client.render.entities.models.SpearEntityModel;
 import com.xkingdark.bob.entities.SpearEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -32,7 +33,7 @@ public class SpearEntityRenderer extends EntityRenderer<SpearEntity, TridentEnti
         matrixStack.push();
         matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(renderState.yaw - 90.0F));
         matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(renderState.pitch + 90.0F));
-        List<RenderLayer> list = ItemRenderer.getGlintRenderLayers(RenderLayer.getEntityCutout(this.texture), false, renderState.enchanted);
+        List<RenderLayer> list = ItemRenderer.getGlintRenderLayers(RenderLayers.entityCutout(this.texture), false, renderState.enchanted);
 
         for (int i = 0; i < list.size(); ++i) {
             orderedRenderCommandQueue.getBatchingQueue(i).submitModel(this.model, Unit.INSTANCE, matrixStack, list.get(i), renderState.light, OverlayTexture.DEFAULT_UV, -1, null, renderState.outlineColor, null);
